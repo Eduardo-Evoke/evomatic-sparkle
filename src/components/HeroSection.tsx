@@ -36,7 +36,7 @@ const HeroSection = () => {
               return (
                 <span
                   key={i}
-                  className={`inline-block opacity-0 animate-[fade-in_0.8s_ease-out_forwards] ${isHighlight ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-[fade-in_0.8s_ease-out_forwards,glow-text_2.5s_ease-in-out_forwards] text-[3.15rem] md:text-6xl" : ""}`}
+                  className={`inline-block opacity-0 animate-[fade-in_0.8s_ease-out_forwards] text-6xl ${isHighlight ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-[fade-in_0.8s_ease-out_forwards,glow-text_2.5s_ease-in-out_forwards] text-[3.15rem] md:text-6xl" : ""}`}
                   style={{
                     animationDelay: `${0.5 + i * 0.12}s`,
                     ...(isWhitePulse ? {
