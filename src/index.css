@@ -114,9 +114,11 @@
   0%, 100% {
     color: hsl(0 0% 100%);
     text-shadow: 0 0 12px hsla(0, 0%, 100%, 0.4);
+    transform: scale(1);
   }
   50% {
-    color: hsl(0 0% 80%);
-    text-shadow: 0 0 4px hsla(0, 0%, 100%, 0.15);
+    color: hsl(0 0% 85%);
+    text-shadow: 0 0 18px hsla(0, 0%, 100%, 0.25);
+    transform: scale(1.03);
   }
 }
