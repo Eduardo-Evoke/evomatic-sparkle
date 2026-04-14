@@ -129,8 +129,8 @@ const Contato = () => {
                     CEP: 13214-101 — Jundiaí - SP
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/10">
-                    <p className="text-primary font-medium">
-                      ☕ Venha tomar um café conosco! Será um prazer recebê-lo.
+                    <p className="text-primary text-center font-semibold">
+                      Venha tomar um café conosco! Será um prazer recebê-lo.
                     </p>
                   </div>
                 </div>
