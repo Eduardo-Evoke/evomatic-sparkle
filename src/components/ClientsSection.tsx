@@ -73,14 +73,12 @@ const ClientsSection = () => {
                 key={`${client.name}-${i}`}
                 className="flex-shrink-0 flex items-center justify-center h-16 md:h-20 px-4"
               >
-                <div className="bg-white/90 rounded-xl px-5 py-3 h-full flex items-center justify-center shadow-md shadow-white/10">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="h-full w-auto max-w-[140px] md:max-w-[180px] object-contain"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-full w-auto max-w-[140px] md:max-w-[180px] object-contain"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
