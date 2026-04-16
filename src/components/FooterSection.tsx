@@ -20,7 +20,7 @@ const FooterSection = () => {
                   Contato
                 </h3>
                 <div className="space-y-3">
-                  <a href="mailto:contato@evomatic.com.br" className="flex items-center gap-3 transition-colors text-primary-foreground text-base font-semibold">
+                  <a href="mailto:contato@evomatic.com.br" className="flex items-center gap-3 transition-colors text-base font-semibold text-primary">
                     <Mail className="w-4 h-4 text-primary-foreground" />
                     contato@evomatic.com.br
                   </a>
