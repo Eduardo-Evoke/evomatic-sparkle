@@ -69,12 +69,12 @@ const ClientsSection = () => {
             {[...clients, ...clients].map((client, i) => (
               <div
                 key={`${client.name}-${i}`}
-                className="flex-shrink-0 flex items-center justify-center h-16 md:h-20 px-4"
+                className="flex-shrink-0 flex items-center justify-center h-16 md:h-20 px-4 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-full w-auto max-w-[140px] md:max-w-[180px] object-contain"
+                  className="h-full w-auto max-w-[140px] md:max-w-[180px] object-contain brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
                   loading="lazy"
                 />
               </div>

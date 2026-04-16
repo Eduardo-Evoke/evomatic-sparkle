@@ -51,7 +51,7 @@ const PartnersSection = () => {
   });
 
   return (
-    <section className="pt-20 pb-8 px-5 relative z-10">
+    <section className="py-8 px-5 relative z-10">
       <div className="max-w-4xl mx-auto backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] bg-background/40" ref={ref}>
         <h2
           className="font-bold text-center mb-3 text-primary text-2xl md:text-5xl"
