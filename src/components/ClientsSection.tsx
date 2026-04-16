@@ -10,6 +10,13 @@ import logoLavateriaFast from "@/assets/clients/lavateria-fast.jpeg";
 import logoLavoro from "@/assets/clients/lavoro.png";
 import logoFazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
 import logoMartinBrower from "@/assets/clients/martin-brower.png";
+import logoMedianiVizicato from "@/assets/clients/mediani-vizicato.png";
+import logoMemorial from "@/assets/clients/memorial.png";
+import logoNesp from "@/assets/clients/nesp.png";
+import logoOpuspac from "@/assets/clients/opuspac.png";
+import logoRotaMarket from "@/assets/clients/rota-market.jpeg";
+import logoRuffato from "@/assets/clients/ruffato.png";
+import logoSimplify from "@/assets/clients/simplify.jpeg";
 
 const clients = [
   { name: "ACMR", logo: logoAcmr },
@@ -22,6 +29,13 @@ const clients = [
   { name: "Lavoro Terraplenagem", logo: logoLavoro },
   { name: "Fazenda Bela Vista", logo: logoFazendaBelaVista },
   { name: "Martin Brower", logo: logoMartinBrower },
+  { name: "Mediani & Vizicato", logo: logoMedianiVizicato },
+  { name: "Memorial Parque da Paz", logo: logoMemorial },
+  { name: "NESP", logo: logoNesp },
+  { name: "Opuspac", logo: logoOpuspac },
+  { name: "Rota Market Fast", logo: logoRotaMarket },
+  { name: "Ruffato Contabilidade", logo: logoRuffato },
+  { name: "Simplify", logo: logoSimplify },
 ];
 
 const ClientsSection = () => {
@@ -51,7 +65,7 @@ const ClientsSection = () => {
         </p>
 
         <div className="relative overflow-hidden">
-          <div className="flex animate-[marquee_30s_linear_infinite] gap-12 md:gap-16 items-center w-max">
+          <div className="flex animate-[marquee_40s_linear_infinite] gap-12 md:gap-16 items-center w-max">
             {[...clients, ...clients].map((client, i) => (
               <div
                 key={`${client.name}-${i}`}
