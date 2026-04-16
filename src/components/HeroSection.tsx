@@ -50,7 +50,7 @@ const HeroSection = () => {
             })}
           </h1>
 
-          <p className="text-base md:text-2xl max-w-2xl mx-auto leading-relaxed font-display lg:text-2xl text-primary-foreground font-semibold">
+          <p className="text-base md:text-2xl max-w-2xl mx-auto leading-relaxed font-display lg:text-2xl font-semibold text-primary">
             Há mais de 12 anos organizando, protegendo e evoluindo ambientes de TI com
             soluções completas em infraestrutura, cloud e segurança.
           </p>
