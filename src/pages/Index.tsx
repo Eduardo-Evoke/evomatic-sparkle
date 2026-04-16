@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import ClientsSection from "@/components/ClientsSection";
 import PartnersSection from "@/components/PartnersSection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -41,7 +40,6 @@ const Index = () => {
         </div>
       </SectionFade>
       <ServicesSection />
-      <ClientsSection />
       <PartnersSection />
       <FooterSection />
       <WhatsAppButton />
