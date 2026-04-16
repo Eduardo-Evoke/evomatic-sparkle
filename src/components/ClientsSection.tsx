@@ -1,19 +1,27 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { Building2 } from "lucide-react";
+
+import logoAcmr from "@/assets/clients/acmr.png";
+import logoApplausi from "@/assets/clients/applausi.png";
+import logoArc from "@/assets/clients/arc.png";
+import logoBenfrio from "@/assets/clients/benfrio.png";
+import logoColegioViaBrasil from "@/assets/clients/colegio-via-brasil.png";
+import logoGrupoPredigna from "@/assets/clients/grupo-predigna.png";
+import logoLavateriaFast from "@/assets/clients/lavateria-fast.jpeg";
+import logoLavoro from "@/assets/clients/lavoro.png";
+import logoFazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
+import logoMartinBrower from "@/assets/clients/martin-brower.png";
 
 const clients = [
-  "Escritórios de Advocacia",
-  "Clínicas Médicas",
-  "Construtoras",
-  "Indústrias",
-  "Varejo",
-  "Logística",
-  "Educação",
-  "Contabilidades",
-  "Imobiliárias",
-  "Consultorias",
-  "Startups",
-  "Comércio Exterior",
+  { name: "ACMR", logo: logoAcmr },
+  { name: "Applausi", logo: logoApplausi },
+  { name: "ARC", logo: logoArc },
+  { name: "Benfrio", logo: logoBenfrio },
+  { name: "Colégio Anglo Via Brasil", logo: logoColegioViaBrasil },
+  { name: "Grupo Predigna", logo: logoGrupoPredigna },
+  { name: "Lavateria Fast", logo: logoLavateriaFast },
+  { name: "Lavoro Terraplenagem", logo: logoLavoro },
+  { name: "Fazenda Bela Vista", logo: logoFazendaBelaVista },
+  { name: "Martin Brower", logo: logoMartinBrower },
 ];
 
 const ClientsSection = () => {
@@ -30,7 +38,7 @@ const ClientsSection = () => {
             transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
           }}
         >
-          Segmentos que Atendemos
+          Nossos Clientes
         </h2>
         <p
           className="text-center mb-10 text-primary-foreground text-sm md:text-xl"
@@ -39,31 +47,34 @@ const ClientsSection = () => {
             transition: "opacity 0.6s ease-out 0.15s",
           }}
         >
-          Soluções sob medida para diversos setores do mercado.
+          Empresas que confiam na Evomatic para crescer com segurança.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
-          {clients.map((client, i) => (
-            <div
-              key={client}
-              className="group relative flex items-center gap-3 px-4 py-3 rounded-xl border border-white/[0.06] bg-card/60 backdrop-blur-sm hover:border-primary/40 hover:bg-primary/[0.06] transition-all duration-300 cursor-default"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0) scale(1)" : "translateY(16px) scale(0.96)",
-                transition: `opacity 0.5s ease-out ${0.05 * i}s, transform 0.5s ease-out ${0.05 * i}s`,
-              }}
-            >
-              <Building2 className="w-4 h-4 text-primary/60 group-hover:text-primary transition-colors shrink-0" />
-              <span className="text-sm md:text-base text-foreground/80 group-hover:text-foreground transition-colors font-medium">
-                {client}
-              </span>
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ boxShadow: "inset 0 0 20px hsl(348 91% 42% / 0.06)" }}
-              />
-            </div>
-          ))}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-[marquee_30s_linear_infinite] gap-12 md:gap-16 items-center w-max">
+            {[...clients, ...clients].map((client, i) => (
+              <div
+                key={`${client.name}-${i}`}
+                className="flex-shrink-0 flex items-center justify-center h-16 md:h-20 px-4 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-full w-auto max-w-[140px] md:max-w-[180px] object-contain brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   );
 };
