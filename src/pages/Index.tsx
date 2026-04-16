@@ -41,6 +41,7 @@ const Index = () => {
         </div>
       </SectionFade>
       <ServicesSection />
+      <ClientsSection />
       <PartnersSection />
       <FooterSection />
       <WhatsAppButton />
