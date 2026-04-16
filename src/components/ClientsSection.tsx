@@ -48,9 +48,8 @@ const ClientsSection = () => {
           className="font-bold text-center mb-3 text-primary text-2xl md:text-5xl font-display"
           style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "scale(1)" : "scale(0.9)",
-            filter: isVisible ? "blur(0px)" : "blur(6px)",
-            transition: "opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out",
+            transform: isVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
           }}
         >
           Nossos Clientes
@@ -59,8 +58,7 @@ const ClientsSection = () => {
           className="text-center mb-10 text-primary-foreground text-sm md:text-xl"
           style={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateX(0)" : "translateX(-30px)",
-            transition: "opacity 0.7s ease-out 0.2s, transform 0.7s ease-out 0.2s",
+            transition: "opacity 0.6s ease-out 0.15s",
           }}
         >
           Empresas que confiam na Evomatic para crescer com segurança.
