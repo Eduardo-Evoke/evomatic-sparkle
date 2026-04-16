@@ -3,18 +3,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import Seguranca from "./pages/Seguranca.tsx";
-import Lgpd from "./pages/Lgpd.tsx";
-import QuemSomos from "./pages/QuemSomos.tsx";
-import Contato from "./pages/Contato.tsx";
-import SuporteGestaoTI from "./pages/SuporteGestaoTI.tsx";
-import InfraestruturaServidores from "./pages/InfraestruturaServidores.tsx";
-import LicenciamentoVendas from "./pages/LicenciamentoVendas.tsx";
-import CloudColaboracao from "./pages/CloudColaboracao.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import ScrollToTop from "./components/ScrollToTop.tsx";
-
+import Index from "@/pages/Index";
+import Seguranca from "@/pages/Seguranca";
+import Lgpd from "@/pages/Lgpd";
+import QuemSomos from "@/pages/QuemSomos";
+import Contato from "@/pages/Contato";
+import SuporteGestaoTI from "@/pages/SuporteGestaoTI";
+import InfraestruturaServidores from "@/pages/InfraestruturaServidores";
+import LicenciamentoVendas from "@/pages/LicenciamentoVendas";
+import CloudColaboracao from "@/pages/CloudColaboracao";
+import NotFound from "@/pages/NotFound";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
