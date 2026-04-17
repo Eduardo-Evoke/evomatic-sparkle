@@ -59,7 +59,7 @@ const beneficios = [
 const CloudColaboracao = () => {
   return (
     <main className="overflow-hidden relative">
-      <StaticTexture />
+      <SolutionsBackground />
       <Header />
 
       {/* Hero */}
