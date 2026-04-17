@@ -93,7 +93,7 @@ const SuporteGestaoTI = () => {
       <div className="relative z-10">
         <div className="h-16 relative z-10" style={{ background: "linear-gradient(180deg, transparent 0%, hsl(220 14% 92%) 100%)", boxShadow: "inset 0 24px 40px -16px rgba(0,0,0,0.55), inset 0 8px 16px -8px rgba(0,0,0,0.35)" }} />
 
-        <div className="relative -mt-32">
+        <div className="relative">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
