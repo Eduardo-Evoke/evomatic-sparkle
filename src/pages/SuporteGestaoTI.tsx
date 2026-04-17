@@ -111,12 +111,7 @@ const SuporteGestaoTI = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-6xl">
                 O que está{" "}
-                <span
-                  className="text-primary"
-                  style={{
-                    animation: "white-pulse 2s ease-out forwards, white-pulse-loop 3s ease-in-out 2s infinite",
-                  }}
-                >incluso</span>{" "}
+                <span className="text-primary">incluso</span>{" "}
                 no nosso suporte
               </h2>
               <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
