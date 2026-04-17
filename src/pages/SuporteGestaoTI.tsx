@@ -111,7 +111,7 @@ const SuporteGestaoTI = () => {
         />
         {/* Transição esfumaçada inferior — funde com o fundo escuro abaixo */}
         <div className="absolute inset-x-0 -bottom-px h-40 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent z-20" />
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative z-30">
           <Reveal direction="up">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold font-display text-black mb-4 md:text-6xl">
@@ -127,12 +127,12 @@ const SuporteGestaoTI = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {diferenciais.map((item, i) => (
               <Reveal key={i} delay={i * 0.1} direction="up">
-                <div className="p-6 h-full rounded-2xl bg-white border border-black/10 shadow-sm hover:border-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className={`${glassCard} p-6 h-full`}>
                   <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-black font-bold mb-2 text-xl">{item.title}</h3>
-                  <p className="text-neutral-700 leading-relaxed font-medium text-base">{item.desc}</p>
+                  <h3 className="text-foreground font-bold mb-2 text-xl">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-medium text-base">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
