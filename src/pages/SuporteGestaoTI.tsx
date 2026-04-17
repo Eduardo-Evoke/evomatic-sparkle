@@ -89,125 +89,174 @@ const SuporteGestaoTI = () => {
         </div>
       </section>
 
-      {/* Diferenciais */}
-      <section className="py-20 px-6 relative z-10 overflow-hidden">
-        {/* Transição esfumaçada superior — funde com o fundo escuro acima */}
-        <div className="absolute inset-x-0 -top-px h-40 pointer-events-none bg-gradient-to-b from-background via-background/70 to-transparent z-20" />
-        {/* Base branca suave */}
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: "radial-gradient(ellipse at 50% 40%, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 60%, hsl(220 14% 92%) 100%)",
-        }} />
-        {/* Glows coloridos suaves para profundidade 3D */}
-        <div className="absolute -top-32 -left-20 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[140px] pointer-events-none" />
-        <div className="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-white blur-[120px] pointer-events-none opacity-60" />
-        {/* Ruído sutil */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-            backgroundSize: "256px 256px",
-          }}
-        />
-        {/* Transição esfumaçada inferior — funde com o fundo escuro abaixo */}
-        <div className="absolute inset-x-0 -bottom-px h-40 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent z-20" />
-        <div className="max-w-6xl mx-auto relative z-30">
-          <Reveal direction="up">
-            <div className="text-center mb-16 pt-[7%]">
-              <h2 className="text-3xl font-bold font-display text-black mb-4 md:text-6xl">
-                O que está{" "}
-                <span className="text-primary">incluso</span>{" "}
-                no nosso suporte
-              </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-neutral-700 font-semibold">
-                Um serviço completo de TI para que sua empresa tenha tecnologia funcionando com estabilidade, segurança e performance.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {diferenciais.map((item, i) => (
-              <Reveal key={i} delay={i * 0.1} direction="up">
-                <div className={`${glassCard} p-6 h-full`}>
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-bold mb-2 text-xl text-primary">{item.title}</h3>
-                  <p className="leading-relaxed font-medium text-base text-secondary">{item.desc}</p>
+      {/* Wrapper claro contínuo: técnico, cinza-claro com acentos vermelhos */}
+      <div className="relative z-10">
+        <div className="h-32 bg-gradient-to-b from-background via-background/60 to-transparent relative z-10" />
+
+        <div className="relative -mt-32">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, hsl(220 16% 96%) 0%, hsl(220 14% 93%) 50%, hsl(220 16% 96%) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.35]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsl(220 13% 80% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(220 13% 80% / 0.5) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+            }}
+          />
+          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[140px] pointer-events-none" />
+          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-primary/[0.05] blur-[140px] pointer-events-none" />
+
+          {/* Diferenciais */}
+          <section className="pt-40 pb-24 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                    <span className="w-8 h-px bg-primary" />
+                    O que está incluso
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                    Tudo o que sua TI precisa,{" "}
+                    <span className="text-primary">em um só contrato</span>
+                  </h2>
+                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                    Um serviço completo para que sua empresa tenha tecnologia funcionando
+                    com estabilidade, segurança e performance.
+                  </p>
                 </div>
               </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* SLA — destaque */}
-      <section className="pt-32 pb-12 px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
-                SLA: compromisso com <span className="text-primary">resultados</span>
-              </h2>
-              <p className="max-w-2xl mx-auto text-base md:text-lg font-semibold text-primary-foreground">
-                Nosso contrato de nível de serviço garante tempos de resposta e resolution que mantêm sua operação rodando.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { label: "Urgências", tempo: "Até 30 min", desc: "Servidor parado, sistema fora do ar, incidente de segurança. Resposta imediata com prioridade máxima.", highlight: true },
-              { label: "Alto", tempo: "Até 2 horas", desc: "Problema que afeta múltiplos usuários ou impacta processos importantes da operação.", highlight: false },
-              { label: "Normal", tempo: "Até 4 horas", desc: "Solicitações de configuração, dúvidas técnicas, instalação de software e ajustes pontuais.", highlight: false },
-            ].map((sla, i) => (
-              <Reveal key={i} delay={i * 0.15} direction="up">
-                <div className={`${glassCard} p-8 h-full flex flex-col ${sla.highlight ? "border-primary/50 shadow-[0_0_50px_rgba(184,10,45,0.15),0_0_80px_rgba(184,10,45,0.08)] ring-1 ring-primary/20 scale-[1.03]" : ""}`}>
-                  <span className={`text-xs font-bold uppercase tracking-wider mb-3 block ${sla.highlight ? "text-primary bg-primary/10 px-3 py-1 rounded-full w-fit" : "text-primary"}`}>{sla.label}</span>
-                  <span className={`text-3xl font-black block mb-3 ${sla.highlight ? "text-primary" : "text-foreground"}`}>{sla.tempo}</span>
-                  <p className="text-muted-foreground leading-relaxed font-bold text-base">{sla.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Como funciona */}
-      <section className="py-12 px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-6xl">
-                Como funciona na prática
-              </h2>
-              <p className="max-w-2xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
-                Do chamado à resolução, um fluxo eficiente e transparente.
-              </p>
-            </div>
-          </Reveal>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {comoFunciona.map((step, i) => (
-              <Reveal key={step.number} delay={i * 0.15} direction="right">
-                <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(184,10,45,0.4)] transition-all duration-300">
-                    {step.number}
-                  </div>
-                  <div className={`flex-1 ${glassCard} p-5`}>
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
-                        <step.icon className="w-4 h-4 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-foreground mb-1 text-xl">{step.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed font-bold text-base">{step.desc}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {diferenciais.map((item, i) => (
+                  <Reveal key={i} delay={i * 0.08} direction="up">
+                    <div className="relative h-full bg-white rounded-xl pl-6 pr-5 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                      <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-primary rounded-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300" />
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                          <item.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-bold text-lg text-neutral-900 mb-1.5 leading-snug">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm leading-relaxed text-neutral-600">
+                            {item.desc}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* SLA — timeline visual */}
+          <section className="py-20 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                    <span className="w-8 h-px bg-primary" />
+                    SLA garantido
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                    Tempos de resposta{" "}
+                    <span className="text-primary">previsíveis</span>
+                  </h2>
+                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                    Cada chamado é classificado por prioridade e tem prazo definido em contrato.
+                  </p>
                 </div>
               </Reveal>
-            ))}
-          </div>
+
+              <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_32px_-12px_rgba(15,23,42,0.1)]">
+                <div className="hidden md:block absolute left-12 right-12 top-[112px] h-[2px] bg-gradient-to-r from-primary via-primary/60 to-primary/20" />
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 relative">
+                  {[
+                    { label: "Urgência", tempo: "30 min", desc: "Servidor parado, sistema fora do ar, incidente de segurança.", icon: Zap },
+                    { label: "Alta", tempo: "2 horas", desc: "Problema que afeta múltiplos usuários ou processos importantes.", icon: Timer },
+                    { label: "Normal", tempo: "4 horas", desc: "Configurações, dúvidas técnicas, instalações e ajustes pontuais.", icon: Clock },
+                  ].map((sla, i) => (
+                    <Reveal key={i} delay={i * 0.12} direction="up">
+                      <div className="relative flex flex-col items-center text-center">
+                        <div className="relative mb-5">
+                          <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_8px_20px_-4px_rgba(184,10,45,0.5)] ring-4 ring-white">
+                            <sla.icon className="w-6 h-6 text-primary-foreground" />
+                          </div>
+                        </div>
+                        <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary mb-2">
+                          {sla.label}
+                        </span>
+                        <span className="text-3xl md:text-4xl font-black text-neutral-900 mb-3 font-display">
+                          {sla.tempo}
+                        </span>
+                        <p className="text-sm leading-relaxed text-neutral-600 max-w-[240px]">
+                          {sla.desc}
+                        </p>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Como funciona */}
+          <section className="pt-12 pb-24 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-14 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                    <span className="w-8 h-px bg-primary" />
+                    Como funciona
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                    Do chamado à <span className="text-primary">resolução</span>
+                  </h2>
+                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                    Um fluxo simples, rastreável e transparente.
+                  </p>
+                </div>
+              </Reveal>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {comoFunciona.map((step, i) => (
+                  <Reveal key={step.number} delay={i * 0.12} direction="up">
+                    <div className="relative h-full bg-white rounded-xl p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                      <span className="absolute -top-2 -right-2 text-7xl font-black text-primary/10 font-display select-none leading-none">
+                        {step.number}
+                      </span>
+                      <div className="relative">
+                        <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                          <step.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 className="font-bold text-lg text-neutral-900 mb-1.5">
+                          {step.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-neutral-600">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <div className="h-32 bg-gradient-to-b from-transparent to-background" />
         </div>
-      </section>
+      </div>
 
 
 
