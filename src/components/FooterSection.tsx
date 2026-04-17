@@ -34,7 +34,8 @@ const FooterSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"
-                      className="w-9 h-9 rounded-full border border-primary-foreground/30 flex items-center justify-center text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-white transition-transform hover:scale-110"
+                      style={{ background: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)" }}
                     >
                       <Instagram className="w-4 h-4" />
                     </a>
@@ -43,7 +44,8 @@ const FooterSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
-                      className="w-9 h-9 rounded-full border border-primary-foreground/30 flex items-center justify-center text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-white transition-transform hover:scale-110"
+                      style={{ backgroundColor: "#0A66C2" }}
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
