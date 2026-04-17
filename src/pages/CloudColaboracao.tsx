@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-import StaticTexture from "@/components/StaticTexture";
+import SolutionsBackground from "@/components/SolutionsBackground";
 import heroImg from "@/assets/cloud-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -59,7 +59,7 @@ const beneficios = [
 const CloudColaboracao = () => {
   return (
     <main className="overflow-hidden relative">
-      <StaticTexture />
+      <SolutionsBackground />
       <Header />
 
       {/* Hero */}
