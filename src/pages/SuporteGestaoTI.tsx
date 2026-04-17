@@ -113,7 +113,7 @@ const SuporteGestaoTI = () => {
         <div className="absolute inset-x-0 -bottom-px h-40 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent z-20" />
         <div className="max-w-6xl mx-auto relative z-30">
           <Reveal direction="up">
-            <div className="text-center mb-16 pt-[15%]">
+            <div className="text-center mb-16 pt-[7%]">
               <h2 className="text-3xl font-bold font-display text-black mb-4 md:text-6xl">
                 O que está{" "}
                 <span className="text-primary">incluso</span>{" "}
