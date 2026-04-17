@@ -40,7 +40,7 @@ const FooterSection = () => {
                       <Instagram className="w-4 h-4" />
                     </a>
                     <a
-                      href="https://www.linkedin.com/company/evomatic"
+                      href="https://www.linkedin.com/company/evomaticti/?viewAsMember=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
