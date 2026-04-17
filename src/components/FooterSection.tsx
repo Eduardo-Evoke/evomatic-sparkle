@@ -30,7 +30,7 @@ const FooterSection = () => {
                   </a>
                   <div className="flex items-center gap-3 pt-2">
                     <a
-                      href="https://www.instagram.com/evomatic"
+                      href="https://www.instagram.com/evomatic.it/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"
