@@ -91,9 +91,9 @@ const SuporteGestaoTI = () => {
 
       {/* Wrapper claro contínuo: técnico, cinza-claro com acentos vermelhos */}
       <div className="relative z-10">
-        <div className="h-32 bg-gradient-to-b from-background via-background/60 to-transparent relative z-10" />
+        <div className="h-16 relative z-10" style={{ background: "linear-gradient(180deg, transparent 0%, hsl(220 14% 92%) 100%)", boxShadow: "inset 0 24px 40px -16px rgba(0,0,0,0.55), inset 0 8px 16px -8px rgba(0,0,0,0.35)" }} />
 
-        <div className="relative -mt-32">
+        <div className="relative">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -115,7 +115,7 @@ const SuporteGestaoTI = () => {
           <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.05] blur-[140px] pointer-events-none" />
 
           {/* Diferenciais */}
-          <section className="pt-40 pb-24 px-6 relative">
+          <section className="pt-20 pb-24 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
