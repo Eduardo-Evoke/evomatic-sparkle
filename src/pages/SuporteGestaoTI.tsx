@@ -183,8 +183,8 @@ const SuporteGestaoTI = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 relative">
                   {[
-                    { label: "Urgência", tempo: "30 min", desc: "Servidor parado, sistema fora do ar, incidente de segurança.", icon: Zap },
-                    { label: "Alta", tempo: "2 horas", desc: "Problema que afeta múltiplos usuários ou processos importantes.", icon: Timer },
+                    { label: "urgente", tempo: "30 min", desc: "Servidor parado, sistema fora do ar, incidente de segurança.", icon: Zap },
+                    { label: "prioritário", tempo: "2 horas", desc: "Problema que afeta múltiplos usuários ou processos importantes.", icon: Timer },
                     { label: "Normal", tempo: "4 horas", desc: "Configurações, dúvidas técnicas, instalações e ajustes pontuais.", icon: Clock },
                   ].map((sla, i) => (
                     <Reveal key={i} delay={i * 0.12} direction="up">
