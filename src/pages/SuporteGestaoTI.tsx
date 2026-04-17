@@ -144,10 +144,10 @@ const SuporteGestaoTI = () => {
                           <item.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-base text-primary-foreground mb-2 leading-snug">
+                          <h3 className="font-bold text-lg text-primary-foreground mb-1.5 leading-snug">
                             {item.title}
                           </h3>
-                          <p className="leading-relaxed text-muted-foreground text-sm font-medium">
+                          <p className="leading-relaxed text-muted-foreground text-base font-semibold">
                             {item.desc}
                           </p>
                         </div>
