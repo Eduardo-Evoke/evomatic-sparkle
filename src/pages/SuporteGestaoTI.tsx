@@ -115,7 +115,7 @@ const SuporteGestaoTI = () => {
           <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.05] blur-[140px] pointer-events-none" />
 
           {/* Diferenciais */}
-          <section className="pt-8 pb-24 px-6 relative">
+          <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
@@ -160,7 +160,7 @@ const SuporteGestaoTI = () => {
           </section>
 
           {/* SLA — timeline visual */}
-          <section className="pt-4 pb-20 px-6 relative">
+          <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
@@ -212,7 +212,7 @@ const SuporteGestaoTI = () => {
           </section>
 
           {/* Como funciona */}
-          <section className="pt-12 pb-24 px-6 relative">
+          <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-14 max-w-3xl">
