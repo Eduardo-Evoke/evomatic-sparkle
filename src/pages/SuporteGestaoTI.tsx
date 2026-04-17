@@ -131,8 +131,8 @@ const SuporteGestaoTI = () => {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-foreground font-bold mb-2 text-xl">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed font-medium text-base">{item.desc}</p>
+                  <h3 className="font-bold mb-2 text-xl text-primary">{item.title}</h3>
+                  <p className="leading-relaxed font-medium text-base text-secondary">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
