@@ -212,7 +212,7 @@ const SuporteGestaoTI = () => {
           </section>
 
           {/* Como funciona */}
-          <section className="pt-12 pb-24 px-6 relative">
+          <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-14 max-w-3xl">
