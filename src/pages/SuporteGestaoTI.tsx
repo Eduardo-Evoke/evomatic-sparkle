@@ -137,7 +137,7 @@ const SuporteGestaoTI = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {diferenciais.map((item, i) => (
                   <Reveal key={i} delay={i * 0.08} direction="up">
-                    <div className="relative h-full bg-secondary/60 backdrop-blur-md rounded-xl pl-6 pr-5 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                    <div className="relative h-full bg-secondary rounded-xl pl-6 pr-5 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
                       <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-primary rounded-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300" />
                       <div className="flex items-start gap-4">
                         <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
