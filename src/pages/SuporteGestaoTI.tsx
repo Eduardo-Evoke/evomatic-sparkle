@@ -90,16 +90,27 @@ const SuporteGestaoTI = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-12 px-6 relative z-10 overflow-hidden bg-white">
-        {/* Quadriculado preto */}
+      <section className="py-20 px-6 relative z-10 overflow-hidden">
+        {/* Transição esfumaçada superior — funde com o fundo escuro acima */}
+        <div className="absolute inset-x-0 -top-px h-40 pointer-events-none bg-gradient-to-b from-background via-background/70 to-transparent z-20" />
+        {/* Base branca suave */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: "radial-gradient(ellipse at 50% 40%, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 60%, hsl(220 14% 92%) 100%)",
+        }} />
+        {/* Glows coloridos suaves para profundidade 3D */}
+        <div className="absolute -top-32 -left-20 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[140px] pointer-events-none" />
+        <div className="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-white blur-[120px] pointer-events-none opacity-60" />
+        {/* Ruído sutil */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            backgroundSize: "256px 256px",
           }}
         />
+        {/* Transição esfumaçada inferior — funde com o fundo escuro abaixo */}
+        <div className="absolute inset-x-0 -bottom-px h-40 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent z-20" />
         <div className="max-w-6xl mx-auto relative">
           <Reveal direction="up">
             <div className="text-center mb-16">
