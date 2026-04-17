@@ -90,31 +90,25 @@ const SuporteGestaoTI = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-12 px-6 relative z-10 overflow-hidden">
-        {/* 3D perspective grid */}
-        <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
-          <div className="absolute inset-0 origin-bottom" style={{
-            transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+      <section className="py-12 px-6 relative z-10 overflow-hidden bg-white">
+        {/* Quadriculado preto */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
             backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-          }} />
-        </div>
-        {/* Glow accents */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-white/[0.015] blur-[150px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-white/[0.01] blur-[120px]" />
-        </div>
-        <div className="max-w-6xl mx-auto">
+          }}
+        />
+        <div className="max-w-6xl mx-auto relative">
           <Reveal direction="up">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-6xl">
+              <h2 className="text-3xl font-bold font-display text-black mb-4 md:text-6xl">
                 O que está{" "}
                 <span className="text-primary">incluso</span>{" "}
                 no nosso suporte
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="max-w-3xl mx-auto text-base md:text-lg text-neutral-700 font-semibold">
                 Um serviço completo de TI para que sua empresa tenha tecnologia funcionando com estabilidade, segurança e performance.
               </p>
             </div>
@@ -122,12 +116,12 @@ const SuporteGestaoTI = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {diferenciais.map((item, i) => (
               <Reveal key={i} delay={i * 0.1} direction="up">
-                <div className={`${glassCard} p-6 h-full`}>
+                <div className="p-6 h-full rounded-2xl bg-white border border-black/10 shadow-sm hover:border-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-foreground font-bold mb-2 text-xl">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed font-bold text-base">{item.desc}</p>
+                  <h3 className="text-black font-bold mb-2 text-xl">{item.title}</h3>
+                  <p className="text-neutral-700 leading-relaxed font-medium text-base">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
