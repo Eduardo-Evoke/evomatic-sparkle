@@ -160,7 +160,7 @@ const SuporteGestaoTI = () => {
           </section>
 
           {/* SLA — timeline visual */}
-          <section className="pt-4 pb-20 px-6 relative">
+          <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
