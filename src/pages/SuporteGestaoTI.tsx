@@ -98,7 +98,7 @@ const SuporteGestaoTI = () => {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, hsl(220 16% 96%) 0%, hsl(220 14% 93%) 50%, hsl(220 16% 96%) 100%)",
+                "linear-gradient(180deg, hsl(220 10% 82%) 0%, hsl(220 8% 78%) 50%, hsl(220 10% 82%) 100%)",
             }}
           />
           <div
