@@ -98,21 +98,21 @@ const SuporteGestaoTI = () => {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, hsl(220 10% 82%) 0%, hsl(220 8% 78%) 50%, hsl(220 10% 82%) 100%)",
+                "linear-gradient(180deg, hsl(220 14% 92%) 0%, hsl(220 12% 84%) 35%, hsl(220 10% 74%) 70%, hsl(220 9% 66%) 100%)",
             }}
           />
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.35]"
+            className="absolute inset-0 pointer-events-none opacity-[0.3]"
             style={{
               backgroundImage:
-                "linear-gradient(hsl(220 13% 80% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(220 13% 80% / 0.5) 1px, transparent 1px)",
+                "linear-gradient(hsl(220 10% 55% / 0.45) 1px, transparent 1px), linear-gradient(90deg, hsl(220 10% 55% / 0.45) 1px, transparent 1px)",
               backgroundSize: "56px 56px",
               maskImage:
                 "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
             }}
           />
-          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[140px] pointer-events-none" />
-          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-primary/[0.05] blur-[140px] pointer-events-none" />
+          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.04] blur-[140px] pointer-events-none" />
+          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.05] blur-[140px] pointer-events-none" />
 
           {/* Diferenciais */}
           <section className="pt-40 pb-24 px-6 relative">
