@@ -141,7 +141,7 @@ const SuporteGestaoTI = () => {
       </section>
 
       {/* SLA — destaque */}
-      <section className="py-12 px-6 relative z-10">
+      <section className="pt-32 pb-12 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <Reveal direction="up">
             <div className="text-center mb-16">
