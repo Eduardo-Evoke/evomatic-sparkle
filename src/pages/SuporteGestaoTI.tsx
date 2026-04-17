@@ -233,7 +233,7 @@ const SuporteGestaoTI = () => {
                 {comoFunciona.map((step, i) => (
                   <Reveal key={step.number} delay={i * 0.12} direction="up">
                     <div className="relative h-full bg-white rounded-xl p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
-                      <span className="absolute -top-2 -right-2 text-7xl font-black text-primary/10 font-display select-none leading-none">
+                      <span className="absolute top-2 right-3 text-6xl font-black text-primary/10 font-display select-none leading-none">
                         {step.number}
                       </span>
                       <div className="relative">
