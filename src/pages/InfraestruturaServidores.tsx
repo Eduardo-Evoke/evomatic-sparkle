@@ -78,8 +78,8 @@ const InfraestruturaServidores = () => {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-[72px] z-10">
         <img src={heroImg} alt="Infraestrutura e servidores" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent opacity-100" />
+        <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
@@ -99,14 +99,14 @@ const InfraestruturaServidores = () => {
 
       {/* Infraestrutura & Redes */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
-        {/* 3D perspective grid */}
+        {/* 3D perspective grid — textura única, mais visível */}
         <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
           <div className="absolute inset-0 origin-bottom" style={{
             transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
+            maskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
           }} />
         </div>
         <div className="absolute inset-0 pointer-events-none">
@@ -115,15 +115,15 @@ const InfraestruturaServidores = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <Network className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
                 Infraestrutura & Redes
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-6xl">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Rede rápida, estável e <span className="text-primary">sem ponto cego</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg font-semibold text-primary-foreground">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Projetos completos de rede cabeada e Wi-Fi, com monitoramento em tempo real e equipamentos de ponta.
               </p>
             </div>
@@ -146,14 +146,14 @@ const InfraestruturaServidores = () => {
 
       {/* Servidores & Virtualização */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
-        {/* 3D perspective grid */}
+        {/* 3D perspective grid — textura única, mais visível */}
         <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
           <div className="absolute inset-0 origin-bottom" style={{
             transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
+            maskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
           }} />
         </div>
         <div className="absolute inset-0 pointer-events-none">
@@ -162,15 +162,15 @@ const InfraestruturaServidores = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <HardDrive className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
                 Servidores & Virtualização
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
-                Servidor certo para o seu negócio: <br /> <span className="text-primary">local, nuvem ou datacenter</span>
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                Servidor certo para o seu negócio: <span className="text-primary">local, nuvem ou datacenter</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg font-semibold text-primary-foreground">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Migrações seguras, virtualização profissional e hospedagem em datacenter próprio sem hardware no seu escritório.
               </p>
             </div>

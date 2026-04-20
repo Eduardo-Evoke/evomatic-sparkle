@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import LgpdBackground from "@/components/LgpdBackground";
 
 import lgpdHero from "@/assets/lgpd-hero.jpg";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -113,22 +114,18 @@ const Lgpd = () => {
   const c3 = useCountUp(2115, 2500, isVisible);
 
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden relative">
+      <LgpdBackground />
       <Header />
+      <div className="relative z-10">
 
       {/* ═══ HERO — ALARME ═══ */}
-      <section className="relative min-h-[65vh] flex items-center pt-[72px]">
-        <img src={lgpdHero} alt="LGPD" className="absolute inset-0 w-full h-full object-cover opacity-60" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+      <section className="relative h-[60vh] flex items-center pt-[72px]">
+        <img src={lgpdHero} alt="LGPD" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent opacity-100" />
+        <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
-            <Reveal delay={0.1} direction="left">
-              <span className="inline-flex items-center gap-2 text-primary text-base font-semibold mb-4 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 animate-pulse">
-                <AlertOctagon className="w-4 h-4" />
-                Sua empresa está em risco
-              </span>
-            </Reveal>
             <Reveal delay={0.3} direction="left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-foreground leading-tight mb-6">
                 Multas de até <span className="text-primary">R$ 50 milhões</span> por infração à LGPD
@@ -145,7 +142,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ NÚMEROS DE ALARME ═══ */}
-      <section className="py-12 px-6 bg-background" ref={statsRef}>
+      <section className="py-12 px-6 relative" ref={statsRef}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -170,25 +167,28 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ RISCOS / CONSEQUÊNCIAS ═══ */}
-      <section className="py-12 px-6 bg-secondary/30 relative overflow-hidden">
-        {/* Watermarks */}
-        <div className="absolute inset-0 pointer-events-none select-none">
-          <ShieldCheck className="absolute w-40 h-40 text-foreground/[0.07] top-[5%] left-[8%] rotate-[-15deg]" strokeWidth={0.5} />
-          <Lock className="absolute w-36 h-36 text-foreground/[0.07] top-[10%] right-[12%] rotate-[20deg]" strokeWidth={0.5} />
-          <Eye className="absolute w-44 h-44 text-foreground/[0.07] top-[45%] left-[3%] rotate-[10deg]" strokeWidth={0.4} />
-          <AlertTriangle className="absolute w-32 h-32 text-foreground/[0.07] top-[60%] right-[6%] rotate-[-10deg]" strokeWidth={0.5} />
-          <FileText className="absolute w-36 h-36 text-foreground/[0.07] bottom-[8%] left-[20%] rotate-[25deg]" strokeWidth={0.4} />
-          <ShieldCheck className="absolute w-28 h-28 text-foreground/[0.07] bottom-[12%] right-[25%] rotate-[-20deg]" strokeWidth={0.5} />
-          <Scale className="absolute w-36 h-36 text-foreground/[0.07] top-[25%] left-[45%] rotate-[5deg]" strokeWidth={0.4} />
-          <Lock className="absolute w-28 h-28 text-foreground/[0.07] top-[75%] left-[55%] rotate-[-30deg]" strokeWidth={0.5} />
-        </div>
+      <section className="py-12 px-6 relative overflow-hidden">
+        {/* Textura corporativa sutil — linhas verticais finas */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 80px)",
+            maskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+          }}
+        />
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-3 md:text-5xl">
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
+                Consequências
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 O que acontece com quem <span className="text-primary">não se adequa</span>
               </h2>
-              <p className="max-w-2xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg text-primary-foreground font-semibold">
                 As consequências vão muito além da multa financeira.
               </p>
             </div>
@@ -214,7 +214,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ PROVA SOCIAL — CASOS REAIS ═══ */}
-      <section className="py-12 px-6 bg-background">
+      <section className="py-12 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <Reveal direction="up">
             <div className="text-center mb-16">
@@ -273,25 +273,28 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ NOSSA SOLUÇÃO — O QUE FAZEMOS ═══ */}
-      <section className="py-12 px-6 bg-secondary/30 relative overflow-hidden">
-        {/* Watermarks */}
-        <div className="absolute inset-0 pointer-events-none select-none">
-          <Lock className="absolute w-40 h-40 text-foreground/[0.07] top-[8%] left-[5%] rotate-[15deg]" strokeWidth={0.5} />
-          <ShieldCheck className="absolute w-36 h-36 text-foreground/[0.07] top-[5%] right-[10%] rotate-[-25deg]" strokeWidth={0.5} />
-          <FileText className="absolute w-44 h-44 text-foreground/[0.07] top-[40%] right-[3%] rotate-[12deg]" strokeWidth={0.4} />
-          <Eye className="absolute w-32 h-32 text-foreground/[0.07] top-[55%] left-[8%] rotate-[-8deg]" strokeWidth={0.5} />
-          <Lock className="absolute w-28 h-28 text-foreground/[0.07] bottom-[15%] left-[30%] rotate-[30deg]" strokeWidth={0.5} />
-          <ShieldCheck className="absolute w-36 h-36 text-foreground/[0.07] bottom-[10%] right-[20%] rotate-[-15deg]" strokeWidth={0.4} />
-          <Scale className="absolute w-32 h-32 text-foreground/[0.07] top-[20%] left-[50%] rotate-[22deg]" strokeWidth={0.4} />
-          <AlertTriangle className="absolute w-28 h-28 text-foreground/[0.07] top-[70%] right-[40%] rotate-[-18deg]" strokeWidth={0.5} />
-        </div>
+      <section className="py-12 px-6 relative overflow-hidden">
+        {/* Textura corporativa sutil — linhas verticais finas */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 80px)",
+            maskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+          }}
+        />
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-3 md:text-5xl">
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
+                A solução
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 A boa notícia: você pode <span className="text-primary">evitar</span> tudo isso.
               </h2>
-              <p className="max-w-2xl mx-auto text-base text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg text-primary-foreground font-semibold">
                 Estruturamos toda a adequação à LGPD da sua empresa, do diagnóstico ao monitoramento contínuo.
               </p>
             </div>
@@ -353,6 +356,7 @@ const Lgpd = () => {
           </div>
         </div>
       </section>
+      </div>
 
 
       <FooterSection />

@@ -66,7 +66,7 @@ const CloudColaboracao = () => {
       <section className="relative min-h-[60vh] flex items-center pt-[72px]">
         <img src={heroImg} alt="Cloud e colaboração" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10 opacity-100" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
@@ -84,70 +84,151 @@ const CloudColaboracao = () => {
         </div>
       </section>
 
-      {/* Soluções Cloud */}
-      <section className="py-12 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
-                O que <span className="text-primary">fazemos</span> por você
-              </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
-                Da implantação à gestão diária, cuidamos de toda a sua infraestrutura cloud para que sua equipe foque no que importa.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {cloudItems.map((item, i) => (
-              <Reveal key={i} delay={i * 0.1} direction="up">
-                <div
-                  className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full flex items-start gap-4"
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px) scale(1.04)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0) scale(1)"; }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
-                    <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Wrapper dark suave — textura "nuvem/órbita" exclusiva da página de Cloud */}
+      <div className="relative z-10">
+        <div className="relative">
+          {/* Base elevada com gradiente azulado sutil */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 0%, hsl(220 14% 9%) 180px, hsl(218 16% 11%) 50%, hsl(220 14% 9%) 100%)",
+            }}
+          />
 
-      {/* Benefícios */}
-      <section className="py-12 px-6 bg-secondary/30">
-        <div className="max-w-6xl mx-auto">
-          <Reveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
-                Por que migrar para a nuvem com a <span className="text-primary">Evomatic</span>?
-              </h2>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {beneficios.map((b, i) => (
-              <Reveal key={i} delay={i * 0.1} direction="up">
-                <div
-                  className="flex flex-col items-center text-center p-6 rounded-2xl border border-white/[0.08] backdrop-blur-sm bg-background/40 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] h-full"
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px) scale(1.04)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0) scale(1)"; }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                    <b.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-foreground font-bold mb-2 text-lg">{b.title}</h3>
-                  <p className="text-foreground/50 leading-relaxed font-bold text-base">{b.desc}</p>
+          {/* Pontilhado orgânico (dot grid) — sensação de partículas / dados na nuvem */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.10]"
+            style={{
+              backgroundImage:
+                "radial-gradient(hsla(0,0%,100%,0.6) 1px, transparent 1.4px)",
+              backgroundSize: "28px 28px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 35%, black 25%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 35%, black 25%, transparent 80%)",
+            }}
+          />
+
+          {/* Arcos concêntricos — evocam órbitas / nuvens / sinal */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='400' cy='400' r='120'/%3E%3Ccircle cx='400' cy='400' r='220'/%3E%3Ccircle cx='400' cy='400' r='320'/%3E%3Ccircle cx='400' cy='400' r='420'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "1100px 1100px",
+              backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+
+          {/* Linhas curvas suaves cruzando a página (efeito de fluxo de dados) */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.05]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1200' viewBox='0 0 1600 1200' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M0,300 C400,200 800,500 1600,250'/%3E%3Cpath d='M0,600 C500,750 1100,400 1600,650'/%3E%3Cpath d='M0,900 C400,800 900,1000 1600,850'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+
+          {/* Ruído fílmico sutil para quebrar uniformidade */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
+
+          {/* Iluminação ambiente — glows distribuídos */}
+          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.07] blur-[170px] pointer-events-none" />
+          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[180px] pointer-events-none" />
+          <div className="absolute top-[60%] left-[15%] w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[190px] pointer-events-none" />
+          <div className="absolute bottom-10 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[160px] pointer-events-none" />
+
+          {/* Spotlight superior */}
+          <div
+            className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 80% at 50% 0%, hsla(0,0%,100%,0.05), transparent 70%)",
+            }}
+          />
+
+          {/* Soluções Cloud */}
+          <section className="py-12 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                    <span className="w-8 h-px bg-primary" />
+                    Soluções Cloud
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                    O que <span className="text-primary">fazemos</span> por você
+                  </h2>
+                  <p className="text-base md:text-lg text-primary-foreground font-semibold">
+                    Da implantação à gestão diária, cuidamos de toda a sua infraestrutura cloud para que sua equipe foque no que importa.
+                  </p>
                 </div>
               </Reveal>
-            ))}
-          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {cloudItems.map((item, i) => (
+                  <Reveal key={i} delay={i * 0.1} direction="up">
+                    <div
+                      className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full flex items-start gap-4"
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px) scale(1.04)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0) scale(1)"; }}
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
+                        <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Benefícios */}
+          <section className="py-12 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                    <span className="w-8 h-px bg-primary" />
+                    Por que Evomatic
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                    Por que migrar para a nuvem com a <span className="text-primary">Evomatic</span>?
+                  </h2>
+                </div>
+              </Reveal>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {beneficios.map((b, i) => (
+                  <Reveal key={i} delay={i * 0.1} direction="up">
+                    <div
+                      className="flex flex-col items-center text-center p-6 rounded-2xl border border-white/[0.08] backdrop-blur-sm bg-background/40 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] h-full"
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-8px) scale(1.04)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0) scale(1)"; }}
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                        <b.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-foreground font-bold mb-2 text-lg">{b.title}</h3>
+                      <p className="text-foreground/50 leading-relaxed font-bold text-base">{b.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
 
 
       <FooterSection />

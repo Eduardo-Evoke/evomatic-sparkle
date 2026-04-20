@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import PartnersSection from "@/components/PartnersSection";
+import ClientsSection from "@/components/ClientsSection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import TicketButton from "@/components/TicketButton";
@@ -40,8 +41,9 @@ const Index = () => {
         </div>
       </SectionFade>
       <ServicesSection />
+      <ClientsSection />
       <PartnersSection />
-      <FooterSection />
+      <FooterSection className="relative z-10 border-t border-white/[0.06] bg-transparent shadow-[0_-4px_30px_rgba(0,0,0,0.4)]" />
       <WhatsAppButton />
       <TicketButton />
     </main>

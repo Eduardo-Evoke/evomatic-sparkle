@@ -69,8 +69,8 @@ const SuporteGestaoTI = () => {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-[72px] z-10">
         <img src={heroImg} alt="Central de operações de suporte e gestão de TI" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-background/70 to-background pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent opacity-100" />
+        <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
@@ -149,43 +149,44 @@ const SuporteGestaoTI = () => {
             }}
           />
 
-          {/* Marca d'água — palavras-chave de suporte e gestão */}
+          {/* Textura de fundo — grid técnico mais visível */}
           <div
-            aria-hidden="true"
-            className="absolute inset-0 pointer-events-none overflow-hidden select-none"
-          >
-            <div
-              className="absolute flex flex-wrap content-start gap-x-8 gap-y-5 -rotate-12"
-              style={{
-                top: "-10%",
-                left: "-10%",
-                width: "130%",
-                height: "130%",
-                fontFamily: "var(--font-display)",
-                fontWeight: 700,
-                fontSize: "clamp(22px, 3vw, 44px)",
-                lineHeight: 1,
-                letterSpacing: "0.02em",
-                color: "hsla(0, 0%, 100%, 0.03)",
-              }}
-            >
-              {Array.from({ length: 18 }).flatMap((_, row) =>
-                ["SUPORTE", "GESTÃO DE TI", "HELPDESK", "SLA 24/7", "ATENDIMENTO", "CHAMADOS", "MONITORAMENTO", "GESTÃO DE ATIVOS", "TICKETS"].map((word, i) => (
-                  <span key={`${row}-${i}`} className="whitespace-nowrap">
-                    {word}
-                    <span style={{ color: "hsla(348, 91%, 55%, 0.08)" }}> //</span>
-                  </span>
-                ))
-              )}
-            </div>
-          </div>
+            className="absolute inset-0 pointer-events-none opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+            }}
+          />
+          
+          {/* Linhas diagonais mais fortes */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+            }}
+          />
+          
+          {/* Ruído mais intenso */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.10] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
 
           {/* Diferenciais */}
           <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
-                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                  <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
                     <span className="w-8 h-px bg-primary" />
                     O que está incluso
                   </span>
@@ -193,7 +194,7 @@ const SuporteGestaoTI = () => {
                     Tudo o que sua TI precisa,{" "}
                     <span className="text-primary">em um só contrato</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Um serviço completo para que sua empresa tenha tecnologia funcionando
                     com estabilidade, segurança e performance.
                   </p>
@@ -203,17 +204,17 @@ const SuporteGestaoTI = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
                 {diferenciais.map((item, i) => (
                   <Reveal key={i} delay={i * 0.08} direction="up" className="h-full">
-                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] rounded-xl pl-7 pr-6 py-7 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/[0.05] hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] rounded-xl pl-7 pr-6 py-7 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/95 hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
                       <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-primary rounded-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300" />
                       <div className="flex items-start gap-4 h-full">
                         <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
                           <item.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-lg text-foreground/90 mb-1.5 leading-snug">
+                          <h3 className="font-bold text-lg text-foreground/90 group-hover:text-slate-900 mb-1.5 leading-snug">
                             {item.title}
                           </h3>
-                          <p className="leading-relaxed text-foreground/60 text-base font-bold">
+                          <p className="leading-relaxed text-foreground/60 group-hover:text-slate-700 text-base font-bold">
                             {item.desc}
                           </p>
                         </div>
@@ -230,7 +231,7 @@ const SuporteGestaoTI = () => {
             <div className="max-w-6xl mx-auto relative">
               <Reveal direction="up">
                 <div className="mb-16 max-w-3xl">
-                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                  <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
                     <span className="w-8 h-px bg-primary" />
                     SLA garantido
                   </span>
@@ -238,7 +239,7 @@ const SuporteGestaoTI = () => {
                     Tempos de resposta{" "}
                     <span className="text-primary">previsíveis</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Cada chamado é classificado por prioridade e tem prazo definido em contrato.
                   </p>
                 </div>
@@ -289,7 +290,7 @@ const SuporteGestaoTI = () => {
                   <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Do chamado à <span className="text-primary">resolução</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Um fluxo simples, rastreável e transparente.
                   </p>
                 </div>

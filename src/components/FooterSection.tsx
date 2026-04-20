@@ -1,16 +1,31 @@
 import { Mail, Phone, MapPin, Briefcase, Instagram, Linkedin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const FooterSection = () => {
-  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal();
-  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
-
+const FooterColumn = ({ children, i }: { children: React.ReactNode; i: number }) => {
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
+  const delay = i * 0.1;
   return (
-    <footer id="contato" className="relative z-10 border">
+    <div
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0) scale(1)" : "translateY(80px) scale(0.85)",
+        transition: `opacity 0.8s ease-out ${delay}s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s`,
+        willChange: "opacity, transform",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+const FooterSection = ({ className = "relative z-10 border bg-card" }: { className?: string }) => {
+  return (
+    <footer id="contato" className={className}>
 
       {/* Footer Content */}
-      <div ref={gridRef} className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto py-[10px] px-[10px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-8 md:p-10">
           {[0, 1, 2].map((colIndex) => {
             const content = [
               // Contato
@@ -96,16 +111,9 @@ const FooterSection = () => {
             ];
 
             return (
-              <div
-                key={colIndex}
-                style={{
-                  opacity: gridVisible ? 1 : 0,
-                  transform: gridVisible ? "translateY(0)" : "translateY(30px)",
-                  transition: `opacity 0.6s ease-out ${colIndex * 0.15}s, transform 0.6s ease-out ${colIndex * 0.15}s`,
-                }}
-              >
+              <FooterColumn key={colIndex} i={colIndex}>
                 {content[colIndex]}
-              </div>
+              </FooterColumn>
             );
           })}
         </div>

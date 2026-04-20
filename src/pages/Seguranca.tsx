@@ -3,7 +3,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import SolutionsBackground from "@/components/SolutionsBackground";
-import firewallHero from "@/assets/firewall-hero.jpg";
+import firewallHero from "@/assets/seguranca-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
   ShieldCheck, Eye, Wrench, ShieldAlert, ArrowRight,
@@ -75,8 +75,8 @@ const Seguranca = () => {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-[72px] z-10">
         <img src={firewallHero} alt="Segurança de rede" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
@@ -96,30 +96,31 @@ const Seguranca = () => {
 
       {/* Segurança */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
-          <div className="absolute inset-0 origin-bottom" style={{
-            transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-          }} />
-        </div>
+        {/* Textura hexagonal — exclusiva da página de Segurança */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.18]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: "56px 64px",
+            maskImage: "radial-gradient(ellipse at center, black 35%, transparent 85%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 35%, transparent 85%)",
+          }}
+        />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-white/[0.015] blur-[150px]" />
           <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-white/[0.01] blur-[120px]" />
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <Shield className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
                 Segurança & Backup
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Proteção <span className="text-primary">completa</span> para sua operação
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Soluções integradas que protegem seus dados, sua rede e seus sistemas contra as ameaças mais comuns e sofisticadas.
               </p>
             </div>
@@ -142,30 +143,31 @@ const Seguranca = () => {
 
       {/* Treinamentos */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
-          <div className="absolute inset-0 origin-bottom" style={{
-            transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-          }} />
-        </div>
+        {/* Textura hexagonal — exclusiva da página de Segurança */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.18]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: "56px 64px",
+            maskImage: "radial-gradient(ellipse at center, black 35%, transparent 85%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 35%, transparent 85%)",
+          }}
+        />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 right-1/3 w-[600px] h-[600px] rounded-full bg-white/[0.015] blur-[180px]" />
           <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] rounded-full bg-white/[0.01] blur-[100px]" />
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <GraduationCap className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
+                <span className="w-8 h-px bg-primary" />
                 Treinamentos & Capacitação
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Equipe treinada erra menos e vira sua <span className="text-primary">primeira linha de defesa</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Capacitação prática para que seus colaboradores saibam se proteger — e proteger a empresa.
               </p>
             </div>
