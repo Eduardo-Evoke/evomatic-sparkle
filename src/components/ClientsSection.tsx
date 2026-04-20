@@ -31,7 +31,7 @@ const clients: Client[] = [
   { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz },
   { name: "NESP", logo: nesp, invert: true },
-  { name: "Opuspac", logo: opuspac, invert: true },
+  { name: "Opuspac", logo: opuspac },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Ruffato Contabilidade", logo: ruffato, invert: true },
   { name: "Simplify", logo: simplify },
