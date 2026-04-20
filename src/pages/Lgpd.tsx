@@ -114,8 +114,10 @@ const Lgpd = () => {
   const c3 = useCountUp(2115, 2500, isVisible);
 
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden relative">
+      <SolutionsBackground />
       <Header />
+      <div className="relative z-10">
 
       {/* ═══ HERO — ALARME ═══ */}
       <section className="relative min-h-[65vh] flex items-center pt-[72px]">
