@@ -66,7 +66,7 @@ const CloudColaboracao = () => {
       <section className="relative min-h-[60vh] flex items-center pt-[72px]">
         <img src={heroImg} alt="Cloud e colaboração" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10 opacity-5" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
