@@ -149,36 +149,37 @@ const SuporteGestaoTI = () => {
             }}
           />
 
-          {/* Marca d'água — palavras-chave de suporte e gestão */}
+          {/* Textura de fundo — grid técnico mais visível */}
           <div
-            aria-hidden="true"
-            className="absolute inset-0 pointer-events-none overflow-hidden select-none"
-          >
-            <div
-              className="absolute flex flex-wrap content-start gap-x-8 gap-y-5 -rotate-12"
-              style={{
-                top: "-10%",
-                left: "-10%",
-                width: "130%",
-                height: "130%",
-                fontFamily: "var(--font-display)",
-                fontWeight: 700,
-                fontSize: "clamp(22px, 3vw, 44px)",
-                lineHeight: 1,
-                letterSpacing: "0.02em",
-                color: "hsla(0, 0%, 100%, 0.03)",
-              }}
-            >
-              {Array.from({ length: 18 }).flatMap((_, row) =>
-                ["SUPORTE", "GESTÃO DE TI", "HELPDESK", "SLA 24/7", "ATENDIMENTO", "CHAMADOS", "MONITORAMENTO", "GESTÃO DE ATIVOS", "TICKETS"].map((word, i) => (
-                  <span key={`${row}-${i}`} className="whitespace-nowrap">
-                    {word}
-                    <span style={{ color: "hsla(348, 91%, 55%, 0.08)" }}> //</span>
-                  </span>
-                ))
-              )}
-            </div>
-          </div>
+            className="absolute inset-0 pointer-events-none opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+            }}
+          />
+          
+          {/* Linhas diagonais mais fortes */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+            }}
+          />
+          
+          {/* Ruído mais intenso */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.10] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
 
           {/* Diferenciais */}
           <section className="py-12 px-6 relative">
