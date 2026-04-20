@@ -105,7 +105,7 @@ const ServicesSection = () => {
               <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
                 <service.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-3 text-2xl">{service.title}</h3>
+              <h3 className="font-bold text-foreground mb-3 text-base text-center">{service.title}</h3>
               {service.description && <p className="text-foreground/70 mb-3 font-semibold text-lg">{service.description}</p>}
               <ul className="text-foreground/60 text-sm leading-relaxed space-y-1.5 hidden md:block">
                 {service.items.map((item) => (
