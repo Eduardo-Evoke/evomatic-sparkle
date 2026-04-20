@@ -37,11 +37,11 @@ const transparentClientsRow2: Client[] = [
 const whiteBgClients: Client[] = [
   { name: "ARC", logo: arc, whiteBg: true },
   { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
-  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
   { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
 ];
 
 // Logos apenas em texto (sem imagem)
