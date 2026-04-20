@@ -7,6 +7,13 @@ import lavateriaFast from "@/assets/clients/lavateria-fast.jpeg";
 import lavoro from "@/assets/clients/lavoro.png";
 import fazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
 import martinBrower from "@/assets/clients/martin-brower.png";
+import medianiVizicato from "@/assets/clients/mediani-vizicato.png";
+import memorialParqueDaPaz from "@/assets/clients/memorial-parque-da-paz.png";
+import nesp from "@/assets/clients/nesp.png";
+import opuspac from "@/assets/clients/opuspac.png";
+import rotaMarketFast from "@/assets/clients/rota-market-fast.jpeg";
+import ruffato from "@/assets/clients/ruffato-contabilidade.png";
+import simplify from "@/assets/clients/simplify.jpeg";
 
 type Client = { name: string; logo?: string };
 
@@ -21,6 +28,13 @@ const clients: Client[] = [
   { name: "Lavoro Terraplenagem", logo: lavoro },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Martin Brower", logo: martinBrower },
+  { name: "Mediani Vizicato", logo: medianiVizicato },
+  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz },
+  { name: "NESP", logo: nesp },
+  { name: "Opuspac", logo: opuspac },
+  { name: "Rota Market Fast", logo: rotaMarketFast },
+  { name: "Ruffato Contabilidade", logo: ruffato },
+  { name: "Simplify", logo: simplify },
 ];
 
 const ClientsSection = () => {
