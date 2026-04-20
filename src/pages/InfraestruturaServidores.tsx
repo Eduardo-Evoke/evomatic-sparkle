@@ -162,15 +162,15 @@ const InfraestruturaServidores = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <HardDrive className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <span className="w-8 h-px bg-primary" />
                 Servidores & Virtualização
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
-                Servidor certo para o seu negócio: <br /> <span className="text-primary">local, nuvem ou datacenter</span>
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                Servidor certo para o seu negócio: <span className="text-primary">local, nuvem ou datacenter</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg font-semibold text-primary-foreground">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Migrações seguras, virtualização profissional e hospedagem em datacenter próprio sem hardware no seu escritório.
               </p>
             </div>
