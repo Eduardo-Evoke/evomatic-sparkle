@@ -100,7 +100,7 @@ const SuporteGestaoTI = () => {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
+                "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 180px, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
             }}
           />
           {/* Grid técnico ultra discreto */}
