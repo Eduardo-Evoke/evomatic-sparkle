@@ -25,7 +25,7 @@ const FooterSection = ({ className = "relative z-10 border bg-card" }: { classNa
 
       {/* Footer Content */}
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 backdrop-blur-sm border border-white/[0.08] rounded-2xl shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] bg-background/40 p-8 md:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-8 md:p-10">
           {[0, 1, 2].map((colIndex) => {
             const content = [
               // Contato
