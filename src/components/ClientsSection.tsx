@@ -52,39 +52,44 @@ const textClients: Client[] = [
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
 ];
 
-const renderClient = (client: Client, i: number, isVisible: boolean) => (
-  <div
-    key={client.name}
-    className="flex flex-col items-center justify-center gap-3 p-4 transition-all duration-300 hover:scale-[1.05]"
-    style={{
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible ? "translateY(0)" : "translateY(60px)",
-      transition: `opacity 0.7s ease-out ${i * 0.08 + 0.2}s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.08 + 0.2}s, scale 0.3s`,
-    }}
-  >
+const ClientCard = ({ client, i }: { client: Client; i: number }) => {
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
+  const delay = (i % 5) * 0.1;
+  return (
     <div
-      className={`flex items-center justify-center w-28 h-28 rounded-xl overflow-hidden ${
-        client.whiteBg ? "bg-white p-3" : ""
-      }`}
+      ref={ref}
+      className="flex flex-col items-center justify-center gap-3 p-4"
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0) scale(1)" : "translateY(80px) scale(0.85)",
+        transition: `opacity 0.8s ease-out ${delay}s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s`,
+        willChange: "opacity, transform",
+      }}
     >
-      {client.logo ? (
-        <img
-          src={client.logo}
-          alt={`Logo ${client.name}`}
-          className="max-h-full max-w-full w-auto object-contain"
-          loading="lazy"
-        />
-      ) : (
-        <span className="text-lg md:text-xl font-bold font-display text-primary-foreground tracking-wide text-center">
-          {client.name}
-        </span>
-      )}
+      <div
+        className={`flex items-center justify-center w-28 h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
+          client.whiteBg ? "bg-white p-3" : ""
+        }`}
+      >
+        {client.logo ? (
+          <img
+            src={client.logo}
+            alt={`Logo ${client.name}`}
+            className="max-h-full max-w-full w-auto object-contain"
+            loading="lazy"
+          />
+        ) : (
+          <span className="text-lg md:text-xl font-bold font-display text-primary-foreground tracking-wide text-center">
+            {client.name}
+          </span>
+        )}
+      </div>
+      <span className="mt-1 text-primary-foreground text-xs md:text-base font-semibold text-center">
+        {client.name}
+      </span>
     </div>
-    <span className="mt-1 text-primary-foreground text-xs md:text-base font-semibold text-center">
-      {client.name}
-    </span>
-  </div>
-);
+  );
+};
 
 const ClientsSection = () => {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
