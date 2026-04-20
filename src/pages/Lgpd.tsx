@@ -173,7 +173,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ RISCOS / CONSEQUÊNCIAS ═══ */}
-      <section className="py-12 px-6 relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)" }}>
+      <section className="py-12 px-6 relative overflow-hidden">
         {/* Watermarks */}
         <div className="absolute inset-0 pointer-events-none select-none">
           <ShieldCheck className="absolute w-40 h-40 text-foreground/[0.07] top-[5%] left-[8%] rotate-[-15deg]" strokeWidth={0.5} />
