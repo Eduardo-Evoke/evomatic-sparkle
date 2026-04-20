@@ -15,7 +15,7 @@ const SolutionsBackground = () => {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, hsl(220 8% 9%) 0%, hsl(220 6% 11%) 45%, hsl(220 5% 8%) 100%)",
+            "linear-gradient(180deg, hsl(220 10% 12%) 0%, hsl(220 8% 14%) 45%, hsl(220 9% 11%) 100%)",
         }}
       />
 
