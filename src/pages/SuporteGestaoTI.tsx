@@ -91,14 +91,7 @@ const SuporteGestaoTI = () => {
 
       {/* Wrapper dark suave com hierarquia entre seções */}
       <div className="relative z-10">
-        {/* Transição suave do hero para a área de conteúdo */}
-        <div
-          className="h-16 relative z-10"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 100%)",
-          }}
-        />
+
 
         <div className="relative">
           {/* Base elevada (um pouco mais clara que o background global para criar hierarquia) */}
