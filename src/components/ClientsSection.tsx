@@ -70,7 +70,7 @@ const ClientsSection = () => {
           {clients.map((client, i) => (
             <div
               key={client.name}
-              className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/95 border border-white/10 hover:bg-white transition-all duration-300 hover:scale-[1.03] hover:shadow-lg min-h-[120px]"
+              className="flex flex-col items-center justify-center gap-3 p-4 transition-all duration-300 hover:scale-[1.05] min-h-[120px]"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateY(0)" : "translateY(20px)",
@@ -86,12 +86,12 @@ const ClientsSection = () => {
                     loading="lazy"
                   />
                 ) : (
-                  <span className="text-lg md:text-xl font-bold font-display text-foreground tracking-wide">
+                  <span className="text-lg md:text-xl font-bold font-display text-primary-foreground tracking-wide">
                     {client.name}
                   </span>
                 )}
               </div>
-              <span className="text-xs md:text-sm font-semibold text-foreground/70 text-center leading-tight">
+              <span className="text-xs md:text-sm font-semibold text-primary-foreground/80 text-center leading-tight">
                 {client.name}
               </span>
             </div>
