@@ -43,8 +43,8 @@ const whiteBgClients: Client[] = [
   { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
   { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
-  { name: "ACMR", logo: acmr, whiteBg: true },
-  { name: "Applausi", logo: applausi, whiteBg: true },
+  { name: "ACMR", logo: acmr },
+  { name: "Applausi", logo: applausi },
 ];
 
 // Logos apenas em texto (sem imagem)
