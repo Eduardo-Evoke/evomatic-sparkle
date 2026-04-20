@@ -364,6 +364,7 @@ const Lgpd = () => {
           </div>
         </div>
       </section>
+      </div>
 
 
       <FooterSection />
