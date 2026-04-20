@@ -41,7 +41,7 @@ const Index = () => {
       </SectionFade>
       <ServicesSection />
       <PartnersSection />
-      <FooterSection />
+      <FooterSection className="relative z-10 border-t border-white/[0.06] bg-background/70 backdrop-blur-md shadow-[0_-4px_30px_rgba(0,0,0,0.4)]" />
       <WhatsAppButton />
       <TicketButton />
     </main>
