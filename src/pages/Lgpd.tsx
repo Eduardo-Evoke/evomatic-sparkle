@@ -126,12 +126,6 @@ const Lgpd = () => {
         <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
-            <Reveal delay={0.1} direction="left">
-              <span className="inline-flex items-center gap-2 text-primary text-base font-semibold mb-4 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 animate-pulse">
-                <AlertOctagon className="w-4 h-4" />
-                Sua empresa está em risco
-              </span>
-            </Reveal>
             <Reveal delay={0.3} direction="left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-foreground leading-tight mb-6">
                 Multas de até <span className="text-primary">R$ 50 milhões</span> por infração à LGPD
