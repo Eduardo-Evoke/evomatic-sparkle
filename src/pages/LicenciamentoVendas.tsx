@@ -148,15 +148,15 @@ const LicenciamentoVendas = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <Search className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <span className="w-8 h-px bg-primary" />
                 Licenciamento & Auditoria
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Descubra o que está irregular <span className="text-primary">antes da fiscalização</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg font-semibold text-primary-foreground">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Auditorias de software, regularização de licenças e gestão contínua para que sua empresa nunca corra riscos desnecessários.
               </p>
             </div>
