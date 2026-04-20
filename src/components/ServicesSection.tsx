@@ -107,7 +107,7 @@ const ServicesSection = () => {
               </div>
               <h3 className="font-bold text-foreground mb-3 text-2xl">{service.title}</h3>
               {service.description && <p className="text-foreground/70 mb-3 font-semibold text-lg">{service.description}</p>}
-              <ul className="text-foreground/60 text-sm leading-relaxed space-y-1.5">
+              <ul className="text-foreground/60 text-sm leading-relaxed space-y-1.5 hidden md:block">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-base font-bold text-slate-400">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
