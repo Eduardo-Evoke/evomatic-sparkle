@@ -84,86 +84,74 @@ const CloudColaboracao = () => {
         </div>
       </section>
 
-      {/* Wrapper dark suave com hierarquia entre seções (mesmo padrão da página de Suporte) */}
+      {/* Wrapper dark suave — textura "nuvem/órbita" exclusiva da página de Cloud */}
       <div className="relative z-10">
         <div className="relative">
-          {/* Base elevada */}
+          {/* Base elevada com gradiente azulado sutil */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 180px, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
+                "linear-gradient(180deg, transparent 0%, hsl(220 14% 9%) 180px, hsl(218 16% 11%) 50%, hsl(220 14% 9%) 100%)",
             }}
           />
-          {/* Grid técnico ultra discreto */}
+
+          {/* Pontilhado orgânico (dot grid) — sensação de partículas / dados na nuvem */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.10]"
+            style={{
+              backgroundImage:
+                "radial-gradient(hsla(0,0%,100%,0.6) 1px, transparent 1.4px)",
+              backgroundSize: "28px 28px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 35%, black 25%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 35%, black 25%, transparent 80%)",
+            }}
+          />
+
+          {/* Arcos concêntricos — evocam órbitas / nuvens / sinal */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='400' cy='400' r='120'/%3E%3Ccircle cx='400' cy='400' r='220'/%3E%3Ccircle cx='400' cy='400' r='320'/%3E%3Ccircle cx='400' cy='400' r='420'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "1100px 1100px",
+              backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+
+          {/* Linhas curvas suaves cruzando a página (efeito de fluxo de dados) */}
           <div
             className="absolute inset-0 pointer-events-none opacity-[0.05]"
             style={{
-              backgroundImage:
-                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
-              backgroundSize: "56px 56px",
-              maskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1200' viewBox='0 0 1600 1200' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M0,300 C400,200 800,500 1600,250'/%3E%3Cpath d='M0,600 C500,750 1100,400 1600,650'/%3E%3Cpath d='M0,900 C400,800 900,1000 1600,850'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
             }}
           />
-          {/* Linhas diagonais sutis */}
+
+          {/* Ruído fílmico sutil para quebrar uniformidade */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
-            }}
-          />
-          {/* Ruído sutil */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+            className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
               backgroundSize: "256px 256px",
             }}
           />
-          {/* Iluminação ambiente — glows radiais distribuídos */}
-          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
-          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[170px] pointer-events-none" />
-          <div className="absolute top-[60%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[180px] pointer-events-none" />
+
+          {/* Iluminação ambiente — glows distribuídos */}
+          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.07] blur-[170px] pointer-events-none" />
+          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[180px] pointer-events-none" />
+          <div className="absolute top-[60%] left-[15%] w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[190px] pointer-events-none" />
           <div className="absolute bottom-10 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[160px] pointer-events-none" />
+
           {/* Spotlight superior */}
           <div
             className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
             style={{
               background:
                 "radial-gradient(ellipse 70% 80% at 50% 0%, hsla(0,0%,100%,0.05), transparent 70%)",
-            }}
-          />
-          {/* Grid técnico mais visível */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
-              backgroundSize: "56px 56px",
-              maskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
-            }}
-          />
-          {/* Linhas diagonais mais fortes */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
-            }}
-          />
-          {/* Ruído mais intenso */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.10] mix-blend-overlay"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-              backgroundSize: "256px 256px",
             }}
           />
 
