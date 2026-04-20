@@ -19,13 +19,13 @@ import simplify from "@/assets/clients/simplify.jpeg";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
-// Logos sem fundo - linha 1
+// Linha 1 - fundo branco padronizado
 const transparentClients: Client[] = [
-  { name: "Benfrio", logo: benfrio },
-  { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil },
-  { name: "Lavoro Terraplenagem", logo: lavoro },
-  { name: "Opuspac", logo: opuspac },
-  { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
+  { name: "Benfrio", logo: benfrio, whiteBg: true },
+  { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
+  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
 // Logos sem fundo - linha 2
@@ -47,8 +47,8 @@ const whiteBgClients: Client[] = [
 // Linha final
 const textClients: Client[] = [
   { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
-  { name: "ACMR", logo: acmr },
-  { name: "Applausi", logo: applausi },
+  { name: "ACMR", logo: acmr, whiteBg: true },
+  { name: "Applausi", logo: applausi, whiteBg: true },
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
 ];
 
