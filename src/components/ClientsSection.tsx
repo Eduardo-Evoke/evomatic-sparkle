@@ -70,7 +70,7 @@ const ClientsSection = () => {
           {clients.map((client, i) => (
             <div
               key={client.name}
-              className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/95 border border-white/10 hover:bg-white transition-all duration-300 hover:scale-[1.03] hover:shadow-lg min-h-[120px]"
+              className="flex flex-col items-center justify-center gap-3 p-4 transition-all duration-300 hover:scale-[1.05] min-h-[120px]"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateY(0)" : "translateY(20px)",
