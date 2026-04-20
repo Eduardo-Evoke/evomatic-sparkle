@@ -80,7 +80,7 @@ const renderClient = (client: Client, i: number, isVisible: boolean) => (
         </span>
       )}
     </div>
-    <span className="text-xs font-semibold text-center leading-tight text-primary-foreground md:text-base">
+    <span className="mt-1 text-primary-foreground text-xs md:text-base font-semibold text-center">
       {client.name}
     </span>
   </div>
