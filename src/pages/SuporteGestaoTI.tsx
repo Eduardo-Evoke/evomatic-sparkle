@@ -89,30 +89,39 @@ const SuporteGestaoTI = () => {
         </div>
       </section>
 
-      {/* Wrapper claro contínuo: técnico, cinza-claro com acentos vermelhos */}
+      {/* Wrapper dark suave com hierarquia entre seções */}
       <div className="relative z-10">
-        <div className="h-16 relative z-10" style={{ background: "linear-gradient(180deg, transparent 0%, hsl(220 14% 92%) 100%)", boxShadow: "inset 0 24px 40px -16px rgba(0,0,0,0.55), inset 0 8px 16px -8px rgba(0,0,0,0.35)" }} />
+        {/* Transição suave do hero para a área de conteúdo */}
+        <div
+          className="h-16 relative z-10"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 100%)",
+          }}
+        />
 
         <div className="relative">
+          {/* Base elevada (um pouco mais clara que o background global para criar hierarquia) */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, hsl(220 14% 92%) 0%, hsl(220 12% 84%) 35%, hsl(220 10% 74%) 70%, hsl(220 9% 66%) 100%)",
+                "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
             }}
           />
+          {/* Grid técnico ultra discreto */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.3]"
+            className="absolute inset-0 pointer-events-none opacity-[0.04]"
             style={{
               backgroundImage:
-                "linear-gradient(hsl(220 10% 55% / 0.45) 1px, transparent 1px), linear-gradient(90deg, hsl(220 10% 55% / 0.45) 1px, transparent 1px)",
+                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
               backgroundSize: "56px 56px",
               maskImage:
                 "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
             }}
           />
-          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.04] blur-[140px] pointer-events-none" />
-          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-foreground/[0.05] blur-[140px] pointer-events-none" />
+          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[140px] pointer-events-none" />
+          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-white/[0.02] blur-[140px] pointer-events-none" />
 
           {/* Diferenciais */}
           <section className="py-12 px-6 relative">
@@ -123,11 +132,11 @@ const SuporteGestaoTI = () => {
                     <span className="w-8 h-px bg-primary" />
                     O que está incluso
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Tudo o que sua TI precisa,{" "}
                     <span className="text-primary">em um só contrato</span>
                   </h2>
-                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-medium">
                     Um serviço completo para que sua empresa tenha tecnologia funcionando
                     com estabilidade, segurança e performance.
                   </p>
@@ -137,17 +146,17 @@ const SuporteGestaoTI = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
                 {diferenciais.map((item, i) => (
                   <Reveal key={i} delay={i * 0.08} direction="up" className="h-full">
-                    <div className="relative h-full bg-secondary rounded-xl pl-7 pr-6 py-7 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] rounded-xl pl-7 pr-6 py-7 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/[0.05] hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
                       <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-primary rounded-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300" />
                       <div className="flex items-start gap-4 h-full">
-                        <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                        <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
                           <item.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-lg text-primary-foreground mb-1.5 leading-snug">
+                          <h3 className="font-bold text-lg text-foreground/90 mb-1.5 leading-snug">
                             {item.title}
                           </h3>
-                          <p className="leading-relaxed text-muted-foreground text-base font-semibold">
+                          <p className="leading-relaxed text-foreground/60 text-base font-medium">
                             {item.desc}
                           </p>
                         </div>
@@ -168,17 +177,17 @@ const SuporteGestaoTI = () => {
                     <span className="w-8 h-px bg-primary" />
                     SLA garantido
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Tempos de resposta{" "}
                     <span className="text-primary">previsíveis</span>
                   </h2>
-                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-medium">
                     Cada chamado é classificado por prioridade e tem prazo definido em contrato.
                   </p>
                 </div>
               </Reveal>
 
-              <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_32px_-12px_rgba(15,23,42,0.1)]">
+              <div className="relative bg-white/[0.04] border border-white/[0.06] backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_12px_32px_-12px_rgba(0,0,0,0.4)]">
                 <div className="hidden md:block absolute left-12 right-12 top-[112px] h-[2px] bg-gradient-to-r from-primary via-primary/60 to-primary/20" />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 relative">
@@ -190,17 +199,17 @@ const SuporteGestaoTI = () => {
                     <Reveal key={i} delay={i * 0.12} direction="up">
                       <div className="relative flex flex-col items-center text-center">
                         <div className="relative mb-5">
-                          <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_8px_20px_-4px_rgba(184,10,45,0.5)] ring-4 ring-white">
+                          <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_8px_20px_-4px_rgba(184,10,45,0.5)] ring-4 ring-white/10">
                             <sla.icon className="w-6 h-6 text-primary-foreground" />
                           </div>
                         </div>
                         <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary mb-2">
                           {sla.label}
                         </span>
-                        <span className="text-3xl md:text-4xl font-black text-neutral-900 mb-3 font-display">
+                        <span className="text-3xl md:text-4xl font-black text-foreground/90 mb-3 font-display">
                           {sla.tempo}
                         </span>
-                        <p className="text-sm leading-relaxed text-neutral-600 max-w-[240px]">
+                        <p className="text-sm leading-relaxed text-foreground/60 max-w-[240px]">
                           {sla.desc}
                         </p>
                       </div>
@@ -220,10 +229,10 @@ const SuporteGestaoTI = () => {
                     <span className="w-8 h-px bg-primary" />
                     Como funciona
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-bold font-display text-neutral-900 leading-tight mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Do chamado à <span className="text-primary">resolução</span>
                   </h2>
-                  <p className="text-base md:text-lg text-neutral-600 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-medium">
                     Um fluxo simples, rastreável e transparente.
                   </p>
                 </div>
@@ -232,18 +241,18 @@ const SuporteGestaoTI = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {comoFunciona.map((step, i) => (
                   <Reveal key={step.number} delay={i * 0.12} direction="up">
-                    <div className="relative h-full bg-white rounded-xl p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(15,23,42,0.08)] hover:shadow-[0_4px_12px_rgba(184,10,45,0.08),0_20px_40px_-12px_rgba(184,10,45,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
-                      <span className="absolute top-2 right-3 text-6xl font-black text-primary/10 font-display select-none leading-none">
+                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm rounded-xl p-6 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/[0.05] hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                      <span className="absolute top-2 right-3 text-6xl font-black text-primary/15 font-display select-none leading-none">
                         {step.number}
                       </span>
                       <div className="relative">
-                        <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                           <step.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
-                        <h3 className="font-bold text-lg text-neutral-900 mb-1.5">
+                        <h3 className="font-bold text-lg text-foreground/90 mb-1.5">
                           {step.title}
                         </h3>
-                        <p className="text-sm leading-relaxed text-neutral-600">
+                        <p className="text-sm leading-relaxed text-foreground/60">
                           {step.desc}
                         </p>
                       </div>
