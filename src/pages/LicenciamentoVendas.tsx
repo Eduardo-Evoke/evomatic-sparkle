@@ -91,7 +91,7 @@ const LicenciamentoVendas = () => {
         </div>
       </section>
 
-      {/* Wrapper dark suave com hierarquia entre seções (mesmo padrão da página de Suporte) */}
+      {/* Wrapper dark suave — textura "documento/certificação" exclusiva da página de Licenciamento */}
       <div className="relative z-10">
         <div className="relative">
           {/* Base elevada */}
@@ -102,75 +102,69 @@ const LicenciamentoVendas = () => {
                 "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 180px, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
             }}
           />
-          {/* Grid técnico ultra discreto */}
+
+          {/* Marca d'água — selos circulares de "certificação" sutis */}
           <div
             className="absolute inset-0 pointer-events-none opacity-[0.05]"
             style={{
-              backgroundImage:
-                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
-              backgroundSize: "56px 56px",
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='160' cy='160' r='70'/%3E%3Ccircle cx='160' cy='160' r='84'/%3E%3Cpath d='M130 160 l22 22 l40 -46' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "320px 320px",
               maskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+                "radial-gradient(ellipse at 50% 40%, black 25%, transparent 80%)",
               WebkitMaskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+                "radial-gradient(ellipse at 50% 40%, black 25%, transparent 80%)",
             }}
           />
-          {/* Linhas diagonais sutis */}
+
+          {/* Linhas horizontais finas — sensação de documento / régua */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.03]"
+            className="absolute inset-0 pointer-events-none opacity-[0.04]"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+                "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.45) 0 1px, transparent 1px 32px)",
             }}
           />
-          {/* Ruído sutil */}
+
+          {/* Marcação lateral — pequenos traços verticais como margem de planilha */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+            className="absolute inset-y-0 left-0 w-24 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 12px)",
+              maskImage: "linear-gradient(90deg, black, transparent)",
+              WebkitMaskImage: "linear-gradient(90deg, black, transparent)",
+            }}
+          />
+          <div
+            className="absolute inset-y-0 right-0 w-24 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 12px)",
+              maskImage: "linear-gradient(270deg, black, transparent)",
+              WebkitMaskImage: "linear-gradient(270deg, black, transparent)",
+            }}
+          />
+
+          {/* Ruído fílmico sutil */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
               backgroundSize: "256px 256px",
             }}
           />
-          {/* Iluminação ambiente — glows radiais distribuídos */}
-          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
-          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[170px] pointer-events-none" />
-          <div className="absolute top-[60%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[180px] pointer-events-none" />
+
+          {/* Iluminação ambiente — glows distribuídos */}
+          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.07] blur-[170px] pointer-events-none" />
+          <div className="absolute top-[40%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[180px] pointer-events-none" />
           <div className="absolute bottom-10 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[160px] pointer-events-none" />
+
           {/* Spotlight superior */}
           <div
             className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
             style={{
               background:
                 "radial-gradient(ellipse 70% 80% at 50% 0%, hsla(0,0%,100%,0.05), transparent 70%)",
-            }}
-          />
-          {/* Grid técnico mais visível */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
-              backgroundSize: "56px 56px",
-              maskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
-            }}
-          />
-          {/* Linhas diagonais mais fortes */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
-            }}
-          />
-          {/* Ruído mais intenso */}
-          <div
-            className="absolute inset-0 pointer-events-none opacity-[0.10] mix-blend-overlay"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-              backgroundSize: "256px 256px",
             }}
           />
 
