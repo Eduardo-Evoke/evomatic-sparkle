@@ -156,6 +156,34 @@ const SuporteGestaoTI = () => {
             }}
           />
 
+          {/* Marca d'água — visível através dos cards translúcidos */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none overflow-hidden select-none"
+          >
+            <div
+              className="absolute flex flex-wrap content-start gap-x-16 gap-y-10 -rotate-12"
+              style={{
+                top: "-10%",
+                left: "-10%",
+                width: "130%",
+                height: "130%",
+                fontFamily: "var(--font-display)",
+                fontWeight: 900,
+                fontSize: "clamp(64px, 9vw, 140px)",
+                lineHeight: 1,
+                letterSpacing: "-0.02em",
+                color: "hsla(0, 0%, 100%, 0.028)",
+              }}
+            >
+              {Array.from({ length: 40 }).map((_, i) => (
+                <span key={i} className="whitespace-nowrap">
+                  EVOMATIC<span style={{ color: "hsla(348, 91%, 55%, 0.07)" }}>.</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Diferenciais */}
           <section className="py-12 px-6 relative">
             <div className="max-w-6xl mx-auto relative">
