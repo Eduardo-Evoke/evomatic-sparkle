@@ -58,8 +58,8 @@ const renderClient = (client: Client, i: number, isVisible: boolean) => (
     className="flex flex-col items-center justify-center gap-3 p-4 transition-all duration-300 hover:scale-[1.05]"
     style={{
       opacity: isVisible ? 1 : 0,
-      transform: isVisible ? "translateY(0)" : "translateY(20px)",
-      transition: `opacity 0.5s ease-out ${i * 0.05 + 0.2}s, transform 0.5s ease-out ${i * 0.05 + 0.2}s, scale 0.3s`,
+      transform: isVisible ? "translateY(0)" : "translateY(60px)",
+      transition: `opacity 0.7s ease-out ${i * 0.08 + 0.2}s, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.08 + 0.2}s, scale 0.3s`,
     }}
   >
     <div
