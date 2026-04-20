@@ -221,7 +221,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ PROVA SOCIAL — CASOS REAIS ═══ */}
-      <section className="py-12 px-6 bg-background">
+      <section className="py-12 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <Reveal direction="up">
             <div className="text-center mb-16">
