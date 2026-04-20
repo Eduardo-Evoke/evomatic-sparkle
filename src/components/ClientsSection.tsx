@@ -58,7 +58,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center gap-3 p-4"
+      className="flex flex-col items-center justify-center gap-2 md:gap-3 p-1 md:p-4"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0) scale(1)" : "translateY(80px) scale(0.85)",
@@ -67,7 +67,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
       }}
     >
       <div
-        className={`flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
+        className={`flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
           client.whiteBg ? "bg-white p-2 md:p-3" : ""
         }`}
       >
@@ -84,7 +84,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
           </span>
         )}
       </div>
-      <span className="mt-1 text-primary-foreground text-xs md:text-base font-semibold text-center">
+      <span className="mt-1 text-primary-foreground text-[11px] md:text-base font-semibold text-center leading-tight">
         {client.name}
       </span>
     </div>
