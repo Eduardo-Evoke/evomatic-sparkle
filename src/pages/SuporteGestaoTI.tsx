@@ -111,17 +111,50 @@ const SuporteGestaoTI = () => {
           />
           {/* Grid técnico ultra discreto */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.04]"
+            className="absolute inset-0 pointer-events-none opacity-[0.05]"
             style={{
               backgroundImage:
                 "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
               backgroundSize: "56px 56px",
               maskImage:
                 "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
             }}
           />
-          <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[140px] pointer-events-none" />
-          <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] rounded-full bg-white/[0.02] blur-[140px] pointer-events-none" />
+
+          {/* Linhas diagonais ultra sutis (textura tech) */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+            }}
+          />
+
+          {/* Ruído sutil para quebrar uniformidade */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
+
+          {/* Iluminação ambiente — glows radiais distribuídos */}
+          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
+          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[170px] pointer-events-none" />
+          <div className="absolute top-[60%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[180px] pointer-events-none" />
+          <div className="absolute bottom-10 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[160px] pointer-events-none" />
+
+          {/* Spotlight superior — foco de luz suave vindo de cima */}
+          <div
+            className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 80% at 50% 0%, hsla(0,0%,100%,0.05), transparent 70%)",
+            }}
+          />
 
           {/* Diferenciais */}
           <section className="py-12 px-6 relative">
