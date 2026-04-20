@@ -17,14 +17,18 @@ import simplify from "@/assets/clients/simplify.jpeg";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
-// Logos sem fundo (transparentes / claras sobre o fundo escuro)
+// Logos sem fundo - linha 1
 const transparentClients: Client[] = [
   { name: "Benfrio", logo: benfrio },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil },
-  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Lavoro Terraplenagem", logo: lavoro },
-  { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Opuspac", logo: opuspac },
+  { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
+];
+
+// Logos sem fundo - linha 2
+const transparentClientsRow2: Client[] = [
+  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
@@ -113,6 +117,11 @@ const ClientsSection = () => {
           {/* Linha 1: logos sem fundo */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {transparentClients.map((client, i) => renderClient(client, i, isVisible))}
+          </div>
+
+          {/* Linha 2: logos sem fundo */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {transparentClientsRow2.map((client, i) => renderClient(client, i, isVisible))}
           </div>
 
           {/* Linha 2: logos com fundo branco */}
