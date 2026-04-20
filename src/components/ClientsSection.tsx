@@ -15,7 +15,7 @@ import rotaMarketFast from "@/assets/clients/rota-market-fast.jpeg";
 import ruffato from "@/assets/clients/ruffato-contabilidade.png";
 import simplify from "@/assets/clients/simplify.jpeg";
 
-type Client = { name: string; logo?: string; invert?: boolean };
+type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
 const clients: Client[] = [
   { name: "ACMR" },
@@ -28,7 +28,7 @@ const clients: Client[] = [
   { name: "Lavoro Terraplenagem", logo: lavoro },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Martin Brower", logo: martinBrower, invert: true },
-  { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz },
   { name: "NESP", logo: nesp, invert: true },
   { name: "Opuspac", logo: opuspac },
