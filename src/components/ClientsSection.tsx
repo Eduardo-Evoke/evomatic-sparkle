@@ -86,12 +86,12 @@ const ClientsSection = () => {
                     loading="lazy"
                   />
                 ) : (
-                  <span className="text-lg md:text-xl font-bold font-display text-foreground tracking-wide">
+                  <span className="text-lg md:text-xl font-bold font-display text-primary-foreground tracking-wide">
                     {client.name}
                   </span>
                 )}
               </div>
-              <span className="text-xs md:text-sm font-semibold text-foreground/70 text-center leading-tight">
+              <span className="text-xs md:text-sm font-semibold text-primary-foreground/80 text-center leading-tight">
                 {client.name}
               </span>
             </div>
