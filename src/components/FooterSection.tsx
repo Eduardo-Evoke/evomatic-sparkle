@@ -1,15 +1,30 @@
 import { Mail, Phone, MapPin, Briefcase, Instagram, Linkedin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const FooterSection = ({ className = "relative z-10 border bg-card" }: { className?: string }) => {
-  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal({ threshold: 0.05 });
-  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal({ threshold: 0.05 });
+const FooterColumn = ({ children, i }: { children: React.ReactNode; i: number }) => {
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
+  const delay = i * 0.1;
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0) scale(1)" : "translateY(80px) scale(0.85)",
+        transition: `opacity 0.8s ease-out ${delay}s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s`,
+        willChange: "opacity, transform",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
+const FooterSection = ({ className = "relative z-10 border bg-card" }: { className?: string }) => {
   return (
     <footer id="contato" className={className}>
 
       {/* Footer Content */}
-      <div ref={gridRef} className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[0, 1, 2].map((colIndex) => {
             const content = [
