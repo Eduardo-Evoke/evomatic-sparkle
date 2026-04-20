@@ -61,7 +61,7 @@ const SolutionsBackground = () => {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 55%, hsla(0,0%,0%,0.45) 100%)",
+            "radial-gradient(ellipse at center, transparent 60%, hsla(0,0%,0%,0.25) 100%)",
         }}
       />
     </div>
