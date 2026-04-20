@@ -6,7 +6,7 @@ const FooterSection = () => {
   const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
 
   return (
-    <footer id="contato" className="relative z-10 border">
+    <footer id="contato" className="relative z-10 border bg-card">
 
       {/* Footer Content */}
       <div ref={gridRef} className="max-w-6xl mx-auto px-6 py-16">
