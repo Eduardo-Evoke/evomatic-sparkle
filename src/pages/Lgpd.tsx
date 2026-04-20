@@ -115,7 +115,7 @@ const Lgpd = () => {
 
   return (
     <main className="overflow-hidden relative">
-      <SolutionsBackground />
+      <LgpdBackground />
       <Header />
       <div className="relative z-10">
 
