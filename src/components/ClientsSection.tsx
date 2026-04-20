@@ -119,6 +119,11 @@ const ClientsSection = () => {
             {transparentClients.map((client, i) => renderClient(client, i, isVisible))}
           </div>
 
+          {/* Linha 2: logos sem fundo */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {transparentClientsRow2.map((client, i) => renderClient(client, i, isVisible))}
+          </div>
+
           {/* Linha 2: logos com fundo branco */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {whiteBgClients.map((client, i) => renderClient(client, i, isVisible))}
