@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SolutionsBackground from "@/components/SolutionsBackground";
 
 import lgpdHero from "@/assets/lgpd-hero.jpg";
 import { useState, useEffect, useRef, useCallback } from "react";
