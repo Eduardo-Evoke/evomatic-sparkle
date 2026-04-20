@@ -88,7 +88,7 @@ const ServicesSection = () => {
           <p className="text-center max-w-xl mx-auto text-muted-foreground">​</p>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
             <div
               key={service.title}
