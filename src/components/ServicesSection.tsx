@@ -88,7 +88,7 @@ const ServicesSection = () => {
           <p className="text-center max-w-xl mx-auto text-muted-foreground">​</p>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
             <div
               key={service.title}
@@ -105,9 +105,9 @@ const ServicesSection = () => {
               <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
                 <service.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-3 text-2xl">{service.title}</h3>
+              <h3 className="font-bold text-foreground mb-3 text-base text-center">{service.title}</h3>
               {service.description && <p className="text-foreground/70 mb-3 font-semibold text-lg">{service.description}</p>}
-              <ul className="text-foreground/60 text-sm leading-relaxed space-y-1.5">
+              <ul className="text-foreground/60 text-sm leading-relaxed space-y-1.5 hidden md:block">
                 {service.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-base font-bold text-slate-400">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
