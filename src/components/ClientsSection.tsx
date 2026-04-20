@@ -30,6 +30,7 @@ const transparentClients: Client[] = [
 
 // Logos sem fundo - linha 2
 const transparentClientsRow2: Client[] = [
+  { name: "ARC", logo: arc },
   { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
@@ -37,19 +38,18 @@ const transparentClientsRow2: Client[] = [
 
 // Logos que precisam de fundo branco para legibilidade
 const whiteBgClients: Client[] = [
-  { name: "ARC", logo: arc, whiteBg: true },
   { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
   { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
   { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
-  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
+  { name: "ACMR", logo: acmr },
+  { name: "Applausi", logo: applausi },
 ];
 
 // Logos apenas em texto (sem imagem)
 const textClients: Client[] = [
-  { name: "ACMR", logo: acmr },
-  { name: "Applausi", logo: applausi },
+  { name: "Mediani Vizicato", logo: medianiVizicato },
 ];
 
 const renderClient = (client: Client, i: number, isVisible: boolean) => (
