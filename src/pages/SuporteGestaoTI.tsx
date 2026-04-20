@@ -70,8 +70,7 @@ const SuporteGestaoTI = () => {
       <section className="relative min-h-[60vh] flex items-center pt-[72px] z-10">
         <img src={heroImg} alt="Central de operações de suporte e gestão de TI" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-background/70 to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
           <div className="max-w-2xl">
             <Reveal delay={0.3} direction="left">
@@ -100,7 +99,7 @@ const SuporteGestaoTI = () => {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
+                "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 180px, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
             }}
           />
           {/* Grid técnico ultra discreto */}
