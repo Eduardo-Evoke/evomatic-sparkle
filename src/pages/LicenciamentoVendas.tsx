@@ -105,7 +105,7 @@ const LicenciamentoVendas = () => {
 
           {/* Marca d'água — selos circulares de "certificação" sutis */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.05]"
+            className="absolute inset-0 pointer-events-none opacity-[0.10]"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='160' cy='160' r='70'/%3E%3Ccircle cx='160' cy='160' r='84'/%3E%3Cpath d='M130 160 l22 22 l40 -46' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: "320px 320px",
@@ -118,7 +118,7 @@ const LicenciamentoVendas = () => {
 
           {/* Linhas horizontais finas — sensação de documento / régua */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.04]"
+            className="absolute inset-0 pointer-events-none opacity-[0.09]"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.45) 0 1px, transparent 1px 32px)",
@@ -127,7 +127,7 @@ const LicenciamentoVendas = () => {
 
           {/* Marcação lateral — pequenos traços verticais como margem de planilha */}
           <div
-            className="absolute inset-y-0 left-0 w-24 pointer-events-none opacity-[0.06]"
+            className="absolute inset-y-0 left-0 w-24 pointer-events-none opacity-[0.12]"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 12px)",
@@ -136,7 +136,7 @@ const LicenciamentoVendas = () => {
             }}
           />
           <div
-            className="absolute inset-y-0 right-0 w-24 pointer-events-none opacity-[0.06]"
+            className="absolute inset-y-0 right-0 w-24 pointer-events-none opacity-[0.12]"
             style={{
               backgroundImage:
                 "repeating-linear-gradient(180deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 12px)",
@@ -147,7 +147,7 @@ const LicenciamentoVendas = () => {
 
           {/* Ruído fílmico sutil */}
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.07] mix-blend-overlay"
+            className="absolute inset-0 pointer-events-none opacity-[0.12] mix-blend-overlay"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
               backgroundSize: "256px 256px",
