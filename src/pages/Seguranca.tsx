@@ -96,13 +96,14 @@ const Seguranca = () => {
 
       {/* Segurança */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
+        {/* 3D perspective grid — textura única, mais visível */}
         <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
           <div className="absolute inset-0 origin-bottom" style={{
             transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
+            maskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
           }} />
         </div>
         <div className="absolute inset-0 pointer-events-none">
@@ -111,15 +112,15 @@ const Seguranca = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <Shield className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <span className="w-8 h-px bg-primary" />
                 Segurança & Backup
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground mb-4 md:text-5xl">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Proteção <span className="text-primary">completa</span> para sua operação
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Soluções integradas que protegem seus dados, sua rede e seus sistemas contra as ameaças mais comuns e sofisticadas.
               </p>
             </div>
@@ -142,13 +143,14 @@ const Seguranca = () => {
 
       {/* Treinamentos */}
       <section className="py-12 px-6 relative z-10 overflow-hidden">
+        {/* 3D perspective grid — textura única, mais visível */}
         <div className="absolute inset-0 pointer-events-none" style={{ perspective: "600px" }}>
           <div className="absolute inset-0 origin-bottom" style={{
             transform: "rotateX(55deg) scale(2.5)",
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
-            maskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 30%, white 70%, transparent 100%)",
+            maskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, transparent 0%, white 15%, white 85%, transparent 100%)",
           }} />
         </div>
         <div className="absolute inset-0 pointer-events-none">
@@ -157,15 +159,15 @@ const Seguranca = () => {
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider mb-3 text-lg">
-                <GraduationCap className="w-4 h-4" />
+            <div className="mb-16 max-w-3xl">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <span className="w-8 h-px bg-primary" />
                 Treinamentos & Capacitação
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                 Equipe treinada erra menos e vira sua <span className="text-primary">primeira linha de defesa</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground font-semibold">
+              <p className="text-base md:text-lg font-semibold text-primary-foreground">
                 Capacitação prática para que seus colaboradores saibam se proteger — e proteger a empresa.
               </p>
             </div>
