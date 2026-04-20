@@ -15,7 +15,7 @@ import rotaMarketFast from "@/assets/clients/rota-market-fast.jpeg";
 import ruffato from "@/assets/clients/ruffato-contabilidade.png";
 import simplify from "@/assets/clients/simplify.jpeg";
 
-type Client = { name: string; logo?: string; invert?: boolean };
+type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
 const clients: Client[] = [
   { name: "ACMR" },
@@ -28,7 +28,7 @@ const clients: Client[] = [
   { name: "Lavoro Terraplenagem", logo: lavoro },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Martin Brower", logo: martinBrower, invert: true },
-  { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz },
   { name: "NESP", logo: nesp, invert: true },
   { name: "Opuspac", logo: opuspac },
@@ -82,7 +82,7 @@ const ClientsSection = () => {
                   <img
                     src={client.logo}
                     alt={`Logo ${client.name}`}
-                    className="max-h-16 max-w-full w-auto object-contain"
+                    className={`max-h-16 max-w-full w-auto object-contain ${client.whiteBg ? "bg-white rounded-md p-1.5" : ""}`}
                     style={client.invert ? { filter: "invert(1) brightness(2) grayscale(1) contrast(1.2)" } : undefined}
                     loading="lazy"
                   />
