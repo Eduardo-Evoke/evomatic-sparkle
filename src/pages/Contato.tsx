@@ -126,7 +126,8 @@ const Contato = () => {
                   <p className="text-primary-foreground leading-relaxed text-base font-semibold">
                     Rua Itirapina, 1060, 1º Andar, Sala 12<br />
                     Bairro: Cidade Luiza<br />
-                    CEP: 13214-101 — Jundiaí - SP
+                    CEP: 13214-101<br />
+                    Jundiaí - SP
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <p className="text-primary text-center font-semibold">
