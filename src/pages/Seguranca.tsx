@@ -3,7 +3,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import SolutionsBackground from "@/components/SolutionsBackground";
-import firewallHero from "@/assets/firewall-hero.jpg";
+import firewallHero from "@/assets/seguranca-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
   ShieldCheck, Eye, Wrench, ShieldAlert, ArrowRight,
