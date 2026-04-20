@@ -156,31 +156,34 @@ const SuporteGestaoTI = () => {
             }}
           />
 
-          {/* Marca d'água — visível através dos cards translúcidos */}
+          {/* Marca d'água — palavras-chave de tecnologia/suporte/gestão */}
           <div
             aria-hidden="true"
             className="absolute inset-0 pointer-events-none overflow-hidden select-none"
           >
             <div
-              className="absolute flex flex-wrap content-start gap-x-16 gap-y-10 -rotate-12"
+              className="absolute flex flex-wrap content-start gap-x-12 gap-y-8 -rotate-12"
               style={{
                 top: "-10%",
                 left: "-10%",
                 width: "130%",
                 height: "130%",
                 fontFamily: "var(--font-display)",
-                fontWeight: 900,
-                fontSize: "clamp(64px, 9vw, 140px)",
+                fontWeight: 800,
+                fontSize: "clamp(48px, 7vw, 110px)",
                 lineHeight: 1,
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.01em",
                 color: "hsla(0, 0%, 100%, 0.028)",
               }}
             >
-              {Array.from({ length: 40 }).map((_, i) => (
-                <span key={i} className="whitespace-nowrap">
-                  EVOMATIC<span style={{ color: "hsla(348, 91%, 55%, 0.07)" }}>.</span>
-                </span>
-              ))}
+              {Array.from({ length: 12 }).flatMap((_, row) =>
+                ["SUPORTE", "GESTÃO DE TI", "MONITORAMENTO", "SLA 24/7", "INFRAESTRUTURA", "HELPDESK", "CLOUD", "NETWORK", "UPTIME"].map((word, i) => (
+                  <span key={`${row}-${i}`} className="whitespace-nowrap">
+                    {word}
+                    <span style={{ color: "hsla(348, 91%, 55%, 0.07)" }}> //</span>
+                  </span>
+                ))
+              )}
             </div>
           </div>
 
