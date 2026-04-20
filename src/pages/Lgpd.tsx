@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import SolutionsBackground from "@/components/SolutionsBackground";
+import LgpdBackground from "@/components/LgpdBackground";
 
 import lgpdHero from "@/assets/lgpd-hero.jpg";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -115,7 +115,7 @@ const Lgpd = () => {
 
   return (
     <main className="overflow-hidden relative">
-      <SolutionsBackground />
+      <LgpdBackground />
       <Header />
       <div className="relative z-10">
 
