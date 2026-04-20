@@ -91,91 +91,158 @@ const LicenciamentoVendas = () => {
         </div>
       </section>
 
-      {/* Vendas & Locação */}
-      <section className="py-12 px-6 relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[150px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[120px]" />
-          <div className="absolute inset-0 opacity-[0.07]" style={{
-            backgroundImage: `linear-gradient(hsl(var(--primary) / 0.25) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.25) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-          }} />
-        </div>
-        <div className="max-w-6xl mx-auto relative z-10">
-          <Reveal direction="up">
-            <div className="mb-16 max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                <span className="w-8 h-px bg-primary" />
-                Vendas & Locação
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
-                Equipamentos e licenças <span className="text-primary">sob medida</span>
-              </h2>
-              <p className="text-base md:text-lg font-semibold text-primary-foreground">
-                Do firewall ao notebook, do antivírus ao Microsoft 365 — fornecemos, configuramos e damos suporte.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {vendasItems.map((item, i) => (
-              <Reveal key={i} delay={i * 0.1} direction="up">
-                <div className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full flex items-start gap-4 hover:-translate-y-2 hover:scale-[1.04]">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
-                    <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Wrapper dark suave com hierarquia entre seções (mesmo padrão da página de Suporte) */}
+      <div className="relative z-10">
+        <div className="relative">
+          {/* Base elevada */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 0%, hsl(220 10% 10%) 180px, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)",
+            }}
+          />
+          {/* Grid técnico ultra discreto */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.05]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+            }}
+          />
+          {/* Linhas diagonais sutis */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+            }}
+          />
+          {/* Ruído sutil */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
+          {/* Iluminação ambiente — glows radiais distribuídos */}
+          <div className="absolute top-32 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.08] blur-[160px] pointer-events-none" />
+          <div className="absolute top-[35%] -right-40 w-[560px] h-[560px] rounded-full bg-white/[0.04] blur-[170px] pointer-events-none" />
+          <div className="absolute top-[60%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[180px] pointer-events-none" />
+          <div className="absolute bottom-10 -right-32 w-[520px] h-[520px] rounded-full bg-primary/[0.05] blur-[160px] pointer-events-none" />
+          {/* Spotlight superior */}
+          <div
+            className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 80% at 50% 0%, hsla(0,0%,100%,0.05), transparent 70%)",
+            }}
+          />
+          {/* Grid técnico mais visível */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "linear-gradient(hsla(0,0%,100%,0.5) 1px, transparent 1px), linear-gradient(90deg, hsla(0,0%,100%,0.5) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at 50% 40%, black 30%, transparent 80%)",
+            }}
+          />
+          {/* Linhas diagonais mais fortes */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, hsla(0,0%,100%,0.5) 0 1px, transparent 1px 16px)",
+            }}
+          />
+          {/* Ruído mais intenso */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.10] mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+              backgroundSize: "256px 256px",
+            }}
+          />
 
-      {/* Licenciamento & Auditoria */}
-      <section className="py-12 px-6 relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/3 w-[600px] h-[600px] rounded-full bg-primary/[0.05] blur-[180px]" />
-          <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] rounded-full bg-primary/[0.03] blur-[100px]" />
-          <div className="absolute inset-0 opacity-[0.07]" style={{
-            backgroundImage: `linear-gradient(hsl(var(--primary) / 0.25) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.25) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-          }} />
-        </div>
-        <div className="max-w-6xl mx-auto relative z-10">
-          <Reveal direction="up">
-            <div className="mb-16 max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                <span className="w-8 h-px bg-primary" />
-                Licenciamento & Auditoria
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
-                Descubra o que está irregular <span className="text-primary">antes da fiscalização</span>
-              </h2>
-              <p className="text-base md:text-lg font-semibold text-primary-foreground">
-                Auditorias de software, regularização de licenças e gestão contínua para que sua empresa nunca corra riscos desnecessários.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {auditoriaItems.map((item, i) => (
-              <Reveal key={i} delay={i * 0.15} direction="up">
-                <div className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full hover:-translate-y-2 hover:scale-[1.04]">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
-                  <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
+          {/* Vendas & Locação */}
+          <section className="py-12 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                    <span className="w-8 h-px bg-primary" />
+                    Vendas & Locação
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                    Equipamentos e licenças <span className="text-primary">sob medida</span>
+                  </h2>
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
+                    Do firewall ao notebook, do antivírus ao Microsoft 365 — fornecemos, configuramos e damos suporte.
+                  </p>
                 </div>
               </Reveal>
-            ))}
-          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {vendasItems.map((item, i) => (
+                  <Reveal key={i} delay={i * 0.1} direction="up">
+                    <div className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full flex items-start gap-4 hover:-translate-y-2 hover:scale-[1.04]">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
+                        <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Licenciamento & Auditoria */}
+          <section className="py-12 px-6 relative">
+            <div className="max-w-6xl mx-auto relative">
+              <Reveal direction="up">
+                <div className="mb-16 max-w-3xl">
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                    <span className="w-8 h-px bg-primary" />
+                    Licenciamento & Auditoria
+                  </span>
+                  <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
+                    Descubra o que está irregular <span className="text-primary">antes da fiscalização</span>
+                  </h2>
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
+                    Auditorias de software, regularização de licenças e gestão contínua para que sua empresa nunca corra riscos desnecessários.
+                  </p>
+                </div>
+              </Reveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {auditoriaItems.map((item, i) => (
+                  <Reveal key={i} delay={i * 0.15} direction="up">
+                    <div className="relative backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:border-primary/40 transition-all duration-150 ease-out cursor-default shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_hsla(348,91%,42%,0.3),0_0_60px_hsla(348,91%,42%,0.15),inset_0_1px_0_hsla(348,91%,42%,0.2)] bg-background/40 h-full hover:-translate-y-2 hover:scale-[1.04]">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-foreground font-bold mb-2 text-lg">{item.title}</h3>
+                      <p className="text-foreground/50 leading-relaxed font-bold text-base">{item.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
 
 
       <FooterSection />
