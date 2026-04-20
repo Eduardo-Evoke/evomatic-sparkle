@@ -148,7 +148,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ NÚMEROS DE ALARME ═══ */}
-      <section className="py-12 px-6 bg-background" ref={statsRef}>
+      <section className="py-12 px-6 relative" ref={statsRef}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
