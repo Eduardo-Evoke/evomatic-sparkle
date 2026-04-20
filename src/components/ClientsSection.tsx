@@ -67,8 +67,8 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
       }}
     >
       <div
-        className={`flex items-center justify-center w-28 h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
-          client.whiteBg ? "bg-white p-3" : ""
+        className={`flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
+          client.whiteBg ? "bg-white p-2 md:p-3" : ""
         }`}
       >
         {client.logo ? (
