@@ -279,18 +279,17 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ NOSSA SOLUÇÃO — O QUE FAZEMOS ═══ */}
-      <section className="py-12 px-6 relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)" }}>
-        {/* Watermarks */}
-        <div className="absolute inset-0 pointer-events-none select-none">
-          <Lock className="absolute w-40 h-40 text-foreground/[0.07] top-[8%] left-[5%] rotate-[15deg]" strokeWidth={0.5} />
-          <ShieldCheck className="absolute w-36 h-36 text-foreground/[0.07] top-[5%] right-[10%] rotate-[-25deg]" strokeWidth={0.5} />
-          <FileText className="absolute w-44 h-44 text-foreground/[0.07] top-[40%] right-[3%] rotate-[12deg]" strokeWidth={0.4} />
-          <Eye className="absolute w-32 h-32 text-foreground/[0.07] top-[55%] left-[8%] rotate-[-8deg]" strokeWidth={0.5} />
-          <Lock className="absolute w-28 h-28 text-foreground/[0.07] bottom-[15%] left-[30%] rotate-[30deg]" strokeWidth={0.5} />
-          <ShieldCheck className="absolute w-36 h-36 text-foreground/[0.07] bottom-[10%] right-[20%] rotate-[-15deg]" strokeWidth={0.4} />
-          <Scale className="absolute w-32 h-32 text-foreground/[0.07] top-[20%] left-[50%] rotate-[22deg]" strokeWidth={0.4} />
-          <AlertTriangle className="absolute w-28 h-28 text-foreground/[0.07] top-[70%] right-[40%] rotate-[-18deg]" strokeWidth={0.5} />
-        </div>
+      <section className="py-12 px-6 relative overflow-hidden">
+        {/* Textura corporativa sutil — linhas verticais finas */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, hsla(0,0%,100%,0.6) 0 1px, transparent 1px 80px)",
+            maskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskImage: "linear-gradient(180deg, transparent, black 20%, black 80%, transparent)",
+          }}
+        />
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
             <div className="mb-16 max-w-3xl">
