@@ -123,23 +123,31 @@ const ClientsSection = () => {
         <div className="space-y-10">
           {/* Linha 1: logos sem fundo */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {transparentClients.map((client, i) => renderClient(client, i, isVisible))}
+            {transparentClients.map((client, i) => (
+              <ClientCard key={client.name} client={client} i={i} />
+            ))}
           </div>
 
           {/* Linha 2: logos sem fundo */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {transparentClientsRow2.map((client, i) => renderClient(client, i, isVisible))}
+            {transparentClientsRow2.map((client, i) => (
+              <ClientCard key={client.name} client={client} i={i} />
+            ))}
           </div>
 
-          {/* Linha 2: logos com fundo branco */}
+          {/* Linha 3: logos com fundo branco */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {whiteBgClients.map((client, i) => renderClient(client, i, isVisible))}
+            {whiteBgClients.map((client, i) => (
+              <ClientCard key={client.name} client={client} i={i} />
+            ))}
           </div>
 
-          {/* Linha 3: clientes em texto */}
+          {/* Linha 4: clientes em texto */}
           {textClients.length > 0 && (
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              {textClients.map((client, i) => renderClient(client, i, isVisible))}
+              {textClients.map((client, i) => (
+                <ClientCard key={client.name} client={client} i={i} />
+              ))}
             </div>
           )}
         </div>
