@@ -111,16 +111,9 @@ const FooterSection = ({ className = "relative z-10 border bg-card" }: { classNa
             ];
 
             return (
-              <div
-                key={colIndex}
-                style={{
-                  opacity: gridVisible ? 1 : 0,
-                  transform: gridVisible ? "translateY(0)" : "translateY(30px)",
-                  transition: `opacity 0.6s ease-out ${colIndex * 0.15}s, transform 0.6s ease-out ${colIndex * 0.15}s`,
-                }}
-              >
+              <FooterColumn key={colIndex} i={colIndex}>
                 {content[colIndex]}
-              </div>
+              </FooterColumn>
             );
           })}
         </div>
