@@ -17,14 +17,18 @@ import simplify from "@/assets/clients/simplify.jpeg";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
-// Logos sem fundo (transparentes / claras sobre o fundo escuro)
+// Logos sem fundo - linha 1
 const transparentClients: Client[] = [
   { name: "Benfrio", logo: benfrio },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil },
-  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Lavoro Terraplenagem", logo: lavoro },
-  { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Opuspac", logo: opuspac },
+  { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
+];
+
+// Logos sem fundo - linha 2
+const transparentClientsRow2: Client[] = [
+  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
