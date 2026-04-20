@@ -113,7 +113,7 @@ const Seguranca = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
             <div className="mb-16 max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
                 <span className="w-8 h-px bg-primary" />
                 Segurança & Backup
               </span>
@@ -160,7 +160,7 @@ const Seguranca = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
             <div className="mb-16 max-w-3xl">
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+              <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
                 <span className="w-8 h-px bg-primary" />
                 Treinamentos & Capacitação
               </span>
