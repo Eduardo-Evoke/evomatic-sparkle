@@ -204,17 +204,17 @@ const SuporteGestaoTI = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
                 {diferenciais.map((item, i) => (
                   <Reveal key={i} delay={i * 0.08} direction="up" className="h-full">
-                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] rounded-xl pl-7 pr-6 py-7 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/[0.05] hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
+                    <div className="relative h-full bg-white/[0.03] border border-white/[0.06] rounded-xl pl-7 pr-6 py-7 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-12px_rgba(0,0,0,0.4)] hover:border-primary/30 hover:bg-white/95 hover:shadow-[0_4px_12px_rgba(184,10,45,0.15),0_20px_40px_-12px_rgba(184,10,45,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden group">
                       <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-primary rounded-full group-hover:top-0 group-hover:bottom-0 transition-all duration-300" />
                       <div className="flex items-start gap-4 h-full">
                         <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
                           <item.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-lg text-foreground/90 mb-1.5 leading-snug">
+                          <h3 className="font-bold text-lg text-foreground/90 group-hover:text-slate-900 mb-1.5 leading-snug">
                             {item.title}
                           </h3>
-                          <p className="leading-relaxed text-foreground/60 text-base font-bold">
+                          <p className="leading-relaxed text-foreground/60 group-hover:text-slate-700 text-base font-bold">
                             {item.desc}
                           </p>
                         </div>
