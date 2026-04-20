@@ -20,7 +20,7 @@ type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean
 const clients: Client[] = [
   { name: "ACMR" },
   { name: "Applausi" },
-  { name: "ARC", logo: arc },
+  { name: "ARC", logo: arc, whiteBg: true },
   { name: "Benfrio", logo: benfrio },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil },
   { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
@@ -29,7 +29,7 @@ const clients: Client[] = [
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista },
   { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
-  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz },
+  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
   { name: "Opuspac", logo: opuspac },
   { name: "Rota Market Fast", logo: rotaMarketFast },
