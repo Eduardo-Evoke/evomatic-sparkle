@@ -1,5 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import arc from "@/assets/clients/arc.png";
+import acmr from "@/assets/clients/acmr.png";
+import applausi from "@/assets/clients/applausi.png";
 import benfrio from "@/assets/clients/benfrio.png";
 import colegioViaBrasil from "@/assets/clients/colegio-via-brasil.png";
 import grupoPredigna from "@/assets/clients/grupo-predigna.png";
@@ -46,8 +48,8 @@ const whiteBgClients: Client[] = [
 
 // Logos apenas em texto (sem imagem)
 const textClients: Client[] = [
-  { name: "ACMR" },
-  { name: "Applausi" },
+  { name: "ACMR", logo: acmr },
+  { name: "Applausi", logo: applausi },
 ];
 
 const renderClient = (client: Client, i: number, isVisible: boolean) => (
