@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin, Briefcase, Instagram, Linkedin } from "lucide-reac
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const FooterSection = ({ className = "relative z-10 border bg-card" }: { className?: string }) => {
-  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal();
-  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal({ threshold: 0.05 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal({ threshold: 0.05 });
 
   return (
     <footer id="contato" className={className}>
