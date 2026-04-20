@@ -67,7 +67,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
       }}
     >
       <div
-        className={`flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
+        className={`flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
           client.whiteBg ? "bg-white p-2 md:p-3" : ""
         }`}
       >
@@ -122,21 +122,21 @@ const ClientsSection = () => {
 
         <div className="space-y-10">
           {/* Linha 1: logos sem fundo */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap justify-items-center md:justify-center gap-4 md:gap-6">
             {transparentClients.map((client, i) => (
               <ClientCard key={client.name} client={client} i={i} />
             ))}
           </div>
 
           {/* Linha 2: logos sem fundo */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap justify-items-center md:justify-center gap-4 md:gap-6">
             {transparentClientsRow2.map((client, i) => (
               <ClientCard key={client.name} client={client} i={i} />
             ))}
           </div>
 
           {/* Linha 3: logos com fundo branco */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <div className="grid grid-cols-3 md:flex md:flex-wrap justify-items-center md:justify-center gap-4 md:gap-6">
             {whiteBgClients.map((client, i) => (
               <ClientCard key={client.name} client={client} i={i} />
             ))}
@@ -144,7 +144,7 @@ const ClientsSection = () => {
 
           {/* Linha 4: clientes em texto */}
           {textClients.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div className="grid grid-cols-3 md:flex md:flex-wrap justify-items-center md:justify-center gap-4 md:gap-6">
               {textClients.map((client, i) => (
                 <ClientCard key={client.name} client={client} i={i} />
               ))}
