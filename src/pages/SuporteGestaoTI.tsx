@@ -194,7 +194,7 @@ const SuporteGestaoTI = () => {
                     Tudo o que sua TI precisa,{" "}
                     <span className="text-primary">em um só contrato</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Um serviço completo para que sua empresa tenha tecnologia funcionando
                     com estabilidade, segurança e performance.
                   </p>
@@ -239,7 +239,7 @@ const SuporteGestaoTI = () => {
                     Tempos de resposta{" "}
                     <span className="text-primary">previsíveis</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Cada chamado é classificado por prioridade e tem prazo definido em contrato.
                   </p>
                 </div>
@@ -290,7 +290,7 @@ const SuporteGestaoTI = () => {
                   <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Do chamado à <span className="text-primary">resolução</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
+                  <p className="text-base md:text-lg font-semibold text-primary-foreground">
                     Um fluxo simples, rastreável e transparente.
                   </p>
                 </div>
