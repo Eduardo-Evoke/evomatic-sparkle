@@ -52,6 +52,14 @@ const textClients: Client[] = [
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
 ];
 
+// Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
+const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true };
+const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true };
+const textClientsMobile: Client[] = [
+  { name: "ACMR", logo: acmr, whiteBg: true },
+  { name: "Applausi", logo: applausi, whiteBg: true },
+];
+
 const ClientCard = ({ client, i }: { client: Client; i: number }) => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
   const delay = (i % 5) * 0.1;
