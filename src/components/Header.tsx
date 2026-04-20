@@ -42,7 +42,7 @@ const Header = () => {
             className="h-[34px] md:h-[45px] w-auto"
           />
           <p className="tracking-[0.2em] uppercase text-[7px] -mt-0.5 md:text-[9px] text-primary-foreground -ml-[1px]">
-            &nbsp;ESTRUTURE. MODERNIZE. CONECTE.
+            &nbsp;ESTRUTURE. MODERNIZE. CONECTE. · JUNDIAÍ-SP
           </p>
         </Link>
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-10">
