@@ -120,7 +120,7 @@ const Lgpd = () => {
       <div className="relative z-10">
 
       {/* ═══ HERO — ALARME ═══ */}
-      <section className="relative min-h-[60vh] flex items-center pt-[72px]">
+      <section className="relative h-[60vh] flex items-center pt-[72px]">
         <img src={lgpdHero} alt="LGPD" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent opacity-100" />
         <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
