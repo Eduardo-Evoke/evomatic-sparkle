@@ -42,11 +42,11 @@ const whiteBgClients: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
   { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
-  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
 ];
 
 // Linha final
 const textClients: Client[] = [
+  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
   { name: "ACMR", logo: acmr },
   { name: "Applausi", logo: applausi },
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
