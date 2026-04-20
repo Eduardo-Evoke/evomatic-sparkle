@@ -1,12 +1,12 @@
 import { Mail, Phone, MapPin, Briefcase, Instagram, Linkedin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const FooterSection = () => {
+const FooterSection = ({ className = "relative z-10 border bg-card" }: { className?: string }) => {
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal();
   const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
 
   return (
-    <footer id="contato" className="relative z-10 border bg-card">
+    <footer id="contato" className={className}>
 
       {/* Footer Content */}
       <div ref={gridRef} className="max-w-6xl mx-auto px-6 py-16">
