@@ -82,7 +82,7 @@ const ClientsSection = () => {
                   <img
                     src={client.logo}
                     alt={`Logo ${client.name}`}
-                    className="max-h-16 max-w-full w-auto object-contain"
+                    className={`max-h-16 max-w-full w-auto object-contain ${client.whiteBg ? "bg-white rounded-md p-1.5" : ""}`}
                     style={client.invert ? { filter: "invert(1) brightness(2) grayscale(1) contrast(1.2)" } : undefined}
                     loading="lazy"
                   />
