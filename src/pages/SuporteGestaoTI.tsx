@@ -193,7 +193,7 @@ const SuporteGestaoTI = () => {
                     Tudo o que sua TI precisa,{" "}
                     <span className="text-primary">em um só contrato</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
                     Um serviço completo para que sua empresa tenha tecnologia funcionando
                     com estabilidade, segurança e performance.
                   </p>
@@ -213,7 +213,7 @@ const SuporteGestaoTI = () => {
                           <h3 className="font-bold text-lg text-foreground/90 mb-1.5 leading-snug">
                             {item.title}
                           </h3>
-                          <p className="leading-relaxed text-foreground/60 text-base font-medium">
+                          <p className="leading-relaxed text-foreground/60 text-base font-bold">
                             {item.desc}
                           </p>
                         </div>
@@ -238,7 +238,7 @@ const SuporteGestaoTI = () => {
                     Tempos de resposta{" "}
                     <span className="text-primary">previsíveis</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
                     Cada chamado é classificado por prioridade e tem prazo definido em contrato.
                   </p>
                 </div>
@@ -266,7 +266,7 @@ const SuporteGestaoTI = () => {
                         <span className="text-3xl md:text-4xl font-black text-foreground/90 mb-3 font-display">
                           {sla.tempo}
                         </span>
-                        <p className="text-sm leading-relaxed text-foreground/60 max-w-[240px]">
+                        <p className="leading-relaxed text-foreground/60 max-w-[240px] text-base font-bold">
                           {sla.desc}
                         </p>
                       </div>
@@ -289,7 +289,7 @@ const SuporteGestaoTI = () => {
                   <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground/90 leading-tight mb-4">
                     Do chamado à <span className="text-primary">resolução</span>
                   </h2>
-                  <p className="text-base md:text-lg text-foreground/60 font-medium">
+                  <p className="text-base md:text-lg text-foreground/60 font-semibold">
                     Um fluxo simples, rastreável e transparente.
                   </p>
                 </div>
@@ -309,7 +309,7 @@ const SuporteGestaoTI = () => {
                         <h3 className="font-bold text-lg text-foreground/90 mb-1.5">
                           {step.title}
                         </h3>
-                        <p className="text-sm leading-relaxed text-foreground/60">
+                        <p className="leading-relaxed text-foreground/60 text-base font-bold">
                           {step.desc}
                         </p>
                       </div>
