@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SolutionsBackground from "@/components/SolutionsBackground";
 
 import lgpdHero from "@/assets/lgpd-hero.jpg";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -113,8 +114,10 @@ const Lgpd = () => {
   const c3 = useCountUp(2115, 2500, isVisible);
 
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden relative">
+      <SolutionsBackground />
       <Header />
+      <div className="relative z-10">
 
       {/* ═══ HERO — ALARME ═══ */}
       <section className="relative min-h-[65vh] flex items-center pt-[72px]">
@@ -145,7 +148,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ NÚMEROS DE ALARME ═══ */}
-      <section className="py-12 px-6 bg-background" ref={statsRef}>
+      <section className="py-12 px-6 relative" ref={statsRef}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -170,7 +173,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ RISCOS / CONSEQUÊNCIAS ═══ */}
-      <section className="py-12 px-6 relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(220 10% 10%) 0%, hsl(220 9% 12%) 50%, hsl(220 10% 10%) 100%)" }}>
+      <section className="py-12 px-6 relative overflow-hidden">
         {/* Watermarks */}
         <div className="absolute inset-0 pointer-events-none select-none">
           <ShieldCheck className="absolute w-40 h-40 text-foreground/[0.07] top-[5%] left-[8%] rotate-[-15deg]" strokeWidth={0.5} />
@@ -218,7 +221,7 @@ const Lgpd = () => {
       </section>
 
       {/* ═══ PROVA SOCIAL — CASOS REAIS ═══ */}
-      <section className="py-12 px-6 bg-background">
+      <section className="py-12 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <Reveal direction="up">
             <div className="text-center mb-16">
@@ -361,6 +364,7 @@ const Lgpd = () => {
           </div>
         </div>
       </section>
+      </div>
 
 
       <FooterSection />
