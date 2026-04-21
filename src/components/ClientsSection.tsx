@@ -18,13 +18,13 @@ import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-new.png";
 import simplify from "@/assets/clients/simplify.png";
 
-type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean; boost?: boolean; small?: boolean; tiny?: boolean; tinier?: boolean; large?: boolean; mediumSmall?: boolean };
+type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean; boost?: boolean; small?: boolean; tiny?: boolean; tinier?: boolean; large?: boolean; mediumSmall?: boolean; reduce15?: boolean };
 
 // DESKTOP Linha 1 - 5 logos
 const desktopRow1: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true, mediumSmall: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
-  { name: "Lavoro Terraplenagem", logo: lavoro },
+  { name: "Lavoro Terraplenagem", logo: lavoro, reduce15: true },
   { name: "Opuspac", logo: opuspac },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true, tinier: true },
 ];
@@ -152,7 +152,7 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               src={client.logo}
               alt={`Logo ${client.name}`}
               title={client.name}
-              className={`${client.large ? "h-[8.65rem]" : client.tinier ? "h-[3.46rem]" : client.tiny ? "h-[3.85rem]" : client.small ? "h-[4.8rem]" : client.mediumSmall ? "h-[5.4rem]" : "h-24"} w-auto max-w-full object-contain ${
+              className={`${client.large ? "h-[8.65rem]" : client.tinier ? "h-[3.46rem]" : client.tiny ? "h-[3.85rem]" : client.small ? "h-[4.8rem]" : client.reduce15 ? "h-[5.1rem]" : client.mediumSmall ? "h-[5.4rem]" : "h-24"} w-auto max-w-full object-contain ${
                 client.boost
                   ? ""
                   : client.whiteBg
