@@ -34,7 +34,7 @@ const desktopRow2: Client[] = [
   { name: "Lavateria Fast", logo: lavateriaFast, large: true },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
-  { name: "ARC", logo: arc, whiteBg: true },
+  { name: "ARC", logo: arc },
   { name: "Grupo Predigna", logo: grupoPredigna },
 ];
 
