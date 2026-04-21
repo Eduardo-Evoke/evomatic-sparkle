@@ -40,11 +40,11 @@ const desktopRow2: Client[] = [
 
 // DESKTOP Linha 3 - 5 logos
 const desktopRow3: Client[] = [
-  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower },
+  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true, small: true },
+  { name: "Martin Brower", logo: martinBrower, small: true },
   { name: "NESP", logo: nesp },
-  { name: "ACMR", logo: acmr },
-  { name: "Applausi", logo: applausi },
+  { name: "ACMR", logo: acmr, small: true },
+  { name: "Applausi", logo: applausi, small: true },
 ];
 
 
