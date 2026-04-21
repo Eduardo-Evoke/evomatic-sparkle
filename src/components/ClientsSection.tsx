@@ -1,8 +1,8 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Users, Award, Handshake } from "lucide-react";
 import arc from "@/assets/clients/arc.png";
-import acmr from "@/assets/clients/acmr.png";
-import applausi from "@/assets/clients/applausi.png";
+import acmr from "@/assets/clients/acmr-white.png";
+import applausi from "@/assets/clients/applausi-white.png";
 import benfrio from "@/assets/clients/benfrio.png";
 import colegioViaBrasil from "@/assets/clients/colegio-via-brasil.png";
 import grupoPredigna from "@/assets/clients/grupo-predigna-white.png";
@@ -10,12 +10,12 @@ import lavateriaFast from "@/assets/clients/lavateria-fast.png";
 import lavoro from "@/assets/clients/lavoro-white.png";
 import fazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
 import martinBrower from "@/assets/clients/martin-brower-white.png";
-import medianiVizicato from "@/assets/clients/mediani-vizicato.png";
+import medianiVizicato from "@/assets/clients/mediani-vizicato-new.png";
 import memorialParqueDaPaz from "@/assets/clients/memorial-parque-da-paz.png";
 import nesp from "@/assets/clients/nesp-white.png";
 import opuspac from "@/assets/clients/opuspac-white.png";
 import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
-import ruffato from "@/assets/clients/ruffato-contabilidade.png";
+import ruffato from "@/assets/clients/ruffato-new.png";
 import simplify from "@/assets/clients/simplify.png";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
@@ -38,11 +38,19 @@ const desktopRow2: Client[] = [
   { name: "Grupo Predigna", logo: grupoPredigna },
 ];
 
-// DESKTOP Linha 3 - 3 logos centralizados
+// DESKTOP Linha 3 - 5 logos
 const desktopRow3: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
   { name: "Martin Brower", logo: martinBrower },
   { name: "NESP", logo: nesp },
+  { name: "ACMR", logo: acmr },
+  { name: "Applausi", logo: applausi },
+];
+
+// DESKTOP Linha 4 - 2 logos centralizados
+const desktopRow4: Client[] = [
+  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
+  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
 ];
 
 // MOBILE
