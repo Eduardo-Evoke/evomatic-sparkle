@@ -130,25 +130,25 @@ const ClientsSection = () => {
           Empresas que confiam na Evomatic para crescer com segurança.
         </p>
 
-        <div className="space-y-10">
+        <div className="space-y-6">
           {/* MOBILE: ordem customizada */}
-          <div className="md:hidden space-y-10">
-            <div className="grid grid-cols-3 justify-items-center gap-4">
+          <div className="md:hidden space-y-6">
+            <div className="grid grid-cols-3 justify-items-center gap-3">
               {[...transparentClients, medianiVizicatoClient].map((client, i) => (
                 <ClientCard key={`m1-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
+            <div className="grid grid-cols-3 justify-items-center gap-3">
               {transparentClientsRow2.map((client, i) => (
                 <ClientCard key={`m2-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
+            <div className="grid grid-cols-3 justify-items-center gap-3">
               {[...whiteBgClients, ruffatoClient].map((client, i) => (
                 <ClientCard key={`m3-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
+            <div className="grid grid-cols-3 justify-items-center gap-3">
               {textClientsMobile.map((client, i) => (
                 <ClientCard key={`m4-${client.name}`} client={client} i={i} />
               ))}
@@ -156,24 +156,24 @@ const ClientsSection = () => {
           </div>
 
           {/* DESKTOP: ordem original */}
-          <div className="hidden md:block space-y-10">
-            <div className="flex flex-wrap justify-center gap-6">
+          <div className="hidden md:block space-y-6">
+            <div className="flex flex-wrap justify-center gap-4">
               {transparentClients.map((client, i) => (
                 <ClientCard key={`d1-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-4">
               {transparentClientsRow2.map((client, i) => (
                 <ClientCard key={`d2-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-4">
               {whiteBgClients.map((client, i) => (
                 <ClientCard key={`d3-${client.name}`} client={client} i={i} />
               ))}
             </div>
             {textClients.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-wrap justify-center gap-4">
                 {textClients.map((client, i) => (
                   <ClientCard key={`d4-${client.name}`} client={client} i={i} />
                 ))}
