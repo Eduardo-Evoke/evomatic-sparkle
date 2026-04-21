@@ -5,18 +5,18 @@ import acmr from "@/assets/clients/acmr.png";
 import applausi from "@/assets/clients/applausi.png";
 import benfrio from "@/assets/clients/benfrio.png";
 import colegioViaBrasil from "@/assets/clients/colegio-via-brasil.png";
-import grupoPredigna from "@/assets/clients/grupo-predigna.png";
-import lavateriaFast from "@/assets/clients/lavateria-fast.jpeg";
-import lavoro from "@/assets/clients/lavoro.png";
+import grupoPredigna from "@/assets/clients/grupo-predigna-white.png";
+import lavateriaFast from "@/assets/clients/lavateria-fast.png";
+import lavoro from "@/assets/clients/lavoro-white.png";
 import fazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
-import martinBrower from "@/assets/clients/martin-brower.png";
+import martinBrower from "@/assets/clients/martin-brower-white.png";
 import medianiVizicato from "@/assets/clients/mediani-vizicato.png";
 import memorialParqueDaPaz from "@/assets/clients/memorial-parque-da-paz.png";
-import nesp from "@/assets/clients/nesp.png";
-import opuspac from "@/assets/clients/opuspac.png";
-import rotaMarketFast from "@/assets/clients/rota-market-fast.jpeg";
+import nesp from "@/assets/clients/nesp-white.png";
+import opuspac from "@/assets/clients/opuspac-white.png";
+import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-contabilidade.png";
-import simplify from "@/assets/clients/simplify.jpeg";
+import simplify from "@/assets/clients/simplify.png";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
@@ -24,48 +24,48 @@ type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean
 const desktopRow1: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
-  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
-  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro },
+  { name: "Opuspac", logo: opuspac },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
 // DESKTOP Linha 2 - 5 logos
 const desktopRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast },
+  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
   { name: "ARC", logo: arc, whiteBg: true },
-  { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
+  { name: "Grupo Predigna", logo: grupoPredigna },
 ];
 
 // DESKTOP Linha 3 - 3 logos centralizados
 const desktopRow3: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
-  { name: "NESP", logo: nesp, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower },
+  { name: "NESP", logo: nesp },
 ];
 
-// MOBILE - mantém estrutura original
+// MOBILE
 const transparentClients: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
-  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
-  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro },
+  { name: "Opuspac", logo: opuspac },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
 const transparentClientsRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast },
+  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
 
 const whiteBgClients: Client[] = [
   { name: "ARC", logo: arc, whiteBg: true },
-  { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
+  { name: "Grupo Predigna", logo: grupoPredigna },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
-  { name: "NESP", logo: nesp, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower },
+  { name: "NESP", logo: nesp },
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
