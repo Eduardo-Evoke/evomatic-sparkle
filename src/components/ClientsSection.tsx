@@ -139,15 +139,13 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
         willChange: "opacity, transform",
       }}
     >
-      {/* Red glow underneath the card */}
-      <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-3 h-6 w-[85%] bg-primary/70 blur-2xl opacity-90" />
-      <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-1 h-3 w-[70%] bg-primary blur-xl opacity-80" />
-      <div className={`relative flex items-center justify-center h-32 rounded-2xl border backdrop-blur-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+      <div className={`relative flex items-center justify-center h-32 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
         client.boost
           ? "bg-white border-white/30 hover:border-primary/60 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "bg-gradient-to-b from-white/[0.04] to-white/[0.01] border-white/10 hover:border-primary/40"
       }`}>
-        <div className="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-90" />
+        <div className="absolute inset-x-10 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
+        <div className="absolute inset-x-20 -bottom-2 h-3 bg-primary/30 blur-xl opacity-70" />
         <div className="flex items-center justify-center w-full h-full p-5">
           {client.logo ? (
             <img
