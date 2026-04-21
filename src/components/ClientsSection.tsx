@@ -24,48 +24,48 @@ type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean
 const desktopRow1: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
-  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
-  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro },
+  { name: "Opuspac", logo: opuspac },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
 // DESKTOP Linha 2 - 5 logos
 const desktopRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast },
+  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
   { name: "ARC", logo: arc, whiteBg: true },
-  { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
+  { name: "Grupo Predigna", logo: grupoPredigna },
 ];
 
 // DESKTOP Linha 3 - 3 logos centralizados
 const desktopRow3: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
-  { name: "NESP", logo: nesp, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower },
+  { name: "NESP", logo: nesp },
 ];
 
-// MOBILE - mantém estrutura original
+// MOBILE
 const transparentClients: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
-  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
-  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro },
+  { name: "Opuspac", logo: opuspac },
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
 const transparentClientsRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast },
+  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
 
 const whiteBgClients: Client[] = [
   { name: "ARC", logo: arc, whiteBg: true },
-  { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
+  { name: "Grupo Predigna", logo: grupoPredigna },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
-  { name: "NESP", logo: nesp, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower },
+  { name: "NESP", logo: nesp },
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
