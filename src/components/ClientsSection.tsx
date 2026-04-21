@@ -47,6 +47,8 @@ const desktopRow3: Client[] = [
   { name: "Applausi", logo: applausi },
 ];
 
+
+
 // DESKTOP Linha 4 - 2 logos centralizados
 const desktopRow4: Client[] = [
   { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
