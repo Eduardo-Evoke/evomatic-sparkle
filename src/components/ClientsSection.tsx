@@ -13,7 +13,7 @@ import martinBrower from "@/assets/clients/martin-brower-clean.png";
 import medianiVizicato from "@/assets/clients/mediani-vizicato-new.png";
 import memorialParqueDaPaz from "@/assets/clients/memorial-parque-da-paz-new.png";
 import nesp from "@/assets/clients/nesp-white.png";
-import opuspac from "@/assets/clients/opuspac-white.png";
+import opuspac from "@/assets/clients/opuspac-final.png";
 import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-new.png";
 import simplify from "@/assets/clients/simplify.png";
