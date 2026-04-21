@@ -79,8 +79,8 @@ const whiteBgClients: Client[] = [
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
-const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true };
-const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true };
+const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, invert: true };
+const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, invert: true };
 const textClientsMobile: Client[] = [
   { name: "ACMR", logo: acmr, whiteBg: true },
   { name: "Applausi", logo: applausi, whiteBg: true },
