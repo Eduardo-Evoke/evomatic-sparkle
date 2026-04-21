@@ -109,7 +109,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
           <img
             src={client.logo}
             alt={`Logo ${client.name}`}
-            className="max-h-full max-w-full w-auto object-contain"
+            className={`max-h-full max-w-full w-auto object-contain ${client.invert ? "invert brightness-200 contrast-125" : ""}`}
             loading="lazy"
           />
         ) : (
