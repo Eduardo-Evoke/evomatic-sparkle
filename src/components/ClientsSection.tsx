@@ -238,9 +238,15 @@ const ClientsSection = () => {
               ))}
             </div>
             <div className="grid grid-cols-5 gap-6">
-              <div />
               {desktopRow3.map((client, i) => (
                 <DesktopLogoCard key={`d3-${client.name}`} client={client} i={i} />
+              ))}
+            </div>
+            <div className="grid grid-cols-5 gap-6">
+              <div />
+              <div />
+              {desktopRow4.map((client, i) => (
+                <DesktopLogoCard key={`d4-${client.name}`} client={client} i={i} />
               ))}
               <div />
             </div>
