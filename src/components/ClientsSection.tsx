@@ -144,8 +144,8 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
           ? "bg-white border-white/30 hover:border-primary/60 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "bg-gradient-to-b from-white/[0.04] to-white/[0.01] border-white/10 hover:border-primary/40"
       }`}>
-        <div className="absolute inset-x-10 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
-        <div className="absolute inset-x-20 -bottom-2 h-3 bg-primary/30 blur-xl opacity-70" />
+        <div className="absolute inset-x-8 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-90" />
+        <div className="absolute inset-x-16 -bottom-2 h-4 bg-primary/40 blur-xl opacity-90" />
         <div className="flex items-center justify-center w-full h-full p-5">
           {client.logo ? (
             <img
