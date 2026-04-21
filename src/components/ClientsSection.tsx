@@ -187,7 +187,7 @@ const ClientsSection = () => {
             transition: "opacity 0.6s ease-out",
           }}
         >
-          Nossos Clientes
+          ​
         </p>
         <h2
           className="font-bold text-center mb-4 text-primary-foreground text-3xl md:text-5xl"
@@ -200,7 +200,7 @@ const ClientsSection = () => {
           Empresas que confiam na <span className="text-primary">Evomatic</span>
         </h2>
         <p
-          className="text-center mb-4 text-primary-foreground/80 text-sm md:text-lg"
+          className="text-center mb-4 text-sm text-primary-foreground md:text-xl"
           style={{
             opacity: isVisible ? 1 : 0,
             transition: "opacity 0.6s ease-out 0.15s",
