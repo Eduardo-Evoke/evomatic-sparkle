@@ -242,13 +242,12 @@ const ClientsSection = () => {
                 <DesktopLogoCard key={`d3-${client.name}`} client={client} i={i} />
               ))}
             </div>
-            <div className="grid grid-cols-5 gap-6">
-              <div />
-              <div />
+            <div className="flex justify-center gap-6">
               {desktopRow4.map((client, i) => (
-                <DesktopLogoCard key={`d4-${client.name}`} client={client} i={i} />
+                <div key={`d4-${client.name}`} className="w-[calc((100%-4*1.5rem)/5)] min-w-[180px]">
+                  <DesktopLogoCard client={client} i={i} />
+                </div>
               ))}
-              <div />
             </div>
           </div>
         </div>
