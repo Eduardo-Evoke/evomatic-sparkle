@@ -51,8 +51,8 @@ const desktopRow3: Client[] = [
 
 // DESKTOP Linha 4 - 2 logos centralizados
 const desktopRow4: Client[] = [
-  { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
-  { name: "Ruffato Contabilidade", logo: ruffato, invert: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato },
+  { name: "Ruffato Contabilidade", logo: ruffato },
 ];
 
 // MOBILE
@@ -79,8 +79,8 @@ const whiteBgClients: Client[] = [
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
-const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, invert: true };
-const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, invert: true };
+const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato };
+const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato };
 const textClientsMobile: Client[] = [
   { name: "ACMR", logo: acmr, whiteBg: true },
   { name: "Applausi", logo: applausi, whiteBg: true },
