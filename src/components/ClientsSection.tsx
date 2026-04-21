@@ -26,7 +26,7 @@ const desktopRow1: Client[] = [
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
   { name: "Lavoro Terraplenagem", logo: lavoro },
   { name: "Opuspac", logo: opuspac },
-  { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
+  { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true, tiny: true },
 ];
 
 // DESKTOP Linha 2 - 5 logos
@@ -42,8 +42,8 @@ const desktopRow2: Client[] = [
 const desktopRow3: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true, small: true },
   { name: "Martin Brower", logo: martinBrower, small: true },
-  { name: "NESP", logo: nesp },
-  { name: "ACMR", logo: acmr, small: true },
+  { name: "NESP", logo: nesp, tiny: true },
+  { name: "ACMR", logo: acmr, tiny: true },
   { name: "Applausi", logo: applausi, small: true },
 ];
 
@@ -152,7 +152,7 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               src={client.logo}
               alt={`Logo ${client.name}`}
               title={client.name}
-              className={`${client.small ? "h-[4.8rem]" : "h-24"} w-auto max-w-full object-contain ${
+              className={`${client.tiny ? "h-[3.85rem]" : client.small ? "h-[4.8rem]" : "h-24"} w-auto max-w-full object-contain ${
                 client.boost
                   ? ""
                   : client.whiteBg
