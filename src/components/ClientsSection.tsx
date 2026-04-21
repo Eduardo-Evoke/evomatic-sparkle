@@ -65,7 +65,7 @@ const transparentClients: Client[] = [
 ];
 
 const transparentClientsRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
+  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
