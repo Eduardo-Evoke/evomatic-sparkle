@@ -31,7 +31,7 @@ const desktopRow1: Client[] = [
 
 // DESKTOP Linha 2 - 5 logos
 const desktopRow2: Client[] = [
-  { name: "Lavateria Fast", logo: lavateriaFast, whiteBg: true },
+  { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
   { name: "ARC", logo: arc, whiteBg: true },
