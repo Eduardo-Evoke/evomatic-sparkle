@@ -51,8 +51,8 @@ const desktopRow3: Client[] = [
 
 // DESKTOP Linha 4 - 2 logos centralizados
 const desktopRow4: Client[] = [
-  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true, boost: true },
-  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true, boost: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
+  { name: "Ruffato Contabilidade", logo: ruffato, invert: true },
 ];
 
 // MOBILE
