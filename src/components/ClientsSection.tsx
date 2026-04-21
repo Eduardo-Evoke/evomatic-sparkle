@@ -22,7 +22,7 @@ type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean
 
 // DESKTOP Linha 1 - 5 logos
 const desktopRow1: Client[] = [
-  { name: "Benfrio", logo: benfrio, whiteBg: true },
+  { name: "Benfrio", logo: benfrio, whiteBg: true, tinier: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
   { name: "Lavoro Terraplenagem", logo: lavoro },
   { name: "Opuspac", logo: opuspac },
