@@ -146,13 +146,13 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
       }`}>
         <div className="absolute inset-x-8 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-90" />
         <div className="absolute inset-x-16 -bottom-2 h-4 bg-primary/40 blur-xl opacity-90" />
-        <div className="flex items-center justify-center w-full h-full p-5">
+        <div className="flex items-center justify-center w-full h-full p-3">
           {client.logo ? (
             <img
               src={client.logo}
               alt={`Logo ${client.name}`}
               title={client.name}
-              className={`max-h-full max-w-full w-auto object-contain ${
+              className={`h-24 w-auto max-w-full object-contain ${
                 client.boost
                   ? ""
                   : client.whiteBg
