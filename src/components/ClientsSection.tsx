@@ -142,6 +142,9 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
       <div className="relative flex items-center justify-center h-32 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-primary/40 hover:-translate-y-1">
         <div className="absolute inset-x-6 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
         <div className="absolute inset-x-10 -bottom-2 h-3 bg-primary/30 blur-xl opacity-70" />
+        {client.boost && (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.18),transparent_70%)] pointer-events-none" />
+        )}
         <div className="flex items-center justify-center w-full h-full p-5">
           {client.logo ? (
             <img
@@ -149,7 +152,11 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               alt={`Logo ${client.name}`}
               title={client.name}
               className={`max-h-full max-w-full w-auto object-contain ${
-                client.whiteBg ? "" : "drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
+                client.boost
+                  ? "brightness-125 contrast-110 drop-shadow-[0_0_18px_rgba(255,255,255,0.55)]"
+                  : client.whiteBg
+                  ? ""
+                  : "drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
               }`}
               loading="lazy"
             />
