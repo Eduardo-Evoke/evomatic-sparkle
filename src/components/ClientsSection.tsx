@@ -51,8 +51,8 @@ const desktopRow3: Client[] = [
 
 // DESKTOP Linha 4 - 2 logos centralizados
 const desktopRow4: Client[] = [
-  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true, boost: true },
-  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true, boost: true },
+  { name: "Mediani Vizicato", logo: medianiVizicato, invert: true },
+  { name: "Ruffato Contabilidade", logo: ruffato, invert: true },
 ];
 
 // MOBILE
@@ -79,8 +79,8 @@ const whiteBgClients: Client[] = [
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
-const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true };
-const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true };
+const medianiVizicatoClient: Client = { name: "Mediani Vizicato", logo: medianiVizicato, invert: true };
+const ruffatoClient: Client = { name: "Ruffato Contabilidade", logo: ruffato, invert: true };
 const textClientsMobile: Client[] = [
   { name: "ACMR", logo: acmr, whiteBg: true },
   { name: "Applausi", logo: applausi, whiteBg: true },
@@ -109,7 +109,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
           <img
             src={client.logo}
             alt={`Logo ${client.name}`}
-            className="max-h-full max-w-full w-auto object-contain"
+            className={`max-h-full max-w-full w-auto object-contain ${client.invert ? "invert brightness-200 contrast-125" : ""}`}
             loading="lazy"
           />
         ) : (
@@ -153,7 +153,9 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               alt={`Logo ${client.name}`}
               title={client.name}
               className={`${client.large ? "h-[8.65rem]" : client.tinier ? "h-[3.46rem]" : client.tiny ? "h-[3.85rem]" : client.small ? "h-[4.8rem]" : client.reduce15 ? "h-[5.1rem]" : client.mediumSmall ? "h-[5.4rem]" : "h-24"} w-auto max-w-full object-contain ${
-                client.boost
+                client.invert
+                  ? "invert brightness-200 contrast-125 drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
+                  : client.boost
                   ? ""
                   : client.whiteBg
                   ? ""
