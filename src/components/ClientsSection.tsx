@@ -19,7 +19,32 @@ import simplify from "@/assets/clients/simplify.jpeg";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
-// Linha 1 - fundo branco padronizado
+// DESKTOP Linha 1 - 5 logos
+const desktopRow1: Client[] = [
+  { name: "Benfrio", logo: benfrio, whiteBg: true },
+  { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
+  { name: "Lavoro Terraplenagem", logo: lavoro, whiteBg: true },
+  { name: "Opuspac", logo: opuspac, whiteBg: true },
+  { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
+];
+
+// DESKTOP Linha 2 - 5 logos
+const desktopRow2: Client[] = [
+  { name: "Lavateria Fast", logo: lavateriaFast },
+  { name: "Rota Market Fast", logo: rotaMarketFast },
+  { name: "Simplify", logo: simplify },
+  { name: "ARC", logo: arc, whiteBg: true },
+  { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
+];
+
+// DESKTOP Linha 3 - 3 logos centralizados
+const desktopRow3: Client[] = [
+  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
+  { name: "Martin Brower", logo: martinBrower, whiteBg: true },
+  { name: "NESP", logo: nesp, whiteBg: true },
+];
+
+// MOBILE - mantém estrutura original
 const transparentClients: Client[] = [
   { name: "Benfrio", logo: benfrio, whiteBg: true },
   { name: "Colégio Anglo Via Brasil", logo: colegioViaBrasil, whiteBg: true },
@@ -28,28 +53,18 @@ const transparentClients: Client[] = [
   { name: "Fazenda Bela Vista", logo: fazendaBelaVista, whiteBg: true },
 ];
 
-// Logos sem fundo - linha 2
 const transparentClientsRow2: Client[] = [
   { name: "Lavateria Fast", logo: lavateriaFast },
   { name: "Rota Market Fast", logo: rotaMarketFast },
   { name: "Simplify", logo: simplify },
 ];
 
-// Logos que precisam de fundo branco para legibilidade
 const whiteBgClients: Client[] = [
   { name: "ARC", logo: arc, whiteBg: true },
   { name: "Grupo Predigna", logo: grupoPredigna, whiteBg: true },
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
   { name: "Martin Brower", logo: martinBrower, whiteBg: true },
   { name: "NESP", logo: nesp, whiteBg: true },
-];
-
-// Linha final
-const textClients: Client[] = [
-  { name: "Ruffato Contabilidade", logo: ruffato, whiteBg: true },
-  { name: "ACMR", logo: acmr, whiteBg: true },
-  { name: "Applausi", logo: applausi, whiteBg: true },
-  { name: "Mediani Vizicato", logo: medianiVizicato, whiteBg: true },
 ];
 
 // Mobile: Mediani sobe pra linha 1, Ruffato sobe pra linha 3
