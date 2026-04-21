@@ -18,7 +18,7 @@ import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-new.png";
 import simplify from "@/assets/clients/simplify.png";
 
-type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
+type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean; boost?: boolean };
 
 // DESKTOP Linha 1 - 5 logos
 const desktopRow1: Client[] = [
