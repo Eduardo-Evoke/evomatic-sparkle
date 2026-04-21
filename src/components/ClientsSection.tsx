@@ -18,7 +18,7 @@ import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-new.png";
 import simplify from "@/assets/clients/simplify.png";
 
-type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean; boost?: boolean };
+type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean; boost?: boolean; small?: boolean };
 
 // DESKTOP Linha 1 - 5 logos
 const desktopRow1: Client[] = [
@@ -40,11 +40,11 @@ const desktopRow2: Client[] = [
 
 // DESKTOP Linha 3 - 5 logos
 const desktopRow3: Client[] = [
-  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true },
-  { name: "Martin Brower", logo: martinBrower },
+  { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true, small: true },
+  { name: "Martin Brower", logo: martinBrower, small: true },
   { name: "NESP", logo: nesp },
-  { name: "ACMR", logo: acmr },
-  { name: "Applausi", logo: applausi },
+  { name: "ACMR", logo: acmr, small: true },
+  { name: "Applausi", logo: applausi, small: true },
 ];
 
 
@@ -152,7 +152,7 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               src={client.logo}
               alt={`Logo ${client.name}`}
               title={client.name}
-              className={`h-24 w-auto max-w-full object-contain ${
+              className={`${client.small ? "h-[4.8rem]" : "h-24"} w-auto max-w-full object-contain ${
                 client.boost
                   ? ""
                   : client.whiteBg
