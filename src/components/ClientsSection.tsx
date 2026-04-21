@@ -152,7 +152,7 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
               src={client.logo}
               alt={`Logo ${client.name}`}
               title={client.name}
-              className={`h-24 w-auto max-w-full object-contain ${
+              className={`${client.small ? "h-[4.8rem]" : "h-24"} w-auto max-w-full object-contain ${
                 client.boost
                   ? ""
                   : client.whiteBg
