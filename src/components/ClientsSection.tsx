@@ -5,18 +5,18 @@ import acmr from "@/assets/clients/acmr.png";
 import applausi from "@/assets/clients/applausi.png";
 import benfrio from "@/assets/clients/benfrio.png";
 import colegioViaBrasil from "@/assets/clients/colegio-via-brasil.png";
-import grupoPredigna from "@/assets/clients/grupo-predigna.png";
-import lavateriaFast from "@/assets/clients/lavateria-fast.jpeg";
-import lavoro from "@/assets/clients/lavoro.png";
+import grupoPredigna from "@/assets/clients/grupo-predigna-white.png";
+import lavateriaFast from "@/assets/clients/lavateria-fast.png";
+import lavoro from "@/assets/clients/lavoro-white.png";
 import fazendaBelaVista from "@/assets/clients/fazenda-bela-vista.png";
-import martinBrower from "@/assets/clients/martin-brower.png";
+import martinBrower from "@/assets/clients/martin-brower-white.png";
 import medianiVizicato from "@/assets/clients/mediani-vizicato.png";
 import memorialParqueDaPaz from "@/assets/clients/memorial-parque-da-paz.png";
-import nesp from "@/assets/clients/nesp.png";
-import opuspac from "@/assets/clients/opuspac.png";
-import rotaMarketFast from "@/assets/clients/rota-market-fast.jpeg";
+import nesp from "@/assets/clients/nesp-white.png";
+import opuspac from "@/assets/clients/opuspac-white.png";
+import rotaMarketFast from "@/assets/clients/rota-market-fast.png";
 import ruffato from "@/assets/clients/ruffato-contabilidade.png";
-import simplify from "@/assets/clients/simplify.jpeg";
+import simplify from "@/assets/clients/simplify.png";
 
 type Client = { name: string; logo?: string; invert?: boolean; whiteBg?: boolean };
 
