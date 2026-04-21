@@ -66,7 +66,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center gap-2 md:gap-3 p-1 md:p-4"
+      className="group flex flex-col items-center justify-center gap-2 md:gap-3 p-1 md:p-2"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0) scale(1)" : "translateY(80px) scale(0.85)",
@@ -75,15 +75,17 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
       }}
     >
       <div
-        className={`flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-110 ${
-          client.whiteBg ? "bg-white p-2 md:p-3" : ""
+        className={`relative flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden border border-border/60 backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-110 group-hover:border-primary/60 group-hover:shadow-[0_0_24px_-2px_hsl(var(--primary)/0.45)] ${
+          client.whiteBg
+            ? "bg-white/95 p-2 md:p-3"
+            : "bg-card/40 p-2 md:p-3"
         }`}
       >
         {client.logo ? (
           <img
             src={client.logo}
             alt={`Logo ${client.name}`}
-            className="max-h-full max-w-full w-auto object-contain"
+            className="max-h-full max-w-full w-auto object-contain opacity-85 transition-opacity duration-300 group-hover:opacity-100"
             loading="lazy"
           />
         ) : (
@@ -92,7 +94,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
           </span>
         )}
       </div>
-      <span className="mt-1 text-primary-foreground text-[11px] md:text-base font-semibold text-center leading-tight">
+      <span className="mt-1 text-primary-foreground/80 text-[11px] md:text-sm font-medium text-center leading-tight transition-colors duration-300 group-hover:text-primary-foreground">
         {client.name}
       </span>
     </div>
