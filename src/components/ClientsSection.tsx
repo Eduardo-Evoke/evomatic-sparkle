@@ -273,7 +273,7 @@ const ClientsSection = () => {
             transition: "opacity 0.7s ease-out 0.3s, transform 0.7s ease-out 0.3s",
           }}
         >
-          <div className="relative rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-sm px-8 py-6">
+          <div className="relative rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-sm px-8 py-6 animate-soft-pulse">
             <div className="absolute inset-x-10 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-70" />
             <div className="absolute inset-x-20 -bottom-2 h-3 bg-primary/30 blur-xl opacity-70" />
             <div className="grid grid-cols-3 gap-6 items-center">
