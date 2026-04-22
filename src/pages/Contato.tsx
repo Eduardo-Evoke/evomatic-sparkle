@@ -123,7 +123,7 @@ const Contato = () => {
                     </div>
                     <h3 className="text-foreground font-bold text-2xl">Visite-nos</h3>
                   </div>
-                  <p className="text-primary-foreground leading-relaxed text-base font-semibold">
+                  <p className="text-primary-foreground leading-relaxed text-base font-semibold text-center">
                     Rua Itirapina, 1060, 1º Andar, Sala 12<br />
                     Bairro: Cidade Luiza<br />
                     CEP: 13214-101&nbsp;<br />
