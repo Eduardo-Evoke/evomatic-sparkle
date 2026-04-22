@@ -125,7 +125,7 @@ const ClientCard = ({ client, i }: { client: Client; i: number }) => {
   );
 };
 
-const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
+const DesktopLogoCard = ({ client, i, mobile = false }: { client: Client; i: number; mobile?: boolean }) => {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.2 });
   const delay = (i % 5) * 0.08;
   return (
@@ -139,14 +139,14 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
         willChange: "opacity, transform",
       }}
     >
-      <div className={`relative flex items-center justify-center h-32 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+      <div className={`relative flex items-center justify-center ${mobile ? "h-20" : "h-32"} rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
         client.boost
           ? "bg-white border-white/30 hover:border-primary/60 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "bg-gradient-to-b from-white/[0.04] to-white/[0.01] border-white/10 hover:border-primary/40"
       }`}>
         <div className="absolute inset-x-8 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-90" />
         <div className="absolute inset-x-16 -bottom-2 h-4 bg-primary/40 blur-xl opacity-90" />
-        <div className="flex items-center justify-center w-full h-full p-3">
+        <div className={`flex items-center justify-center w-full h-full ${mobile ? "p-1.5" : "p-3"}`}>
           {client.logo ? (
             <img
               src={client.logo}
@@ -161,10 +161,11 @@ const DesktopLogoCard = ({ client, i }: { client: Client; i: number }) => {
                   ? ""
                   : "drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
               }`}
+              style={mobile ? { transform: "scale(0.55)", transformOrigin: "center" } : undefined}
               loading="lazy"
             />
           ) : (
-            <span className="text-xl font-bold font-display text-primary-foreground tracking-wide text-center">
+            <span className={`${mobile ? "text-xs" : "text-xl"} font-bold font-display text-primary-foreground tracking-wide text-center`}>
               {client.name}
             </span>
           )}
