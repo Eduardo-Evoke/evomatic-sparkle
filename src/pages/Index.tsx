@@ -36,7 +36,7 @@ const Index = () => {
             transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
           }}
         >
-           <h2 className="text-2xl font-bold font-display text-[#b80a2d] md:text-5xl">Nossas Soluções</h2>
+           <h2 className="text-3xl font-bold font-display text-[#b80a2d] md:text-5xl">Nossas Soluções</h2>
           <p className="text-sm mt-3 max-w-xs mx-auto text-primary-foreground md:max-w-none md:whitespace-nowrap md:text-2xl">Tecnologia, segurança e estratégia para sua empresa crescer sem riscos.</p>
         </div>
       </SectionFade>
