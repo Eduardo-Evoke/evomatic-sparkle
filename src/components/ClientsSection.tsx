@@ -214,26 +214,28 @@ const ClientsSection = () => {
         </div>
 
         <div className="space-y-6">
-          {/* MOBILE: mantido */}
-          <div className="md:hidden space-y-10">
-            <div className="grid grid-cols-3 justify-items-center gap-4">
-              {[...transparentClients, medianiVizicatoClient].map((client, i) => (
-                <ClientCard key={`m1-${client.name}`} client={client} i={i} />
+          {/* MOBILE: mesmo layout do desktop, escala reduzida */}
+          <div className="md:hidden space-y-3">
+            <div className="grid grid-cols-5 gap-2">
+              {desktopRow1.map((client, i) => (
+                <DesktopLogoCard key={`m1-${client.name}`} client={client} i={i} mobile />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
-              {transparentClientsRow2.map((client, i) => (
-                <ClientCard key={`m2-${client.name}`} client={client} i={i} />
+            <div className="grid grid-cols-5 gap-2">
+              {desktopRow2.map((client, i) => (
+                <DesktopLogoCard key={`m2-${client.name}`} client={client} i={i} mobile />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
-              {[...whiteBgClients, ruffatoClient].map((client, i) => (
-                <ClientCard key={`m3-${client.name}`} client={client} i={i} />
+            <div className="grid grid-cols-5 gap-2">
+              {desktopRow3.map((client, i) => (
+                <DesktopLogoCard key={`m3-${client.name}`} client={client} i={i} mobile />
               ))}
             </div>
-            <div className="grid grid-cols-3 justify-items-center gap-4">
-              {textClientsMobile.map((client, i) => (
-                <ClientCard key={`m4-${client.name}`} client={client} i={i} />
+            <div className="flex justify-center gap-2">
+              {desktopRow4.map((client, i) => (
+                <div key={`m4-${client.name}`} className="w-[calc((100%-4*0.5rem)/5)]">
+                  <DesktopLogoCard client={client} i={i} mobile />
+                </div>
               ))}
             </div>
           </div>
