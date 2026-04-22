@@ -139,7 +139,7 @@ const DesktopLogoCard = ({ client, i, mobile = false }: { client: Client; i: num
         willChange: "opacity, transform",
       }}
     >
-      <div className={`relative flex items-center justify-center ${mobile ? "h-20" : "h-32"} rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+      <div className={`relative flex items-center justify-center ${mobile ? "h-24" : "h-32"} rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
         client.boost
           ? "bg-white border-white/30 hover:border-primary/60 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "bg-gradient-to-b from-white/[0.04] to-white/[0.01] border-white/10 hover:border-primary/40"
