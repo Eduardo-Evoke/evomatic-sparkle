@@ -161,7 +161,7 @@ const DesktopLogoCard = ({ client, i, mobile = false }: { client: Client; i: num
                   ? ""
                   : "drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
               }`}
-              style={mobile ? { transform: "scale(0.55)", transformOrigin: "center" } : undefined}
+              style={mobile ? { transform: "scale(0.75)", transformOrigin: "center" } : undefined}
               loading="lazy"
             />
           ) : (
