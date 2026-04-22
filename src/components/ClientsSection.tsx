@@ -139,7 +139,7 @@ const DesktopLogoCard = ({ client, i, mobile = false }: { client: Client; i: num
         willChange: "opacity, transform",
       }}
     >
-      <div className={`relative flex items-center justify-center ${mobile ? "h-20" : "h-32"} rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+      <div className={`relative flex items-center justify-center ${mobile ? "h-24" : "h-32"} rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
         client.boost
           ? "bg-white border-white/30 hover:border-primary/60 shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "bg-gradient-to-b from-white/[0.04] to-white/[0.01] border-white/10 hover:border-primary/40"
@@ -161,7 +161,7 @@ const DesktopLogoCard = ({ client, i, mobile = false }: { client: Client; i: num
                   ? ""
                   : "drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]"
               }`}
-              style={mobile ? { transform: "scale(0.55)", transformOrigin: "center" } : undefined}
+              style={mobile ? { transform: "scale(0.75)", transformOrigin: "center" } : undefined}
               loading="lazy"
             />
           ) : (
@@ -214,28 +214,11 @@ const ClientsSection = () => {
         </div>
 
         <div className="space-y-6">
-          {/* MOBILE: mesmo layout do desktop, escala reduzida */}
-          <div className="md:hidden space-y-3">
-            <div className="grid grid-cols-5 gap-2">
-              {desktopRow1.map((client, i) => (
-                <DesktopLogoCard key={`m1-${client.name}`} client={client} i={i} mobile />
-              ))}
-            </div>
-            <div className="grid grid-cols-5 gap-2">
-              {desktopRow2.map((client, i) => (
-                <DesktopLogoCard key={`m2-${client.name}`} client={client} i={i} mobile />
-              ))}
-            </div>
-            <div className="grid grid-cols-5 gap-2">
-              {desktopRow3.map((client, i) => (
-                <DesktopLogoCard key={`m3-${client.name}`} client={client} i={i} mobile />
-              ))}
-            </div>
-            <div className="flex justify-center gap-2">
-              {desktopRow4.map((client, i) => (
-                <div key={`m4-${client.name}`} className="w-[calc((100%-4*0.5rem)/5)]">
-                  <DesktopLogoCard client={client} i={i} mobile />
-                </div>
+          {/* MOBILE: 3 logos por linha, mesmo estilo do desktop */}
+          <div className="md:hidden">
+            <div className="grid grid-cols-3 gap-2">
+              {[...desktopRow1, ...desktopRow2, ...desktopRow3, ...desktopRow4].map((client, i) => (
+                <DesktopLogoCard key={`m-${client.name}`} client={client} i={i} mobile />
               ))}
             </div>
           </div>
