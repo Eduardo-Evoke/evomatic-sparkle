@@ -185,7 +185,7 @@ const Lgpd = () => {
                 <span className="w-8 h-px bg-primary" />
                 Consequências
               </span>
-              <h2 className="text-2xl font-bold font-display text-foreground/90 leading-tight mb-4 whitespace-nowrap md:text-5xl">
+              <h2 className="text-2xl font-bold font-display text-foreground/90 leading-tight mb-4 md:whitespace-nowrap md:text-5xl">
                 O que acontece com quem <span className="text-primary">não se adequa</span>
               </h2>
               <p className="text-base md:text-lg text-primary-foreground font-semibold">
