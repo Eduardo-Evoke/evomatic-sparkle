@@ -1,6 +1,6 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Users, Award, Handshake } from "lucide-react";
-import arc from "@/assets/clients/arc.png";
+import arc from "@/assets/clients/arc-white-text.png";
 import acmr from "@/assets/clients/acmr-white.png";
 import applausi from "@/assets/clients/applausi-white.png";
 import benfrio from "@/assets/clients/benfrio.png";
