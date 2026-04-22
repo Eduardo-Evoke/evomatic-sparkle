@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Hero content + cards together */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 md:px-16 lg:px-24 max-w-7xl mx-auto w-full py-7">
         <div className="max-w-3xl text-center mb-8 md:mb-16">
-          <h1 className="text-[1.75rem] md:text-6xl lg:text-7xl leading-[1.1] md:leading-tight mb-6 md:mb-8 text-primary font-bold font-display">
+          <h1 className="text-2xl md:text-6xl lg:text-7xl leading-[1.15] md:leading-tight mb-6 md:mb-8 text-primary font-bold font-display">
             {"Soluções de TI para estruturar, modernizar e conectar sua empresa".split(" ").map((word, i) => {
               const cleanWord = word.replace(/,/g, "");
               const isHighlight = ["estruturar", "modernizar", "conectar"].includes(cleanWord.toLowerCase());
@@ -36,7 +36,7 @@ const HeroSection = () => {
               return (
                 <span
                   key={i}
-                  className={`inline-block opacity-0 animate-[fade-in_0.8s_ease-out_forwards] text-6xl ${isHighlight ? "text-[1.875rem] md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-[fade-in_0.8s_ease-out_forwards,glow-text_2.5s_ease-in-out_forwards]" : ""}`}
+                  className={`inline-block opacity-0 animate-[fade-in_0.8s_ease-out_forwards] text-2xl md:text-6xl ${isHighlight ? "md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent animate-[fade-in_0.8s_ease-out_forwards,glow-text_2.5s_ease-in-out_forwards]" : ""}`}
                   style={{
                     animationDelay: `${0.5 + i * 0.12}s`,
                     ...(isWhitePulse ? {
