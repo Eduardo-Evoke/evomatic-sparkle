@@ -180,12 +180,12 @@ const Lgpd = () => {
         />
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal direction="up">
-            <div className="mb-16 max-w-3xl">
+            <div className="mb-16 max-w-5xl">
               <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.2em] text-primary mb-4 text-lg">
                 <span className="w-8 h-px bg-primary" />
                 Consequências
               </span>
-              <h2 className="text-3xl font-bold font-display text-foreground/90 leading-tight mb-4 md:text-5xl">
+              <h2 className="text-2xl md:text-4xl font-bold font-display text-foreground/90 leading-tight mb-4 whitespace-nowrap">
                 O que acontece com quem <span className="text-primary">não se adequa</span>
               </h2>
               <p className="text-base md:text-lg text-primary-foreground font-semibold">
