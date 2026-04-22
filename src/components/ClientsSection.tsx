@@ -281,21 +281,21 @@ const ClientsSection = () => {
                 <Users className="w-9 h-9 text-primary" strokeWidth={1.5} />
                 <div className="text-left">
                   <div className="text-3xl font-bold text-primary-foreground leading-none">+50</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Empresas atendidas</div>
+                  <div className="text-primary-foreground/70 mt-1 text-base font-semibold">Empresas atendidas</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 justify-center">
                 <Award className="w-9 h-9 text-primary" strokeWidth={1.5} />
                 <div className="text-left">
                   <div className="text-3xl font-bold text-primary-foreground leading-none">96%</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">Satisfação dos clientes</div>
+                  <div className="text-primary-foreground/70 mt-1 text-base font-semibold">Satisfação dos clientes</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 justify-center">
                 <Handshake className="w-9 h-9 text-primary" strokeWidth={1.5} />
                 <div className="text-left">
                   <div className="text-2xl font-bold text-primary-foreground leading-none">Parcerias</div>
-                  <div className="text-sm text-primary-foreground/70 mt-1">de confiança e resultados</div>
+                  <div className="text-primary-foreground/70 mt-1 text-base font-semibold">de confiança e resultados</div>
                 </div>
               </div>
             </div>
