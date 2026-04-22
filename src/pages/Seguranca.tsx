@@ -74,7 +74,7 @@ const Seguranca = () => {
 
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-[72px] z-10">
-        <img src={firewallHero} alt="Segurança de rede" className="absolute inset-0 w-full h-full object-cover object-[75%_75%]" width={1920} height={1080} />
+        <img src={firewallHero} alt="Segurança de rede" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-b from-transparent via-background/40 via-40% to-background pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-20">
