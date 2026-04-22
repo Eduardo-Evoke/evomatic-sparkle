@@ -123,7 +123,7 @@ const Contato = () => {
                     </div>
                     <h3 className="text-foreground font-bold text-2xl">Visite-nos</h3>
                   </div>
-                  <p className="text-primary-foreground leading-relaxed text-base font-semibold text-center">
+                  <p className="text-primary-foreground leading-relaxed text-base font-semibold text-left">
                     Rua Itirapina, 1060, 1º Andar, Sala 12<br />
                     Bairro: Cidade Luiza<br />
                     CEP: 13214-101&nbsp;<br />
@@ -131,7 +131,7 @@ const Contato = () => {
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <p className="text-primary text-center font-bold">
-                      Venha tomar um café conosco, será um prazer recebê-lo.
+                      Venha tomar um café conosco, será um prazer recebê-lo !
                     </p>
                   </div>
                 </div>
