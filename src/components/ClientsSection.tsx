@@ -43,7 +43,7 @@ const desktopRow3: Client[] = [
   { name: "Cemitério Memorial Parque da Paz", logo: memorialParqueDaPaz, whiteBg: true, small: true },
   { name: "Martin Brower", logo: martinBrower, small: true },
   { name: "NESP", logo: nesp, tiny: true },
-  { name: "ACMR", logo: acmr, tiny: true },
+  { name: "ACMR", logo: acmr, tinier: true },
   { name: "Applausi", logo: applausi, small: true },
 ];
 
