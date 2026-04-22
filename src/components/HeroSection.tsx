@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Hero content + cards together */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 md:px-16 lg:px-24 max-w-7xl mx-auto w-full py-7">
         <div className="max-w-3xl text-center mb-8 md:mb-16">
-          <h1 className="text-2xl md:text-6xl lg:text-7xl leading-[1.15] md:leading-tight mb-6 md:mb-8 text-primary font-bold font-display">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.15] md:leading-tight mb-6 md:mb-8 text-primary font-bold font-display">
             {"Soluções de TI para estruturar, modernizar e conectar sua empresa".split(" ").map((word, i) => {
               const cleanWord = word.replace(/,/g, "");
               const isHighlight = ["estruturar", "modernizar", "conectar"].includes(cleanWord.toLowerCase());
