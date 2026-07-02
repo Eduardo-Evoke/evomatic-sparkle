@@ -71,6 +71,22 @@ const beneficios = [
 const Seguranca = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Segurança da Informação e Firewall em Jundiaí e Campinas | Evomatic"
+        description="Proteja sua empresa contra ciberataques. Firewall, EDR, antivírus corporativo e segurança da informação para empresas em Jundiaí, Campinas e região."
+        path="/seguranca"
+        schemas={[
+          serviceSchema({
+            name: "Segurança da Informação",
+            description: "Firewall, EDR, antivírus corporativo e proteção contra ciberataques para empresas em Jundiaí, Campinas e região.",
+            path: "/seguranca",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Segurança da Informação", path: "/seguranca" },
+          ]),
+        ]}
+      />
       <SolutionsBackground />
       <Header />
 
