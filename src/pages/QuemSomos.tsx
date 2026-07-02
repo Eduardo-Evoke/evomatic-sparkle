@@ -4,6 +4,8 @@ import quemSomosBg from "@/assets/quem-somos-bg.jpg";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/lib/seo";
 
 
 function useReveal(threshold = 0.15) {
