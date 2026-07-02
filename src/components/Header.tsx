@@ -81,15 +81,13 @@ const Header = () => {
             Contato
           </Link>
         </nav>
-        <a
-          href="https://wa.me/5511991784226"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/diagnostico"
           className="hidden lg:inline-flex items-center gap-2 text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 bg-primary hover:brightness-110"
         >
           Diagnóstico Gratuito
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -134,16 +132,14 @@ const Header = () => {
           <Link to="/contato" onClick={closeMobile} className="block py-3 text-base font-medium text-primary-foreground">
             Contato
           </Link>
-          <a
-            href="https://wa.me/5511991784226"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/diagnostico"
             onClick={closeMobile}
             className="inline-flex items-center gap-2 text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold bg-primary mt-2"
           >
             Diagnóstico Gratuito
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       )}
     </header>
