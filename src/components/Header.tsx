@@ -38,8 +38,10 @@ const Header = () => {
         <Link to="/" className="flex flex-col items-start">
           <img
             src={logo}
-            alt="Evomatic"
+            alt="Logotipo da Evomatic — empresa de TI em Jundiaí especializada em infraestrutura, cloud e segurança"
             className="h-[34px] md:h-[45px] w-auto"
+            width={180}
+            height={45}
           />
           <p className="tracking-[0.2em] uppercase text-[7px] -mt-0.5 md:text-[9px] text-primary-foreground -ml-[1px]">
             &nbsp;ESTRUTURE. MODERNIZE. CONECTE.
