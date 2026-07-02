@@ -6,6 +6,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import TicketButton from "@/components/TicketButton";
 import NetworkBackground from "@/components/NetworkBackground";
+import SEO from "@/components/SEO";
+import { ORGANIZATION_SCHEMA, LOCAL_BUSINESS_SCHEMA, WEBSITE_SCHEMA } from "@/lib/seo";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const SectionFade = ({ from, to, height = "h-40", children }: { from: string; to: string; height?: string; children?: React.ReactNode }) => (
