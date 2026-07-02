@@ -1,14 +1,16 @@
+import { lazy, Suspense } from "react";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import PartnersSection from "@/components/PartnersSection";
-import ClientsSection from "@/components/ClientsSection";
-import FooterSection from "@/components/FooterSection";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import TicketButton from "@/components/TicketButton";
 import NetworkBackground from "@/components/NetworkBackground";
 import SEO from "@/components/SEO";
 import { ORGANIZATION_SCHEMA, LOCAL_BUSINESS_SCHEMA, WEBSITE_SCHEMA } from "@/lib/seo";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const PartnersSection = lazy(() => import("@/components/PartnersSection"));
+const ClientsSection = lazy(() => import("@/components/ClientsSection"));
+const FooterSection = lazy(() => import("@/components/FooterSection"));
+const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
+const TicketButton = lazy(() => import("@/components/TicketButton"));
 
 const SectionFade = ({ from, to, height = "h-40", children }: { from: string; to: string; height?: string; children?: React.ReactNode }) => (
   <div
@@ -48,12 +50,14 @@ const Index = () => {
           <p className="text-sm mt-3 max-w-xs mx-auto text-primary-foreground md:max-w-none md:whitespace-nowrap md:text-2xl">Tecnologia, segurança e estratégia para sua empresa crescer sem riscos.</p>
         </div>
       </SectionFade>
-      <ServicesSection />
-      <ClientsSection />
-      <PartnersSection />
-      <FooterSection className="relative z-10 border-t border-white/[0.06] bg-transparent shadow-[0_-4px_30px_rgba(0,0,0,0.4)]" />
-      <WhatsAppButton />
-      <TicketButton />
+      <Suspense fallback={null}>
+        <ServicesSection />
+        <ClientsSection />
+        <PartnersSection />
+        <FooterSection className="relative z-10 border-t border-white/[0.06] bg-transparent shadow-[0_-4px_30px_rgba(0,0,0,0.4)]" />
+        <WhatsAppButton />
+        <TicketButton />
+      </Suspense>
     </main>
   );
 };
