@@ -15,17 +15,17 @@ import {
 } from "lucide-react";
 
 import heroImage from "@/assets/diagnostico/hero-executivo-preocupado.webp";
-import iconFirewall from "@/assets/diagnostico/icon-firewall-3d.png";
-import iconBackup from "@/assets/diagnostico/icon-backup-3d.png";
-import iconAcesso from "@/assets/diagnostico/icon-acesso-3d.png";
-import iconSeguranca from "@/assets/diagnostico/icon-seguranca-3d.png";
-import iconDatabase from "@/assets/diagnostico/icon-database-3d.png";
-import iconShieldOff from "@/assets/diagnostico/icon-shieldoff-3d.png";
-import iconUserX from "@/assets/diagnostico/icon-userx-3d.png";
-import iconFileWarn from "@/assets/diagnostico/icon-filewarn-3d.png";
-import iconServerOff from "@/assets/diagnostico/icon-serveroff-3d.png";
-import iconRefresh from "@/assets/diagnostico/icon-refresh-3d.png";
-import iconShield3D from "@/assets/diagnostico/icon-shield-3d.png";
+import iconFirewall from "@/assets/diagnostico/icon-firewall-3d.webp";
+import iconBackup from "@/assets/diagnostico/icon-backup-3d.webp";
+import iconAcesso from "@/assets/diagnostico/icon-acesso-3d.webp";
+import iconSeguranca from "@/assets/diagnostico/icon-seguranca-3d.webp";
+import iconDatabase from "@/assets/diagnostico/icon-database-3d.webp";
+import iconShieldOff from "@/assets/diagnostico/icon-shieldoff-3d.webp";
+import iconUserX from "@/assets/diagnostico/icon-userx-3d.webp";
+import iconFileWarn from "@/assets/diagnostico/icon-filewarn-3d.webp";
+import iconServerOff from "@/assets/diagnostico/icon-serveroff-3d.webp";
+import iconRefresh from "@/assets/diagnostico/icon-refresh-3d.webp";
+import iconShield3D from "@/assets/diagnostico/icon-shield-3d.webp";
 
 const SITE_URL = "https://www.evomatic.com.br";
 const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
@@ -201,7 +201,7 @@ const Diagnostico = () => {
           <header className="relative z-10">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-6 md:px-10 md:pt-8">
               <div className="flex flex-col md:translate-x-[50px]">
-                <img src="/logo-evomatic-white.png" alt="Evomatic — Soluções em TI" className="h-[39px] w-auto md:h-[50px] md:translate-x-[10%]" />
+                <img src="/logo-evomatic-white.webp" alt="Evomatic — Soluções em TI" className="h-[39px] w-auto md:h-[50px] md:translate-x-[10%]" />
                 <p
                   className="-mt-1 pl-[1px] text-[8.5px] font-bold uppercase tracking-[0.18em] text-white/80 md:-mt-1 md:pl-[28px] md:text-[10px]"
                   style={font}

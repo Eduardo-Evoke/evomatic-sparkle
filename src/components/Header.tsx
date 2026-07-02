@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-evomatic.png";
+import logo from "@/assets/logo-evomatic.webp";
 
 const solucoes = [
   { label: "Suporte  & Gestão de TI", href: "/suporte-gestao-ti" },
