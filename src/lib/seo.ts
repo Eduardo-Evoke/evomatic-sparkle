@@ -10,7 +10,7 @@ export const ORGANIZATION_SCHEMA = {
   url: SITE_URL,
   logo: `${SITE_URL}/favicon.png`,
   description:
-    "Empresa de TI em Jundiaí/SP especializada em infraestrutura, cloud, segurança da informação, LGPD e suporte técnico para empresas em Jundiaí, Campinas e região.",
+    "Parceiro estratégico de TI para empresas em Jundiaí, Campinas e interior de São Paulo. Ajudamos negócios a crescer com infraestrutura, cloud, segurança da informação e suporte especializado há mais de 12 anos.",
   areaServed: [
     { "@type": "City", name: "Jundiaí" },
     { "@type": "City", name: "Campinas" },
@@ -36,7 +36,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   telephone: "",
   priceRange: "$$",
   description:
-    "Há mais de 12 anos organizando, protegendo e evoluindo ambientes de TI com soluções completas em infraestrutura, cloud, segurança e LGPD para empresas em Jundiaí, Campinas e região.",
+    "Mais do que suporte de TI: entregamos tecnologia para acelerar negócios. Terceirização de TI, infraestrutura, cloud, Microsoft 365, firewall gerenciado, backup corporativo e adequação à LGPD para empresas em Jundiaí, Campinas e região.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Jundiaí",
