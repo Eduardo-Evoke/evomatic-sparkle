@@ -1,0 +1,124 @@
+# ============================================================
+# Evomatic — .htaccess para hospedagem Apache (KingHost)
+# SPA fallback + Compressão + Cache + Segurança
+# ============================================================
+
+# Habilita motor de rewrite
+RewriteEngine On
+
+# --- Redireciona HTTP -> HTTPS ---
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Redireciona domínio raiz -> www (comente se preferir sem www) ---
+RewriteCond %{HTTP_HOST} ^evomatic\.com\.br$ [NC]
+RewriteRule ^ https://www.evomatic.com.br%{REQUEST_URI} [L,R=301]
+
+# --- Remove barra final (exceto raiz) para canonicalização ---
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# --- SPA fallback: qualquer rota não-arquivo cai em index.html ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# ============================================================
+# COMPRESSÃO (mod_deflate)
+# ============================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype font/otf font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+</IfModule>
+
+# ============================================================
+# CACHE (mod_expires)
+# ============================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML — sempre revalidar (SPA)
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Assets versionados por hash (Vite gera /assets/*-hash.ext) — cache longo
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+
+  # Imagens
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/gif "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/avif "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fontes
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # SEO
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache imutável para assets com hash
+  <FilesMatch "\.(css|js|woff2?|ttf|otf|eot|jpg|jpeg|png|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML sem cache
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # ==========================================================
+  # HEADERS DE SEGURANÇA
+  # ==========================================================
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+
+  # Remove header que expõe versão
+  Header unset X-Powered-By
+</IfModule>
+
+# ============================================================
+# MIME TYPES
+# ============================================================
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
+
+# ============================================================
+# BLOQUEIOS
+# ============================================================
+# Bloqueia listagem de diretórios
+Options -Indexes
+
+# Bloqueia arquivos sensíveis
+<FilesMatch "^\.(env|git|htaccess|htpasswd)">
+  Require all denied
+</FilesMatch>
+
+# Página de erro personalizada (SPA)
+ErrorDocument 404 /index.html
