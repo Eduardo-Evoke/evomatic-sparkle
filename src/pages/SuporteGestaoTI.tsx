@@ -66,8 +66,8 @@ const SuporteGestaoTI = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Suporte e Gestão de TI em Jundiaí e Campinas | Evomatic"
-        description="Suporte técnico especializado e gestão de TI para empresas em Jundiaí, Campinas e região. Monitoramento, atendimento e SLA para manter sua operação 24/7."
+        title="Suporte de TI para Empresas em Jundiaí e Campinas | Evomatic"
+        description="Mais que suporte técnico: parceria estratégica que mantém sua operação estável, produtiva e sem surpresas. Terceirização de TI para empresas em Jundiaí, Campinas e região."
         path="/suporte-gestao-ti"
         schemas={[
           serviceSchema({

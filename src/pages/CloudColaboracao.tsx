@@ -62,8 +62,8 @@ const CloudColaboracao = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Cloud e Colaboração para Empresas em Jundiaí e Campinas | Evomatic"
-        description="Soluções de cloud computing e ferramentas de colaboração (Microsoft 365, Google Workspace, backup em nuvem) para empresas em Jundiaí, Campinas e região."
+        title="Cloud e Microsoft 365 para Empresas em Jundiaí e Campinas | Evomatic"
+        description="Produtividade sem limites e backup corporativo em nuvem. Migração e gestão de cloud, Microsoft 365 e Google Workspace para empresas em Jundiaí, Campinas e interior de SP."
         path="/cloud-colaboracao"
         schemas={[
           serviceSchema({

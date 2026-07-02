@@ -72,8 +72,8 @@ const Seguranca = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Segurança da Informação e Firewall em Jundiaí e Campinas | Evomatic"
-        description="Proteja sua empresa contra ciberataques. Firewall, EDR, antivírus corporativo e segurança da informação para empresas em Jundiaí, Campinas e região."
+        title="Segurança da Informação e Firewall Gerenciado | Evomatic Jundiaí"
+        description="Proteja receita, dados e reputação da sua empresa. Firewall gerenciado, EDR e segurança da informação sob medida para negócios em Jundiaí, Campinas e interior de SP."
         path="/seguranca"
         schemas={[
           serviceSchema({

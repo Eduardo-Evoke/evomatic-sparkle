@@ -29,8 +29,8 @@ const Index = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Evomatic — Empresa de TI em Jundiaí e Campinas | Infraestrutura, Cloud e Segurança"
-        description="Empresa de TI em Jundiaí/SP com atuação em Campinas e região. Suporte técnico, infraestrutura, cloud, segurança da informação e adequação à LGPD há mais de 12 anos."
+        title="Evomatic — TI Estratégica para Empresas em Jundiaí e Campinas"
+        description="Sua empresa merece uma TI que impulsiona resultados. Há 12+ anos apoiamos empresas em Jundiaí, Campinas e interior de SP com infraestrutura, cloud e segurança sob medida."
         path="/"
         schemas={[ORGANIZATION_SCHEMA, LOCAL_BUSINESS_SCHEMA, WEBSITE_SCHEMA]}
       />

@@ -75,8 +75,8 @@ const InfraestruturaServidores = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Infraestrutura de TI e Servidores em Jundiaí e Campinas | Evomatic"
-        description="Projeto, implantação e gestão de infraestrutura de TI e servidores para empresas em Jundiaí, Campinas e região. Alta disponibilidade, virtualização e ambientes hiperconvergentes."
+        title="Infraestrutura de TI e Servidores de Alta Disponibilidade | Evomatic"
+        description="Ambientes de TI robustos, estáveis e prontos para escalar. Projeto e gestão de infraestrutura e servidores para empresas em Jundiaí, Campinas e interior de SP."
         path="/infraestrutura-servidores"
         schemas={[
           serviceSchema({
