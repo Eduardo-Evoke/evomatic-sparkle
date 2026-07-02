@@ -2,7 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404
 
-# Bloqueia diretório de assets de build para não indexar hashes
-Disallow: /assets/
-
 Sitemap: https://www.evomatic.com.br/sitemap.xml
