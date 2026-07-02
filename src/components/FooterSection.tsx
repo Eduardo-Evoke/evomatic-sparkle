@@ -45,7 +45,7 @@ const FooterSection = ({ className = "relative z-10 border bg-card" }: { classNa
                   </a>
                   <div className="flex items-center gap-3 pt-2">
                     <a
-                      href="https://www.instagram.com/evomatic.it/"
+                      href="https://www.instagram.com/evomatic.tech/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram"
