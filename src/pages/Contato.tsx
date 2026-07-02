@@ -44,8 +44,8 @@ const Contato = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Contato | Evomatic — Empresa de TI em Jundiaí e Campinas"
-        description="Fale com a Evomatic. Solicite um diagnóstico gratuito de TI para sua empresa em Jundiaí, Campinas ou região. Atendimento comercial e suporte técnico."
+        title="Fale com a Evomatic | TI Estratégica em Jundiaí e Campinas"
+        description="Converse com um especialista e descubra como transformar sua TI em vantagem competitiva. Diagnóstico gratuito para empresas em Jundiaí, Campinas e região."
         path="/contato"
         schemas={[
           breadcrumbSchema([

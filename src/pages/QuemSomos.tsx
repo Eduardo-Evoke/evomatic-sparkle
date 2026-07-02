@@ -85,8 +85,8 @@ const QuemSomos = () => {
   return (
     <main className="overflow-hidden relative">
       <SEO
-        title="Quem Somos | Evomatic — Empresa de TI em Jundiaí há mais de 12 anos"
-        description="Conheça a Evomatic: mais de 12 anos organizando, protegendo e evoluindo ambientes de TI de empresas em Jundiaí, Campinas e região metropolitana."
+        title="Quem Somos | 12+ anos de TI Estratégica em Jundiaí — Evomatic"
+        description="Somos o parceiro de TI que empresas em Jundiaí, Campinas e região escolhem para crescer com segurança e estabilidade. Conheça a história, o time e a metodologia Evomatic."
         path="/quem-somos"
         schemas={[
           breadcrumbSchema([

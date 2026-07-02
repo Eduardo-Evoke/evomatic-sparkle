@@ -29,9 +29,9 @@ import iconShield3D from "@/assets/diagnostico/icon-shield-3d.webp";
 
 const SITE_URL = "https://www.evomatic.com.br";
 const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
-const PAGE_TITLE = "Diagnóstico Gratuito de TI para Empresas | Evomatic";
+const PAGE_TITLE = "Diagnóstico Gratuito de TI para Empresas | Evomatic Jundiaí";
 const PAGE_DESC =
-  "Identifique vulnerabilidades na infraestrutura de TI da sua empresa antes que gerem prejuízo. Diagnóstico gratuito com especialistas Evomatic.";
+  "Descubra em minutos as vulnerabilidades que travam o crescimento da sua TI. Diagnóstico gratuito com especialistas para empresas em Jundiaí, Campinas e interior de SP.";
 
 declare global {
   interface Window {
