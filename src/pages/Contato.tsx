@@ -43,6 +43,17 @@ const Reveal = ({ children, delay = 0, direction = "up", className = "" }: {
 const Contato = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Contato | Evomatic — Empresa de TI em Jundiaí e Campinas"
+        description="Fale com a Evomatic. Solicite um diagnóstico gratuito de TI para sua empresa em Jundiaí, Campinas ou região. Atendimento comercial e suporte técnico."
+        path="/contato"
+        schemas={[
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Contato", path: "/contato" },
+          ]),
+        ]}
+      />
       <StaticTexture />
       <Header />
 
