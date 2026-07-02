@@ -1,6 +1,6 @@
 import { ShieldCheck, Eye, Wrench, ShieldAlert } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import firewallBg from "@/assets/firewall-bg.png";
+import firewallBg from "@/assets/firewall-bg.webp";
 
 const benefits = [
   { icon: ShieldCheck, text: "Defesa contra invasões e ameaças" },

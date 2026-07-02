@@ -14,7 +14,7 @@ import {
   Check,
 } from "lucide-react";
 
-import heroImage from "@/assets/diagnostico/hero-executivo-preocupado.jpg";
+import heroImage from "@/assets/diagnostico/hero-executivo-preocupado.webp";
 import iconFirewall from "@/assets/diagnostico/icon-firewall-3d.png";
 import iconBackup from "@/assets/diagnostico/icon-backup-3d.png";
 import iconAcesso from "@/assets/diagnostico/icon-acesso-3d.png";

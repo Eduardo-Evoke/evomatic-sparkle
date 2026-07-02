@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Rocket, Award, Users, Building2, ShieldCheck, ArrowRight } from "lucide-react";
-import quemSomosBg from "@/assets/quem-somos-bg.jpg";
+import quemSomosBg from "@/assets/quem-somos-bg.webp";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";

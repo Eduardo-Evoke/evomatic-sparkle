@@ -4,7 +4,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import LgpdBackground from "@/components/LgpdBackground";
 import SEO from "@/components/SEO";
 import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
-import lgpdHero from "@/assets/lgpd-hero.jpg";
+import lgpdHero from "@/assets/lgpd-hero.webp";
 import { useState, useEffect, useRef, useCallback } from "react";
 import {
   ShieldCheck, FileText, Lock, Eye, TrendingUp, AlertTriangle,

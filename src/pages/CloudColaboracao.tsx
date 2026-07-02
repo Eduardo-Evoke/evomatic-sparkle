@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SolutionsBackground from "@/components/SolutionsBackground";
 import SEO from "@/components/SEO";
 import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
-import heroImg from "@/assets/cloud-hero.jpg";
+import heroImg from "@/assets/cloud-hero.webp";
 import { useRef, useState, useEffect } from "react";
 import {
   Cloud, ArrowRight, Mail, FolderOpen, Users, RefreshCw,
