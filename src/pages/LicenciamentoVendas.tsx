@@ -68,6 +68,22 @@ const beneficios = [
 const LicenciamentoVendas = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Licenciamento de Software e Vendas de TI em Jundiaí e Campinas | Evomatic"
+        description="Licenciamento de software Microsoft, VMware, Veeam, hardware e revenda de soluções de TI para empresas em Jundiaí, Campinas e região."
+        path="/licenciamento-vendas"
+        schemas={[
+          serviceSchema({
+            name: "Licenciamento e Vendas",
+            description: "Licenciamento de software, hardware e revenda de soluções de TI para empresas em Jundiaí, Campinas e região.",
+            path: "/licenciamento-vendas",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Licenciamento e Vendas", path: "/licenciamento-vendas" },
+          ]),
+        ]}
+      />
       <SolutionsBackground />
       <Header />
 
