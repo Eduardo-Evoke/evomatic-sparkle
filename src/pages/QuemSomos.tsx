@@ -4,6 +4,8 @@ import quemSomosBg from "@/assets/quem-somos-bg.jpg";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/lib/seo";
 
 
 function useReveal(threshold = 0.15) {
@@ -82,6 +84,17 @@ const values = [
 const QuemSomos = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Quem Somos | Evomatic — Empresa de TI em Jundiaí há mais de 12 anos"
+        description="Conheça a Evomatic: mais de 12 anos organizando, protegendo e evoluindo ambientes de TI de empresas em Jundiaí, Campinas e região metropolitana."
+        path="/quem-somos"
+        schemas={[
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Quem Somos", path: "/quem-somos" },
+          ]),
+        ]}
+      />
       {/* Background image + glow */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <img

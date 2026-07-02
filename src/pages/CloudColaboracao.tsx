@@ -3,6 +3,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import SolutionsBackground from "@/components/SolutionsBackground";
+import SEO from "@/components/SEO";
+import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
 import heroImg from "@/assets/cloud-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -59,6 +61,22 @@ const beneficios = [
 const CloudColaboracao = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Cloud e Colaboração para Empresas em Jundiaí e Campinas | Evomatic"
+        description="Soluções de cloud computing e ferramentas de colaboração (Microsoft 365, Google Workspace, backup em nuvem) para empresas em Jundiaí, Campinas e região."
+        path="/cloud-colaboracao"
+        schemas={[
+          serviceSchema({
+            name: "Cloud e Colaboração",
+            description: "Cloud computing, Microsoft 365, Google Workspace e backup em nuvem para empresas em Jundiaí, Campinas e região.",
+            path: "/cloud-colaboracao",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Cloud e Colaboração", path: "/cloud-colaboracao" },
+          ]),
+        ]}
+      />
       <SolutionsBackground />
       <Header />
 

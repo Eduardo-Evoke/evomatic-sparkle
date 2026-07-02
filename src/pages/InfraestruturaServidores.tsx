@@ -3,6 +3,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import SolutionsBackground from "@/components/SolutionsBackground";
+import SEO from "@/components/SEO";
+import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
 import heroImg from "@/assets/infraestrutura-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -72,6 +74,22 @@ const beneficios = [
 const InfraestruturaServidores = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Infraestrutura de TI e Servidores em Jundiaí e Campinas | Evomatic"
+        description="Projeto, implantação e gestão de infraestrutura de TI e servidores para empresas em Jundiaí, Campinas e região. Alta disponibilidade, virtualização e ambientes hiperconvergentes."
+        path="/infraestrutura-servidores"
+        schemas={[
+          serviceSchema({
+            name: "Infraestrutura e Servidores",
+            description: "Projeto, implantação e gestão de infraestrutura de TI e servidores para empresas em Jundiaí, Campinas e região.",
+            path: "/infraestrutura-servidores",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Infraestrutura e Servidores", path: "/infraestrutura-servidores" },
+          ]),
+        ]}
+      />
       <SolutionsBackground />
       <Header />
 

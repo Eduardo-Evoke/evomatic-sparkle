@@ -3,6 +3,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 import SolutionsBackground from "@/components/SolutionsBackground";
+import SEO from "@/components/SEO";
+import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
 import heroImg from "@/assets/suporte-ti-hero.jpg";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -63,6 +65,22 @@ const comoFunciona = [
 const SuporteGestaoTI = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Suporte e Gestão de TI em Jundiaí e Campinas | Evomatic"
+        description="Suporte técnico especializado e gestão de TI para empresas em Jundiaí, Campinas e região. Monitoramento, atendimento e SLA para manter sua operação 24/7."
+        path="/suporte-gestao-ti"
+        schemas={[
+          serviceSchema({
+            name: "Suporte e Gestão de TI",
+            description: "Suporte técnico e gestão completa de ambientes de TI para empresas em Jundiaí, Campinas e região.",
+            path: "/suporte-gestao-ti",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Suporte e Gestão de TI", path: "/suporte-gestao-ti" },
+          ]),
+        ]}
+      />
       <SolutionsBackground />
       <Header />
 

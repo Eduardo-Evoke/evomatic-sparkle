@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StaticTexture from "@/components/StaticTexture";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/lib/seo";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,6 +43,17 @@ const Reveal = ({ children, delay = 0, direction = "up", className = "" }: {
 const Contato = () => {
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Contato | Evomatic — Empresa de TI em Jundiaí e Campinas"
+        description="Fale com a Evomatic. Solicite um diagnóstico gratuito de TI para sua empresa em Jundiaí, Campinas ou região. Atendimento comercial e suporte técnico."
+        path="/contato"
+        schemas={[
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "Contato", path: "/contato" },
+          ]),
+        ]}
+      />
       <StaticTexture />
       <Header />
 
