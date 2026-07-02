@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StaticTexture from "@/components/StaticTexture";
+import SEO from "@/components/SEO";
+import { breadcrumbSchema } from "@/lib/seo";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
