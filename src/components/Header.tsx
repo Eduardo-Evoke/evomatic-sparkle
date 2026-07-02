@@ -87,7 +87,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center gap-2 text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 bg-primary hover:brightness-110"
         >
-          Solicitar uma reunião
+          Diagnóstico Gratuito
           <ArrowRight className="w-4 h-4" />
         </a>
 
@@ -141,7 +141,7 @@ const Header = () => {
             onClick={closeMobile}
             className="inline-flex items-center gap-2 text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold bg-primary mt-2"
           >
-            Solicitar uma reunião
+            Diagnóstico Gratuito
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
