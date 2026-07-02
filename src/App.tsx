@@ -12,6 +12,7 @@ import SuporteGestaoTI from "@/pages/SuporteGestaoTI";
 import InfraestruturaServidores from "@/pages/InfraestruturaServidores";
 import LicenciamentoVendas from "@/pages/LicenciamentoVendas";
 import CloudColaboracao from "@/pages/CloudColaboracao";
+import Diagnostico from "@/pages/Diagnostico";
 import NotFound from "@/pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/infraestrutura-servidores" element={<InfraestruturaServidores />} />
           <Route path="/licenciamento-vendas" element={<LicenciamentoVendas />} />
           <Route path="/cloud-colaboracao" element={<CloudColaboracao />} />
+          <Route path="/diagnostico" element={<Diagnostico />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
