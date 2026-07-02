@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SolutionsBackground from "@/components/SolutionsBackground";
 import SEO from "@/components/SEO";
 import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
-import heroImg from "@/assets/licenciamento-hero.jpg";
+import heroImg from "@/assets/licenciamento-hero.webp";
 import { useRef, useState, useEffect } from "react";
 import {
   ShieldCheck, ArrowRight, CheckCircle2, Monitor, Laptop, Server,

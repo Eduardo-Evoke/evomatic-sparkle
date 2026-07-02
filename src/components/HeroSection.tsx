@@ -1,5 +1,5 @@
 import { Calendar, Headset, MonitorCheck, Clock } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 import Header from "./Header";
 
 const HeroSection = () => {

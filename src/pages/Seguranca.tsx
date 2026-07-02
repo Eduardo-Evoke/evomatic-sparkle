@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SolutionsBackground from "@/components/SolutionsBackground";
 import SEO from "@/components/SEO";
 import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
-import firewallHero from "@/assets/seguranca-hero.jpg";
+import firewallHero from "@/assets/seguranca-hero.webp";
 import { useRef, useState, useEffect } from "react";
 import {
   ShieldCheck, Eye, Wrench, ShieldAlert, ArrowRight,
