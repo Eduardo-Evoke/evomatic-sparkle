@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import LgpdBackground from "@/components/LgpdBackground";
-
+import SEO from "@/components/SEO";
+import { serviceSchema, breadcrumbSchema } from "@/lib/seo";
 import lgpdHero from "@/assets/lgpd-hero.jpg";
 import { useState, useEffect, useRef, useCallback } from "react";
 import {
