@@ -116,6 +116,22 @@ const Lgpd = () => {
 
   return (
     <main className="overflow-hidden relative">
+      <SEO
+        title="Adequação à LGPD para Empresas em Jundiaí e Campinas | Evomatic"
+        description="Consultoria e adequação à LGPD para empresas em Jundiaí, Campinas e região. Diagnóstico, políticas, DPO e conformidade com a Lei Geral de Proteção de Dados."
+        path="/lgpd"
+        schemas={[
+          serviceSchema({
+            name: "Adequação à LGPD",
+            description: "Diagnóstico, políticas, DPO e conformidade com a Lei Geral de Proteção de Dados para empresas em Jundiaí, Campinas e região.",
+            path: "/lgpd",
+          }),
+          breadcrumbSchema([
+            { name: "Início", path: "/" },
+            { name: "LGPD", path: "/lgpd" },
+          ]),
+        ]}
+      />
       <LgpdBackground />
       <Header />
       <div className="relative z-10">
