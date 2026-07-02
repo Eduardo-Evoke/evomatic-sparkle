@@ -84,9 +84,7 @@ const ServicesSection = () => {
   return (
     <section className="pb-12 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mt-4 mb-8 md:-mt-16 md:mb-36">
-          <p className="text-center max-w-xl mx-auto text-muted-foreground">​</p>
-        </div>
+        <div className="mt-4 mb-8 md:-mt-16 md:mb-36" aria-hidden="true"></div>
 
         <div ref={ref} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (

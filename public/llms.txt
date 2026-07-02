@@ -1,0 +1,23 @@
+# Evomatic — Soluções em TI
+
+> Empresa de TI em Jundiaí/SP com mais de 12 anos de experiência em suporte técnico, infraestrutura, cloud, Microsoft 365, segurança da informação, firewall, backup corporativo e adequação à LGPD. Atendemos empresas em Jundiaí, Campinas, Região Metropolitana de Campinas e interior de São Paulo.
+
+A Evomatic organiza, protege e evoluí ambientes de TI corporativos com serviços gerenciados (outsourcing e terceirização de TI), infraestrutura de servidores, cloud e colaboração (Microsoft 365, Google Workspace), segurança da informação (firewall, antivírus, EDR), backup e recuperação de desastres, licenciamento de software e consultoria em LGPD.
+
+## Páginas
+
+- [Início](/): visão geral da Evomatic, principais serviços e diferenciais para empresas em Jundiaí e Campinas.
+- [Suporte e Gestão de TI](/suporte-gestao-ti): terceirização e outsourcing de TI, help desk, service desk e SLA para empresas.
+- [Infraestrutura e Servidores](/infraestrutura-servidores): projeto, implantação e manutenção de servidores, redes, storage e virtualização.
+- [Cloud e Colaboração](/cloud-colaboracao): Microsoft 365, Google Workspace, migração para nuvem e colaboração corporativa.
+- [Segurança da Informação](/seguranca): firewall, backup corporativo, EDR/antivírus, monitoramento e resposta a incidentes.
+- [LGPD](/lgpd): adequação, mapeamento de dados, políticas e consultoria em Lei Geral de Proteção de Dados.
+- [Licenciamento e Vendas](/licenciamento-vendas): licenças Microsoft, Adobe e demais fabricantes, com apoio consultivo.
+- [Quem Somos](/quem-somos): história, propósito e time da Evomatic.
+- [Contato](/contato): fale com um especialista para orçamentos e atendimento comercial.
+- [Diagnóstico Gratuito](/diagnostico): avaliação técnica gratuita de infraestrutura, segurança e riscos de TI.
+
+## Regiões atendidas
+
+- Jundiaí, Campinas e Região Metropolitana de Campinas
+- Interior de São Paulo
