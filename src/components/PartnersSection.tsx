@@ -1,13 +1,13 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import logoTdSynnex from "@/assets/logo-tdsynnex.png";
-import logoIngramMicro from "@/assets/logo-ingrammicro.png";
-import logoManageEngine from "@/assets/manage-enigme.png";
-import logoAruba from "@/assets/logo-aruba.png";
-import logoLenovo from "@/assets/logo-lenovo.png";
-import logoProxmox from "@/assets/logo-proxmox.png";
-import logoAws from "@/assets/logo-aws.png";
+import logoTdSynnex from "@/assets/logo-tdsynnex.webp";
+import logoIngramMicro from "@/assets/logo-ingrammicro.webp";
+import logoManageEngine from "@/assets/manage-enigme.webp";
+import logoAruba from "@/assets/logo-aruba.webp";
+import logoLenovo from "@/assets/logo-lenovo.webp";
+import logoProxmox from "@/assets/logo-proxmox.webp";
+import logoAws from "@/assets/logo-aws.webp";
 
 const allPartners = [
   { name: "Microsoft", logo: "https://img.icons8.com/fluency/120/microsoft.png", size: "h-[70px]" },
